@@ -1,3 +1,8 @@
+#text editor/ide related ignores
+.vscode/
+.vs/
+.idea/
+
 # Godot 4+ specific ignores
 .godot/
 .nomedia
