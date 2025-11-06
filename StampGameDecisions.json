@@ -1,0 +1,295 @@
+{
+  "influence order": ["Swordsmen", "Shieldmen", "Archers", "Horse", "Strength"],
+  "preparation":{
+    "prep_1_intro": "You get news that century long enemy Kingdom (Kingdom Name) is planning to seize your Kingdom. However, due to a bad harvest season, the Kingdom is lacking in resources, so your only option are to raid nearby weaker Kingdoms.\nYou have been tasked with leading and documenting.",
+    "prep_1_dec_1": {
+      "prompt": "You are given a choice between sending new solider recruits into two different education paths. One focuses on range while the other focuses on close combat. Which education path do you send your first wave of soldiers?",
+      "answer_1": {
+        "option": "Long Range Training", 
+        "outcome": "Your soldiers become reliable with a bow. Stamp 2 archers", 
+        "influence": [0,0,2,0,0]
+      },
+      "answer_2": {
+        "option": "Close Quarters Combat", 
+        "outcome": "your soldiers become skilled with a sword. Stamp 2 swordsmen", 
+        "influence": [2,0,0,0,0]
+      }
+    },
+    "prep_1_dec_2": {
+      "prompt": "You are given a choice between two training programs. The first trains horses to battle alongside your soldiers, while the other trains the physical abilities of your soldiers. \nWhich training program do you pick?",
+      "answer_1": {
+        "option": "Train Horses", 
+        "outcome": "You can now have your best soldiers ride into battle. Stamp 2 horses", 
+        "influence": [0,0,0,2,0]
+      },
+      "answer_2": {
+        "option": "Train Physical Ability", 
+        "outcome": "Your soldiers become much more capable. Add the strength stamp to your army", 
+        "influence": [0,0,0,0,1]
+      }
+    },
+    "prep_1_dec_3": {
+      "prompt": "You are given the option of bulking up your defense lines or bulking up your offensive lines with a grant from the local lord. Where do you put the money?",
+      "answer_1": {
+        "option": "Bulk Defense", 
+        "outcome": "Your army grows impenetrable. Stamp 2 Shieldmen", 
+        "influence": [0,2,0,0,0]
+      },
+      "answer_2": {
+        "option": "Bulk Offence", 
+        "outcome": "Your army strikes fear into enemies. Stamp 2 swordsmen", 
+        "influence": [2,0,0,0,0]
+      }
+    },
+    "prep_1_dec_4": {
+      "prompt": "Due to the poor harvest season, leather for shields and bows are limited. With what leather is given to the army, do you put it towards producing shields or producing bows?",
+      "answer_1": {
+        "option": "Produce Shields", 
+        "outcome": "Your kingdom's crest is burned onto the leather covers. Stamp 2 Shieldmen", 
+        "influence": [0,2,0,0,0]
+      },
+      "answer_2": {
+        "option": "Produce Bows", 
+        "outcome": "The leather is used to create a solid grip. Stamp 2 archers", 
+        "influence": [0,0,2,0,0]
+      }
+    },
+    "prep_1_outro": {
+      "prompt": "It is now the time to pick your battle. Two Kingdoms are set before you, both with resources needed for your Kingdom’s protection. \nThe first Kingdom (name) resides in the flat fields, rich of crops and farm animals. They are known for their archery and speed, adapting to the open and flat geography.\nThe second Kingdom (name) rests on the rocky shores, rich in metals and oceanic resources. They’re known for their close combat and power, useful to living in the uneven geography.",
+      "answer_1": {
+        "option": "Siege (Kingdom 1 Name)", 
+        "outcome": "It has been decided. Stamp the enemy's crest in yellow", 
+        "influence": [0,0,0,0,0]
+      },
+      "answer_2": {
+        "option": "Siege (Kingdom 2 Name)", 
+        "outcome": "It has been decided.  Stamp the enemy's crest in green", 
+        "influence": [0,0,0,0,0]
+      }
+    }
+  },
+  "battle": {
+    "battle_1_decision_1.1": {
+      "prompt": "You inform your army of the raiding of (Kingdom Name), and you waste no time as your troops make the journey. \nYou see the Kingdom from many miles away, visible with the flat openness of the fields. Your army faces the front entrance, guarded by the Kingdom’s own army of Archers.\n\n STAMP an enemy Archer on the right side of cell in (color) ink\n\n Do you order your army to ambush and attack the enemy Archers before they have the chance to shoot, or do you sneak in through another entrance?",
+      "answer_1": {
+        "option": "Ambush", 
+        "outcome": "You order your army to ambush the guarding Archers. The enemy Archers see your army as you approach on the open fields, drawing their bows and shooting quick.\nIn the open fields, with no protection or ways of evading, the incoming arrows hits a large chunk of your troops. They’re weakened by these injuries.\n\nSTAMP arrows pointing left on the left side\nSTAMP weakness",
+        "outcome_2": "You order your army to ambush the guarding Archers. The enemy Archers see your army as you approach on the open fields, drawing their bows and shooting quick.\nWith the speed and agility of the Horses, your troops are able to evade the in-coming arrows.\n\nSTAMP arrows pointing down on the left side",
+        "influence": [0,0,0,0,-1],
+        "next_decision": "battle_1_decision_2.1"
+      },
+      "answer_2": {
+        "option": "Sneak In", 
+        "outcome": "It has been decided.  Stamp the enemy's crest in green", 
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_decision_2.2"
+      }
+    },
+    "battle_1_decision_1.2": {
+      "prompt": "Decision 7: entering",
+      "answer_1": {
+        "option": "Run in", 
+        "outcome": "",
+        "outcome_2": "",
+        "influence": [0,0,0,0,-1],
+        "next_decision": "battle_1_decision_2.3"
+      },
+      "answer_2": {
+        "option": "Walk", 
+        "outcome": "", 
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_decision_2.4"
+      }
+    },
+    "battle_1_decision_2.1": {
+      "prompt": "Through the wave of arrows, your troops reach closer to the enemy Archers, now face to face with them. Now in close reach, your close range troops are able to attack. \nYou’re given two options.",
+      "answer_1": {
+        "option": "Send your archers to raid the kingdom.", 
+        "outcome": "You follow along with your Archers, raiding one of the Kingdom’s inner towns, rich in wheat useful for food. This town has a large dried grain storage house, currently being raided by you and your Archers.\n STAMP",
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_decision_3.1"
+      },
+      "answer_2": {
+        "option": "Keep all your troops together to attack.", 
+        "outcome": "As your troops continue to fight the enemy soldiers, you see more enemy soldiers from inside the Kingdom start to approach, most likely alerted during the arrow rain. \n\nSTAMP", 
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_decision_3.2"
+      }
+    },
+    "battle_1_decision_2.2": {
+      "prompt": "Decision 8: now inside kingdom",
+      "answer_1": {
+        "option": "Stay Together", 
+        "outcome": "",
+        "outcome_2": "",
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_decision_3.3"
+      },
+      "answer_2": {
+        "option": "Split Up", 
+        "outcome": "", 
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_decision_3.4"
+      }
+    },
+    "battle_1_decision_2.3": {
+      "prompt": "Decision 8: which one sending first",
+      "answer_1": {
+        "option": "Archers", 
+        "outcome": "",
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_decision_3.5"
+      },
+      "answer_2": {
+        "option": "Shieldmen", 
+        "outcome": "", 
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_decision_3.6"
+      }
+    },
+    "battle_1_decision_2.4": {
+      "prompt": "Decision 8: they have high ground",
+      "answer_1": {
+        "option": "Use Archers", 
+        "outcome": "",
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_decision_3.7"
+      },
+      "answer_2": {
+        "option": "Climb With Swordsmen", 
+        "outcome": "", 
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_decision_3.8"
+      }
+    },
+    "battle_1_decision_3.1": {
+      "prompt": "Enemy troops located inside the Kingdom gets news of your raiding, and a handful of Archers on horseback ambushes you in the storage house. \nDo you set the storage on fire, allowing for an escape but losing the grain inside, or do you use force to attack back?",
+      "answer_1": {
+        "option": "Use fire.", 
+        "outcome": "You pull out a match stick from your pocket, striking it against one of the wooden support beam. You toss it into the piles of dried grain, seeing it catch a-blaze. As the fire starts to spread, it scares the enemy horses, allowing you and your Archers to escape the burning storage house.\n\nSTAMP\n\nWhile none of your Archers looses their life, you are unable to continue to raid the town. The enemy Archers quickly recovers and their keen eye makes it impossible for you to continue to raid the town. It’s likely word has gone out as well, stopping your troops to raid anymore.",
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_outro"
+      },
+      "answer_2": {
+        "option": "Use force.", 
+        "outcome": "You order your Archers to fight back quickly. Your Archers, fast on their feet and bows, out-shoots the enemy Archers before they could ready their bows. Their horses are scared away from the arrows.\nYou and your troops are able to quickly raid the piles of grain from the storage. It’s enough grain to supply bread to your whole army.\n\nSTAMP", 
+        "outcome_2": "You order your Archers to fight back quickly. Your Archers, injured from the arrows earlier, struggles to pull their bows in time. Your Archers are shot one by one, unable to defend themselves. You’re able to flee from the storage house.\nGrouping back with the rest of your troop outside, you choose to draw back. The news have gotten out of your raiding, and more enemy Archers are making their way to the front entrance.\n\nSTAMP", 
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_outro"
+      }
+    },
+    "battle_1_decision_3.2": {
+      "prompt": "They have yet to get within bow and arrow range. Your army won’t be able to combat all of them at once, so you have no choice but to send one of your force to take care of the incoming enemies.\n\n Who do you send in?",
+      "answer_1": {
+        "option": "Swordsmen", 
+        "outcome": "You order your Swordmen to take care of the incoming enemy troops. The Swordmen, jumping onto horseback, quickly charges at them, evading the arrows similar to before. They’re able to get face to face and attack, too close for the enemy Archers to shoot more. \nYou see those enemy Archers fall as your Swordmen takes them out. Too far away to hear anymore commands, the Swordmen decide to do some raiding as you and the others continue to fight the enemy troops outside the Kingdom.\n\nSTAMP",
+        "outcome_2": "You order your Swordmen to take care of the incoming enemy troops. They make their way over, but with their injuries from the arrows earlier, they are slower and clumsier. The Swordmen get spotted easily, and lacking the speed, they get shot down easily.\n\nSTAMP\n\nWithout a portion of your army, you’re unable to fight back against the wave of new enemies. With no other choice, you and your troops flee.",
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_outro"
+      },
+      "answer_2": {
+        "option": "Archers", 
+        "outcome": "You order your Archers to take care of the incoming enemy troops. They quickly start to aim at those new enemies riding on horseback. Your Archers shoots once in range, taking advantage of their head start, as the incoming enemies are too focused on riding quickly to aim. You see those enemies fall as your Archers shoots them down.\n\nSTAMP", 
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_outro"
+      }
+    }
+    "battle_1_decision_3.3": {
+      "prompt": "Decision 9: Enemy ambushes, who send in first",
+      "answer_1": {
+        "option": "Archers", 
+        "outcome": "",
+        "outcome_2": "",
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_outro"
+      },
+      "answer_2": {
+        "option": "Shieldmen", 
+        "outcome": "", 
+        "outcome_2": "",
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_outro"
+      }
+    },
+    "battle_1_decision_3.4": {
+      "prompt": "Decision 9: Small amount of enemy troops encounter",
+      "answer_1": {
+        "option": "Sacrifice shieldmen", 
+        "outcome": "",
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_outro"
+      },
+      "answer_2": {
+        "option": "Attack Together", 
+        "outcome": "", 
+        "outcome_2": "",
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_outro"
+      }
+    },
+    "battle_1_decision_3.5": {
+      "prompt": "Decision 9: Stuck Outside",
+      "answer_1": {
+        "option": "Split troops", 
+        "outcome": "",
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_outro"
+      },
+      "answer_2": {
+        "option": "Send all to attack", 
+        "outcome": "",
+        "outcome_2": "",
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_outro"
+      }
+    },
+    "battle_1_decision_3.6": {
+      "prompt": "Decision 9: Inside Kingdom",
+      "answer_1": {
+        "option": "Fight Inside Soldiers", 
+        "outcome": "",
+        "outcome_2": "",
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_outro"
+      },
+      "answer_2": {
+        "option": "Sneak and raid quietly", 
+        "outcome": "", 
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_outro"
+      }
+    },
+    "battle_1_decision_3.7": {
+      "prompt": "Decision 9: Enemy less full",
+      "answer_1": {
+        "option": "Focus on raiding", 
+        "outcome": "",
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_outro"
+      },
+      "answer_2": {
+        "option": "Finish remaining enemies", 
+        "outcome": "", 
+        "outcome_2": "",
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_outro"
+      }
+    },
+    "battle_1_decision_3.8": {
+      "prompt": "Decision 9: Face to face with enemy force",
+      "answer_1": {
+        "option": "Use shieldmen", 
+        "outcome": "",
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_outro"
+      },
+      "answer_2": {
+        "option": "Use swordsmen", 
+        "outcome": "",
+        "outcome_2": "",
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_1_outro"
+      }
+    }
+  }
+}
