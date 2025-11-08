@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Stamping"
-run/main_scene="uid://dketgbf70lta4"
+run/main_scene="uid://d2ocdrlsujq8s"
 config/features=PackedStringArray("4.4", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[debug]
+
+gdscript/warnings/unused_variable=2
+gdscript/warnings/untyped_declaration=2
 
 [display]
 
