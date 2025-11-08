@@ -80,7 +80,7 @@
       },
       "answer_2": {
         "option": "Sneak In", 
-        "outcome": "It has been decided.  Stamp the enemy's crest in green", 
+        "outcome": "You order your army to avoid the main entrance and sneak in through one of the outer entrances used for accessing the outer wheat fields. Through the tall wheat, your troops sneaks through, slipping in easily.", 
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_decision_2.2"
       }
@@ -89,8 +89,8 @@
       "prompt": "Decision 7: entering",
       "answer_1": {
         "option": "Run in", 
-        "outcome": "",
-        "outcome_2": "",
+        "outcome": "You order your troop to charge in for a surprise attack. However, the rocky and uneven stone ground is foreign on your troops feet. You watch as they each loose their footing and trip.\nUnfortunately, your troops weren’t trained for this. Even with the horses, your men (and horses) are unable to recover from their trips. Your troops, scraped and hurt by the rocks, still continues to charge, but it’s clear they’re weak to their injuries.",
+        "outcome_2": "You order your troop to charge in for a surprise attack. However, the rocky and uneven stone ground is foreign on your troops feet. You watch as they each loose their footing and trip.\nLuckily, your troops were trained for this. Their physical training allowing your troops to quickly recover from the trip, brushing off their injuries and continuing to charge forwards.",
         "influence": [0,0,0,0,-1],
         "next_decision": "battle_1_decision_2.3"
       },
@@ -117,32 +117,31 @@
       }
     },
     "battle_1_decision_2.2": {
-      "prompt": "Decision 8: now inside kingdom",
+      "prompt": "Now inside, you decide to start raiding before enemies notice your invasion. Do you...",
       "answer_1": {
         "option": "Stay Together", 
-        "outcome": "",
-        "outcome_2": "",
+        "outcome": "Deciding to keep your army together, your numbers are enough to start raiding a decently sized town within the Kingdom.",
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_decision_3.3"
       },
       "answer_2": {
-        "option": "Split Up", 
-        "outcome": "", 
+        "option": "Split into groups", 
+        "outcome": "You decide to split your troops up into small group to cover more area. Following one of the larger groups, you find yourselves in a small town, with a small town center.", 
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_decision_3.4"
       }
     },
     "battle_1_decision_2.3": {
-      "prompt": "Decision 8: which one sending first",
+      "prompt": "Even with the struggle of the ground, your army gets closer to the enemies guarding the entrance. They don’t see you approach fast enough to use the rocks to their advantage, instead facing your troops at face level. They’re equipped with long swords and thick shields.\nYou’re given two options on how to advance.",
       "answer_1": {
-        "option": "Archers", 
-        "outcome": "",
+        "option": "Send In Archers", 
+        "outcome": "You command your Archers to shoot at the enemy lines, hoping to use the slight distance between to your advantage. However, your arrows are no match for the shields, almost bouncing off. ",
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_decision_3.5"
       },
       "answer_2": {
-        "option": "Shieldmen", 
-        "outcome": "", 
+        "option": "Send In Shieldmen", 
+        "outcome": "You command your Shield-men to push through the enemy lines, using their shields to block the attacks of the swords. With your Shield-men on the defensive, your troops are able to force their way into the Kingdom.", 
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_decision_3.6"
       }
@@ -193,68 +192,68 @@
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_outro"
       }
-    }
+    },
     "battle_1_decision_3.3": {
-      "prompt": "Decision 9: Enemy ambushes, who send in first",
+      "prompt": "After raiding the town, your troops gather in the town center, waiting for your next command. Before you can give any, you’re ambushed my a fleet of enemy soldiers. They’re quick, already aiming their bows at your men.\nWho do you send first?",
       "answer_1": {
         "option": "Archers", 
-        "outcome": "",
-        "outcome_2": "",
+        "outcome": "With little time, you send your Archers to take down the enemies. However, their speed fails to match your enemies, leading to some of your Archers to get shot and die. In good news, your Archers get a couple hits in, giving enough time for the rest of your troop to draw back. Even though you’ve lost some men, you return home with some resources.",
+        "outcome_2": "Your Archers, quick on horseback, charge at the enemies. The speed and agility of your horses allows your men to evade the incoming arrows, as the enemies are too focused on your Archers to think about the rest of your troop. The Archers shoot down the enemies with no causalities on your side. However, you see your men grow tired, and with the resources in hand, it would continue to be difficult to fight while holding such items. So, you decide to return home with your loot.",
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_outro"
       },
       "answer_2": {
         "option": "Shieldmen", 
-        "outcome": "", 
-        "outcome_2": "",
+        "outcome": "With little time, you send your Shieldmen to the front. With their shields, they defend the rest of your troops from the incoming arrows. However, this isn’t able to withstand much longer, as the waves of arrows start to weaken the shield.\nYour offensive soldiers rush to attack the enemy Archers, but with a lack of speed, some of your Shieldmen fall before they your troops can attack. \nYour troops are able to push back against the enemies, just long enough for you to order a withdrawal. You have enough resources, and it would make fighting harder with less men and more carry ons.", 
+        "outcome_2": "Your Sheildmen quickly step to the front, defending the rest of your troops from the incoming arrows. With the enemy soldiers distracted, your offensive men jump onto horseback, taking advantage of the distraction to attack. The enemy soldiers fall one by one, until no more arrows threaten your Sheildmen. However, you see your men grow tired, and with the resources in hand, it would continue to be difficult to fight while holding such items. So, you decide to return home with your loot.",
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_outro"
       }
     },
     "battle_1_decision_3.4": {
-      "prompt": "Decision 9: Small amount of enemy troops encounter",
+      "prompt": "As your group begin to start raiding, you’re ambushed by a small group of enemy troops, slightly more men than your group. They spot you first, already aimed to shoot.\nDo you sacrifice your Shield Man or do you attack all together?",
       "answer_1": {
         "option": "Sacrifice shieldmen", 
-        "outcome": "",
+        "outcome": "You send your one Shieldman to defend against the arrows. All the enemy soldiers laser focus on them, pelting them with arrows. Your Shieldman withstands the arrows until they start to wear-down, then break the shield. \nYou and your group doesn’t stick around long enough to see them fatally shot, fleeing from the unequal fight without any resources.",
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_outro"
       },
       "answer_2": {
         "option": "Attack Together", 
-        "outcome": "", 
-        "outcome_2": "",
+        "outcome": "You decide to take the risk and attack all together. Quickly, you realize you are no match for your enemies’ speed and tactics. Without order, one of your solider starts to defend, becoming a target for the enemy Archer’s arrows.\nYou and your group doesn’t stick around long enough to see them fatally shot, fleeing from the unequal fight without any resources.", 
+        "outcome_2": "You decide to take the risk and attack all together. The first enemy arrow is shot at you, narrowly missing you and the horse stood besides you. It spooks the horse, causing it to yank itself out of the hold of one of your soldiers. Before you could grab onto the steed, it had already ran off towards the enemies, avoiding their arrows and kicking at their numbers. Not even the best trained men can defend against the back-kick of a horse.\nIn the chaos, you see the uninjured and living enemy Archers flee from the area. One of your soldiers is able to control the horse, and you quickly raid the town with what you can carry.\nThe horse still looked shaken up, so you decide to withdraw your army from the Kingdom.",
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_outro"
       }
     },
     "battle_1_decision_3.5": {
-      "prompt": "Decision 9: Stuck Outside",
+      "prompt": "While your Archers were shooting, the enemy Swordmen charged quickly forwards, used to the unpredictable ground. They slash at your Archers, fatally wounding them.\nWith the loss of some of your men, you need to start raiding as soon as possible before the rest of your men grow tired.\nDo you...",
       "answer_1": {
-        "option": "Split troops", 
-        "outcome": "",
+        "option": "Send some to start raiding", 
+        "outcome": "At your order, you send half of your troops to force their way through the entrance and disregard the enemy soldiers. At the sight of this, the enemy soldiers falter, confused at the sight. Your attacking troops take advantage of this and slaughter some of them. Your troops continue to fight as the others raid what they can.\nAfter some time, with your troops still fighting at the entrance, your raiders return with some resources. They couldn’t get far, as their numbers were no match for the enemy soldiers within the Kingdom.",
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_outro"
       },
       "answer_2": {
-        "option": "Send all to attack", 
-        "outcome": "",
-        "outcome_2": "",
+        "option": "Keep all troops attacking", 
+        "outcome": "At your order, your troops continue to fight despite the loss of some of your men. As they fight, they become more accustomed to the ground, able to start holding their own. With the physical training, your troops are able to reduce the enemies’ numbers significantly, enough to enter through the entrance.\nYou raid what you can, stone, fish, and ores, before needing to withdrawal as the enemy soldiers from inside the Kingdom makes themselves known. Before you leave the Kingdom land, your troops loot the fallen enemies' swords and shields.",
+        "outcome_2": "At your order, your troops continue to fight despite the loss of some of your men. As they fight, it’s clear that they’re still unable to adapt to the terrain, and with the injures easily, they struggle to hold their own. You watch as some of your men die.",
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_outro"
       }
     },
     "battle_1_decision_3.6": {
-      "prompt": "Decision 9: Inside Kingdom",
+      "prompt": "Now inside, you see enemy troops within the Kingdom.\nDo you...",
       "answer_1": {
-        "option": "Fight Inside Soldiers", 
-        "outcome": "",
-        "outcome_2": "",
+        "option": "Fight enemy troops", 
+        "outcome": "You decide to fight the enemy soldiers you see. There are a lot more than you expected. While the physical training comes through in your troops, a couple do fall at the swords of the enemies.",
+        "outcome_2": "You decide to fight the enemy soldiers you see. There are a lot more than you expected. With their numbers and strength, and your army’s locational disadvantage, your men are easily slain. You’re barely able to flee from the Kingdom and return home, empty handed except for a lone surviving soldier.",
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_outro"
       },
       "answer_2": {
         "option": "Sneak and raid quietly", 
-        "outcome": "", 
+        "outcome": "You decide to have your troops raid the Kingdom instead of fighting the enemies. They’re able to use the rocky geography to their advantage, evading the sight of the enemy soldiers within.\nOut of sight, you’re able to raid successfully, gathering metals, ores, and preserved meats. With the raided loot and your men intact, you return home victorious.", 
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_outro"
       }
