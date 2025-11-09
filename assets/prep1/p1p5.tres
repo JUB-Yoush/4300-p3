@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Preperation" load_steps=5 format=3 uid="uid://dhg25rvssgha7"]
+
+[ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Preperation.cs" id="1_e81pb"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="1_nnf2s"]
+
+[sub_resource type="Resource" id="Resource_y5dqh"]
+script = ExtResource("1_nnf2s")
+Description = "Siege Vetedam Kingdom"
+Outcome = "It has been decided.\\n\\nSTAMP the enemy's crest in green"
+Influence = null
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_x8kwd"]
+script = ExtResource("1_nnf2s")
+Description = "Siege Comore"
+Outcome = "It has been decided. \\n\\nSTAMP the enemy's crest in yellow"
+Influence = null
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[resource]
+script = ExtResource("1_e81pb")
+Prompt = "It is now the time to pick your battle. Two Kingdoms are set before you, both with resources needed for your Kingdom’s protection. \\nThe first Kingdom of Vetedam resides in the flat fields, rich of crops and farm animals. They are known for their archery and speed, adapting to the open and flat geography.\\nThe second, Comore Kingdom, rests on the rocky shores, rich in metals and oceanic resources. They’re known for their close combat and power, useful to living in the uneven geography."
+Answer1 = SubResource("Resource_y5dqh")
+Answer2 = SubResource("Resource_x8kwd")
+metadata/_custom_type_script = "uid://4kjr6gery7dy"

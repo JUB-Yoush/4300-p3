@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Battle" load_steps=8 format=3 uid="uid://bticm6nf43ueg"]
+
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="1_cv8i4"]
+[ext_resource type="Script" uid="uid://dksjoxiffxdbf" path="res://src/datatypes/BattleDecision.cs" id="2_kywoa"]
+[ext_resource type="Script" uid="uid://byavvnsisrwdw" path="res://src/datatypes/Battle.cs" id="3_6mp7e"]
+
+[sub_resource type="Resource" id="Resource_0fwnp"]
+script = ExtResource("1_cv8i4")
+Description = ""
+Outcome = "You follow along with your Archers, raiding one of the Kingdom’s inner towns, rich in wheat useful for food. This town has a large dried grain storage house, currently being raided by you and your Archers.\\n\\nSTAMP Using your Archer and House stamps"
+Influence = null
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_08fdb"]
+script = ExtResource("2_kywoa")
+Description = "Send your archers to raid the kingdom."
+Outcome1 = SubResource("Resource_0fwnp")
+ConditionIndex = -1
+Influence = null
+metadata/_custom_type_script = "uid://dksjoxiffxdbf"
+
+[sub_resource type="Resource" id="Resource_hpqfp"]
+script = ExtResource("1_cv8i4")
+Description = ""
+Outcome = "As your troops continue to fight the enemy soldiers, you see more enemy soldiers from inside the Kingdom start to approach, most likely alerted during the arrow rain. \\n\\nSTAMP Your troops fighting the enemy's"
+Influence = null
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_m8mgp"]
+script = ExtResource("2_kywoa")
+Description = "Keep all your troops together to attack."
+Outcome1 = SubResource("Resource_hpqfp")
+ConditionIndex = -1
+Influence = null
+metadata/_custom_type_script = "uid://dksjoxiffxdbf"
+
+[resource]
+script = ExtResource("3_6mp7e")
+Prompt = "Through the wave of arrows, your troops reach closer to the enemy Archers, now face to face with them. Now in close reach, your close range troops are able to attack. \\nYou’re given two options."
+Choice1 = SubResource("Resource_08fdb")
+Choice2 = SubResource("Resource_m8mgp")
+metadata/_custom_type_script = "uid://byavvnsisrwdw"

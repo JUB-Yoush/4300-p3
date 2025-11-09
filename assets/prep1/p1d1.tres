@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Preperation" load_steps=5 format=3 uid="uid://beg44tdg5u8w8"]
+
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="1_agg1i"]
+[ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Preperation.cs" id="1_gau1k"]
+
+[sub_resource type="Resource" id="Resource_3be34"]
+script = ExtResource("1_agg1i")
+Description = "Long Range Training"
+Outcome = "Your soldiers become reliable with a bow.\\n\\nSTAMP 2 archers"
+Influence = Dictionary[int, int]({})
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_agg1i"]
+script = ExtResource("1_agg1i")
+Description = "Close Quarters Combat"
+Outcome = "your soldiers become skilled with a sword.\\n\\nSTAMP 2 swordsmen"
+Influence = Dictionary[int, int]({})
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[resource]
+script = ExtResource("1_gau1k")
+Prompt = "You are given a choice between sending new solider recruits into two different education paths. One focuses on range while the other focuses on close combat. Which education path do you send your first wave of soldiers?"
+Answer1 = SubResource("Resource_3be34")
+Answer2 = SubResource("Resource_agg1i")
+metadata/_custom_type_script = "uid://4kjr6gery7dy"
