@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=3 format=3 uid="uid://ccfiyajmqbk3q"]
+
+[ext_resource type="Texture2D" uid="uid://bgis8gdjvt486" path="res://assets/ui/spritesheet.png" id="1_ey2gc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ak3ud"]
+atlas = ExtResource("1_ey2gc")
+region = Rect2(0, 460.661, 1019.42, 218.865)
+
+[resource]
+texture = SubResource("AtlasTexture_ak3ud")
+modulate_color = Color(0.758192, 0.758192, 0.758192, 1)
