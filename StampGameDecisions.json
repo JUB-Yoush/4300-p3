@@ -1,17 +1,17 @@
 {
   "influence order": ["Swordsmen", "Shieldmen", "Archers", "Horse", "Strength"],
   "preparation":{
-    "prep_1_intro": "You get news that century long enemy Kingdom (Kingdom Name) is planning to seize your Kingdom. However, due to a bad harvest season, the Kingdom is lacking in resources, so your only option are to raid nearby weaker Kingdoms.\nYou have been tasked with leading and documenting.",
+    "prep_1_intro": "You get news that century long enemy in the Prerid Kingdom is planning to seize your Kingdom. However, due to a bad harvest season, the Kingdom is lacking in resources, so your only option are to raid nearby weaker Kingdoms.\nYou have been tasked with leading and documenting.",
     "prep_1_dec_1": {
       "prompt": "You are given a choice between sending new solider recruits into two different education paths. One focuses on range while the other focuses on close combat. Which education path do you send your first wave of soldiers?",
       "answer_1": {
         "option": "Long Range Training", 
-        "outcome": "Your soldiers become reliable with a bow. Stamp 2 archers", 
+        "outcome": "Your soldiers become reliable with a bow.\n\nSTAMP 2 archers", 
         "influence": [0,0,2,0,0]
       },
       "answer_2": {
         "option": "Close Quarters Combat", 
-        "outcome": "your soldiers become skilled with a sword. Stamp 2 swordsmen", 
+        "outcome": "your soldiers become skilled with a sword.\n\nSTAMP 2 swordsmen", 
         "influence": [2,0,0,0,0]
       }
     },
@@ -19,12 +19,12 @@
       "prompt": "You are given a choice between two training programs. The first trains horses to battle alongside your soldiers, while the other trains the physical abilities of your soldiers. \nWhich training program do you pick?",
       "answer_1": {
         "option": "Train Horses", 
-        "outcome": "You can now have your best soldiers ride into battle. Stamp 2 horses", 
+        "outcome": "You can now have your best soldiers ride into battle.\n\nSTAMP 2 horses", 
         "influence": [0,0,0,2,0]
       },
       "answer_2": {
         "option": "Train Physical Ability", 
-        "outcome": "Your soldiers become much more capable. Add the strength stamp to your army", 
+        "outcome": "Your soldiers become much more capable. Add the strength\n\nSTAMP to your army", 
         "influence": [0,0,0,0,1]
       }
     },
@@ -32,12 +32,12 @@
       "prompt": "You are given the option of bulking up your defense lines or bulking up your offensive lines with a grant from the local lord. Where do you put the money?",
       "answer_1": {
         "option": "Bulk Defense", 
-        "outcome": "Your army grows impenetrable. Stamp 2 Shieldmen", 
+        "outcome": "Your army grows impenetrable.\n\nSTAMP 2 Shieldmen", 
         "influence": [0,2,0,0,0]
       },
       "answer_2": {
         "option": "Bulk Offence", 
-        "outcome": "Your army strikes fear into enemies. Stamp 2 swordsmen", 
+        "outcome": "Your army strikes fear into enemies.\n\nSTAMP 2 swordsmen", 
         "influence": [2,0,0,0,0]
       }
     },
@@ -45,32 +45,111 @@
       "prompt": "Due to the poor harvest season, leather for shields and bows are limited. With what leather is given to the army, do you put it towards producing shields or producing bows?",
       "answer_1": {
         "option": "Produce Shields", 
-        "outcome": "Your kingdom's crest is burned onto the leather covers. Stamp 2 Shieldmen", 
+        "outcome": "Your kingdom's crest is burned onto the leather covers.\n\nSTAMP 2 Shieldmen", 
         "influence": [0,2,0,0,0]
       },
       "answer_2": {
         "option": "Produce Bows", 
-        "outcome": "The leather is used to create a solid grip. Stamp 2 archers", 
+        "outcome": "The leather is used to create a solid grip.\n\nSTAMP 2 archers", 
         "influence": [0,0,2,0,0]
       }
     },
     "prep_1_outro": {
-      "prompt": "It is now the time to pick your battle. Two Kingdoms are set before you, both with resources needed for your Kingdom’s protection. \nThe first Kingdom (name) resides in the flat fields, rich of crops and farm animals. They are known for their archery and speed, adapting to the open and flat geography.\nThe second Kingdom (name) rests on the rocky shores, rich in metals and oceanic resources. They’re known for their close combat and power, useful to living in the uneven geography.",
+      "prompt": "It is now the time to pick your battle. Two Kingdoms are set before you, both with resources needed for your Kingdom’s protection. \nThe first Kingdom of Vetedam resides in the flat fields, rich of crops and farm animals. They are known for their archery and speed, adapting to the open and flat geography.\nThe second, Comore Kingdom, rests on the rocky shores, rich in metals and oceanic resources. They’re known for their close combat and power, useful to living in the uneven geography.",
       "answer_1": {
-        "option": "Siege (Kingdom 1 Name)", 
-        "outcome": "It has been decided. Stamp the enemy's crest in yellow", 
+        "option": "Siege Vetedam Kingdom", 
+        "outcome": "It has been decided.\n\nSTAMP the enemy's crest in green", 
         "influence": [0,0,0,0,0]
       },
       "answer_2": {
-        "option": "Siege (Kingdom 2 Name)", 
-        "outcome": "It has been decided.  Stamp the enemy's crest in green", 
+        "option": "Siege Comore", 
+        "outcome": "It has been decided. \n\nSTAMP the enemy's crest in yellow", 
         "influence": [0,0,0,0,0]
+      }
+    },
+    "prep_2_intro": "You’re hit with the news of the enemy Kingdom. They’re approaching steadily, and it’s unclear what their forces are made of. With time not on your side, you won’t be able to build an army by yourself. Having a helping hand is crucial. With little choices, you turn to the army who had fought with you.",
+    "prep_2_dec_1": {
+      "prompt": "You and the Hero are given a choice between two education paths for your new soldier recruits. One focuses on range while the other focuses on close combat. Which education path do you send your first wave of soldiers?",
+      "answer_1": {
+        "option": "Long Range Training", 
+        "outcome": "Your soldiers become reliable with a bow.\n\nSTAMP 2 archers", 
+        "influence": [0,0,2,0,0]
+      },
+      "answer_2": {
+        "option": "Close Quarters Combat", 
+        "outcome": "your soldiers become skilled with a sword.\n\nSTAMP 2 swordsmen", 
+        "influence": [2,0,0,0,0]
+      }
+    },
+    "prep_2_dec_2": {
+      "prompt": "Two training programs are brought between you and the Hero.\nThe first trains horses to battle alongside your soldiers, while the other trains the physical abilities of your soldiers. Which training program do you pick?",
+      "answer_1": {
+        "option": "Train Horses", 
+        "outcome": "You can now have your best soldiers ride into battle.\n\nSTAMP 2 horses", 
+        "influence": [0,0,0,2,0]
+      },
+      "answer_2": {
+        "option": "Train Physical Ability", 
+        "outcome": "Your soldiers become much more capable. Add the strength\n\nSTAMP to your army", 
+        "influence": [0,0,0,0,1]
+      }
+    },
+    "prep_2_dec_3": {
+      "prompt": "You and the Hero are given the option of bulking up your defense lines or bulking up your offensive lines with a grant from the local lord. Where do you put the money?",
+      "answer_1": {
+        "option": "Bulk Defense", 
+        "outcome": "Your army grows impenetrable.\n\nSTAMP 2 Shieldmen", 
+        "influence": [0,2,0,0,0]
+      },
+      "answer_2": {
+        "option": "Bulk Offence", 
+        "outcome": "Your army strikes fear into enemies.\n\nSTAMP 2 Swordsmen", 
+        "influence": [2,0,0,0,0]
+      }
+    },
+    "prep_2_dec_4": {
+      "prompt": "Even with the resources looted from the Kingdoms, the amount of leather on hand is limited. With what leather is given to the army, do you put it towards producing shields or producing bows?",
+      "answer_1": {
+        "option": "Produce Shields", 
+        "outcome": "Your kingdom's crest is burned onto the leather covers.\n\nSTAMP 2 Shieldmen", 
+        "influence": [0,2,0,0,0]
+      },
+      "answer_2": {
+        "option": "Produce Bows", 
+        "outcome": "The leather is used to create a solid grip.\n\nSTAMP 2 archers", 
+        "influence": [0,0,2,0,0]
+      }
+    },
+    "prep_2_dec_king": {
+      "prompt": "The New King calls for a meeting with you, informing you of an apparent gap in your army line-up. Remembering the Raids of earlier, the New King insists on improving the army’s defense and speed. Sternly, he orders for you to add either more horses or more Shieldmen. Which option to do choose?",
+      "answer_1": {
+        "option": "Improve defence", 
+        "outcome": "More recruits are trained to defend with shields.\n\nSTAMP 2 Shieldmen", 
+        "influence": [0,2,0,0,0]
+      },
+      "answer_2": {
+        "option": "Improve speed", 
+        "outcome": "Horses are added to the fleet for additional speed.\n\nSTAMP 2 horses", 
+        "influence": [0,0,0,2,0]
+      }
+    },
+    "prep_2_dec_barbarian": {
+      "prompt": "The Barbarian calls for a meeting with you, informing you of a lack in your army line-up. Remembering the Raids of earlier, the New King insists that previous army was too weak and wasted time. Sternly, he orders for you to add either more Swordmen or more physical training. Which option to do choose?",
+      "answer_1": {
+        "option": "Add Swordsmen", 
+        "outcome": "New recruits are trained to mastery with a sword.\n\nSTAMP 2 Swordsmen", 
+        "influence": [2,0,0,0,0]
+      },
+      "answer_2": {
+        "option": "Strengthen the Army", 
+        "outcome": "They physical training pays off. \n\nSTAMP strength onto your soldiers", 
+        "influence": [0,0,0,0,1]
       }
     }
   },
   "battle": {
     "battle_1_decision_1.1": {
-      "prompt": "You inform your army of the raiding of (Kingdom Name), and you waste no time as your troops make the journey. \nYou see the Kingdom from many miles away, visible with the flat openness of the fields. Your army faces the front entrance, guarded by the Kingdom’s own army of Archers.\n\n STAMP an enemy Archer on the right side of cell in (color) ink\n\n Do you order your army to ambush and attack the enemy Archers before they have the chance to shoot, or do you sneak in through another entrance?",
+      "prompt": "You inform your army of the raiding of Vetedam, and you waste no time as your troops make the journey. \nYou see the Kingdom from many miles away, visible with the flat openness of the fields. Your army faces the front entrance, guarded by the Kingdom’s own army of Archers.\n\nSTAMP an enemy Archer on the right side of cell in green ink\n\n Do you order your army to ambush and attack the enemy Archers before they have the chance to shoot, or do you sneak in through another entrance?",
       "answer_1": {
         "option": "Ambush", 
         "outcome": "You order your army to ambush the guarding Archers. The enemy Archers see your army as you approach on the open fields, drawing their bows and shooting quick.\nIn the open fields, with no protection or ways of evading, the incoming arrows hits a large chunk of your troops. They’re weakened by these injuries.\n\nSTAMP arrows pointing left on the left side\nSTAMP weakness",
@@ -86,17 +165,17 @@
       }
     },
     "battle_1_decision_1.2": {
-      "prompt": "Decision 7: entering",
+      "prompt": "You inform your army of the raiding of Comore, and you waste no time as your troops make the journey. You see the Kingdom as you approach, on the highest level of the rocky and uneven coastal terrain. It looks taller than it is, with high walls surrounding it. It’s clear there is only one entrance, as the other sides lead right into cliffside. It’s guarded by swordmen and shield men on the stone floor.\n\nDo you order your army to charge or march to the entrance?",
       "answer_1": {
         "option": "Run in", 
-        "outcome": "You order your troop to charge in for a surprise attack. However, the rocky and uneven stone ground is foreign on your troops feet. You watch as they each loose their footing and trip.\nUnfortunately, your troops weren’t trained for this. Even with the horses, your men (and horses) are unable to recover from their trips. Your troops, scraped and hurt by the rocks, still continues to charge, but it’s clear they’re weak to their injuries.",
-        "outcome_2": "You order your troop to charge in for a surprise attack. However, the rocky and uneven stone ground is foreign on your troops feet. You watch as they each loose their footing and trip.\nLuckily, your troops were trained for this. Their physical training allowing your troops to quickly recover from the trip, brushing off their injuries and continuing to charge forwards.",
+        "outcome": "You order your troop to charge in for a surprise attack. However, the rocky and uneven stone ground is foreign on your troops feet. You watch as they each loose their footing and trip.\nUnfortunately, your troops weren’t trained for this. Even with the horses, your men (and horses) are unable to recover from their trips. Your troops, scraped and hurt by the rocks, still continues to charge, but it’s clear they’re weak to their injuries.\n\nSTAMP Your army approaching the enemy walls\nSTAMP Weakness",
+        "outcome_2": "You order your troop to charge in for a surprise attack. However, the rocky and uneven stone ground is foreign on your troops feet. You watch as they each loose their footing and trip.\nLuckily, your troops were trained for this. Their physical training allowing your troops to quickly recover from the trip, brushing off their injuries and continuing to charge forwards.\n\nSTAMP Your army approaching the enemy walls\nLOSE STRENGTH",
         "influence": [0,0,0,0,-1],
         "next_decision": "battle_1_decision_2.3"
       },
       "answer_2": {
         "option": "Walk", 
-        "outcome": "", 
+        "outcome": "You order your troops to march forwards, walking to avoid the rocky terrain. While taking their time avoiding injury, enemy troops take notice of your army and prepare to defend. \n\nSTAMP your army on rocky terrain being noticed.", 
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_decision_2.4"
       }
@@ -105,13 +184,13 @@
       "prompt": "Through the wave of arrows, your troops reach closer to the enemy Archers, now face to face with them. Now in close reach, your close range troops are able to attack. \nYou’re given two options.",
       "answer_1": {
         "option": "Send your archers to raid the kingdom.", 
-        "outcome": "You follow along with your Archers, raiding one of the Kingdom’s inner towns, rich in wheat useful for food. This town has a large dried grain storage house, currently being raided by you and your Archers.\n STAMP",
+        "outcome": "You follow along with your Archers, raiding one of the Kingdom’s inner towns, rich in wheat useful for food. This town has a large dried grain storage house, currently being raided by you and your Archers.\n\nSTAMP Using your Archer and House stamps",
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_decision_3.1"
       },
       "answer_2": {
         "option": "Keep all your troops together to attack.", 
-        "outcome": "As your troops continue to fight the enemy soldiers, you see more enemy soldiers from inside the Kingdom start to approach, most likely alerted during the arrow rain. \n\nSTAMP", 
+        "outcome": "As your troops continue to fight the enemy soldiers, you see more enemy soldiers from inside the Kingdom start to approach, most likely alerted during the arrow rain. \n\nSTAMP Your troops fighting the enemy’s", 
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_decision_3.2"
       }
@@ -120,13 +199,13 @@
       "prompt": "Now inside, you decide to start raiding before enemies notice your invasion. Do you...",
       "answer_1": {
         "option": "Stay Together", 
-        "outcome": "Deciding to keep your army together, your numbers are enough to start raiding a decently sized town within the Kingdom.",
+        "outcome": "Deciding to keep your army together, your numbers are enough to start raiding a decently sized town within the Kingdom. \n\nSTAMP your troops sneaking into enemy houses.",
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_decision_3.3"
       },
       "answer_2": {
         "option": "Split into groups", 
-        "outcome": "You decide to split your troops up into small group to cover more area. Following one of the larger groups, you find yourselves in a small town, with a small town center.", 
+        "outcome": "You decide to split your troops up into small group to cover more area. Following one of the larger groups, you find yourselves in a small town, with a small town center. \n\nSTAMP your troops sneaking into enemy houses.", 
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_decision_3.4"
       }
@@ -135,28 +214,28 @@
       "prompt": "Even with the struggle of the ground, your army gets closer to the enemies guarding the entrance. They don’t see you approach fast enough to use the rocks to their advantage, instead facing your troops at face level. They’re equipped with long swords and thick shields.\nYou’re given two options on how to advance.",
       "answer_1": {
         "option": "Send In Archers", 
-        "outcome": "You command your Archers to shoot at the enemy lines, hoping to use the slight distance between to your advantage. However, your arrows are no match for the shields, almost bouncing off. ",
+        "outcome": "You command your Archers to shoot at the enemy lines, hoping to use the slight distance between to your advantage. However, your arrows are no match for the shields, almost bouncing off. \n\nSTAMP Your archers’ arrows being blocked by enemy shieldmen",
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_decision_3.5"
       },
       "answer_2": {
         "option": "Send In Shieldmen", 
-        "outcome": "You command your Shield-men to push through the enemy lines, using their shields to block the attacks of the swords. With your Shield-men on the defensive, your troops are able to force their way into the Kingdom.", 
+        "outcome": "You command your Shield-men to push through the enemy lines, using their shields to block the attacks of the swords. With your Shield-men on the defensive, your troops are able to force their way into the Kingdom.\n\nSTAMP Your troops fighting past enemy walls", 
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_decision_3.6"
       }
     },
     "battle_1_decision_2.4": {
-      "prompt": "Decision 8: they have high ground",
+      "prompt": "You order your troops to march forwards, walking to avoid the rocky terrain. As you get closer, the enemies sees your troop from the entrance, their Swordmen quickly scaling the entrance wall to gain the high ground.\n\nSTAMP Enemy swordsmen on the right side of the cell",
       "answer_1": {
         "option": "Use Archers", 
-        "outcome": "",
+        "outcome": "You order your Archers to shoot at the enemy Swordmen. Unprepared for the long range attacks, your Archers land some fatal hits on them.\n\nSTAMP Enemy swordsmen being shot by your archers",
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_decision_3.7"
       },
       "answer_2": {
         "option": "Climb With Swordsmen", 
-        "outcome": "", 
+        "outcome": "You order your Swordmen to climb the wall to close the distance between. They begin to climb the wall with issue, as the enemy Swordmen are unable to reach. \n\nSTAMP Your swordsmen facing the enemy swordsmen", 
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_decision_3.8"
       }
@@ -165,130 +244,340 @@
       "prompt": "Enemy troops located inside the Kingdom gets news of your raiding, and a handful of Archers on horseback ambushes you in the storage house. \nDo you set the storage on fire, allowing for an escape but losing the grain inside, or do you use force to attack back?",
       "answer_1": {
         "option": "Use fire.", 
-        "outcome": "You pull out a match stick from your pocket, striking it against one of the wooden support beam. You toss it into the piles of dried grain, seeing it catch a-blaze. As the fire starts to spread, it scares the enemy horses, allowing you and your Archers to escape the burning storage house.\n\nSTAMP\n\nWhile none of your Archers looses their life, you are unable to continue to raid the town. The enemy Archers quickly recovers and their keen eye makes it impossible for you to continue to raid the town. It’s likely word has gone out as well, stopping your troops to raid anymore.",
+        "outcome": "You pull out a match stick from your pocket, striking it against one of the wooden support beam. You toss it into the piles of dried grain, seeing it catch a-blaze. As the fire starts to spread, it scares the enemy horses, allowing you and your Archers to escape the burning storage house.\n\nSTAMP your archers escaping the scene.\n\nWhile none of your Archers looses their life, you are unable to continue to raid the town. The enemy Archers quickly recovers and their keen eye makes it impossible for you to continue to raid the town. It’s likely word has gone out as well, stopping your troops to raid anymore.",
         "influence": [0,0,0,0,0],
-        "next_decision": "battle_1_outro"
+        "next_decision": "battle_1_outro_win"
       },
       "answer_2": {
         "option": "Use force.", 
-        "outcome": "You order your Archers to fight back quickly. Your Archers, fast on their feet and bows, out-shoots the enemy Archers before they could ready their bows. Their horses are scared away from the arrows.\nYou and your troops are able to quickly raid the piles of grain from the storage. It’s enough grain to supply bread to your whole army.\n\nSTAMP", 
-        "outcome_2": "You order your Archers to fight back quickly. Your Archers, injured from the arrows earlier, struggles to pull their bows in time. Your Archers are shot one by one, unable to defend themselves. You’re able to flee from the storage house.\nGrouping back with the rest of your troop outside, you choose to draw back. The news have gotten out of your raiding, and more enemy Archers are making their way to the front entrance.\n\nSTAMP", 
+        "outcome": "You order your Archers to fight back quickly. Your Archers, fast on their feet and bows, out-shoots the enemy Archers before they could ready their bows. Their horses are scared away from the arrows.\nYou and your troops are able to quickly raid the piles of grain from the storage. It’s enough grain to supply bread to your whole army.\n\nSTAMP Your army winning against the archers", 
+        "outcome_2": "You order your Archers to fight back quickly. Your Archers, injured from the arrows earlier, struggles to pull their bows in time. Your Archers are shot one by one, unable to defend themselves. You’re able to flee from the storage house.\nGrouping back with the rest of your troop outside, you choose to draw back. The news have gotten out of your raiding, and more enemy Archers are making their way to the front entrance.\n\nSTAMP Your weakened archers failing to evade enemy fire", 
         "influence": [0,0,0,0,0],
-        "next_decision": "battle_1_outro"
+        "next_decision": "battle_1_outro_mid",
+        "next_decision_2": "battle_1_outro_lose"
       }
     },
     "battle_1_decision_3.2": {
       "prompt": "They have yet to get within bow and arrow range. Your army won’t be able to combat all of them at once, so you have no choice but to send one of your force to take care of the incoming enemies.\n\n Who do you send in?",
       "answer_1": {
         "option": "Swordsmen", 
-        "outcome": "You order your Swordmen to take care of the incoming enemy troops. The Swordmen, jumping onto horseback, quickly charges at them, evading the arrows similar to before. They’re able to get face to face and attack, too close for the enemy Archers to shoot more. \nYou see those enemy Archers fall as your Swordmen takes them out. Too far away to hear anymore commands, the Swordmen decide to do some raiding as you and the others continue to fight the enemy troops outside the Kingdom.\n\nSTAMP",
-        "outcome_2": "You order your Swordmen to take care of the incoming enemy troops. They make their way over, but with their injuries from the arrows earlier, they are slower and clumsier. The Swordmen get spotted easily, and lacking the speed, they get shot down easily.\n\nSTAMP\n\nWithout a portion of your army, you’re unable to fight back against the wave of new enemies. With no other choice, you and your troops flee.",
+        "outcome": "You order your Swordmen to take care of the incoming enemy troops. The Swordmen, jumping onto horseback, quickly charges at them, evading the arrows similar to before. They’re able to get face to face and attack, too close for the enemy Archers to shoot more. \nYou see those enemy Archers fall as your Swordmen takes them out. Too far away to hear anymore commands, the Swordmen decide to do some raiding as you and the others continue to fight the enemy troops outside the Kingdom.\n\nSTAMP Your swordsmen’s triumph over the enemies",
+        "outcome_2": "You order your Swordmen to take care of the incoming enemy troops. They make their way over, but with their injuries from the arrows earlier, they are slower and clumsier. The Swordmen get spotted easily, and lacking the speed, they get shot down easily.\n\nSTAMP Your swordsmen failing to evade enemy fire\n\nWithout a portion of your army, you’re unable to fight back against the wave of new enemies. With no other choice, you and your troops flee.",
         "influence": [0,0,0,0,0],
-        "next_decision": "battle_1_outro"
+        "next_decision": "battle_1_outro_mid",
+        "next_decision_2": "battle_1_outro_lose"
       },
       "answer_2": {
         "option": "Archers", 
-        "outcome": "You order your Archers to take care of the incoming enemy troops. They quickly start to aim at those new enemies riding on horseback. Your Archers shoots once in range, taking advantage of their head start, as the incoming enemies are too focused on riding quickly to aim. You see those enemies fall as your Archers shoots them down.\n\nSTAMP", 
+        "outcome": "You order your Archers to take care of the incoming enemy troops. They quickly start to aim at those new enemies riding on horseback. Your Archers shoots once in range, taking advantage of their head start, as the incoming enemies are too focused on riding quickly to aim. You see those enemies fall as your Archers shoots them down.\n\nSTAMP Your archers firing enemies off horses", 
         "influence": [0,0,0,0,0],
-        "next_decision": "battle_1_outro"
+        "next_decision": "battle_1_outro_win"
       }
     },
     "battle_1_decision_3.3": {
       "prompt": "After raiding the town, your troops gather in the town center, waiting for your next command. Before you can give any, you’re ambushed my a fleet of enemy soldiers. They’re quick, already aiming their bows at your men.\nWho do you send first?",
       "answer_1": {
         "option": "Archers", 
-        "outcome": "With little time, you send your Archers to take down the enemies. However, their speed fails to match your enemies, leading to some of your Archers to get shot and die. In good news, your Archers get a couple hits in, giving enough time for the rest of your troop to draw back. Even though you’ve lost some men, you return home with some resources.",
-        "outcome_2": "Your Archers, quick on horseback, charge at the enemies. The speed and agility of your horses allows your men to evade the incoming arrows, as the enemies are too focused on your Archers to think about the rest of your troop. The Archers shoot down the enemies with no causalities on your side. However, you see your men grow tired, and with the resources in hand, it would continue to be difficult to fight while holding such items. So, you decide to return home with your loot.",
+        "outcome": "With little time, you send your Archers to take down the enemies. However, their speed fails to match your enemies, leading to some of your Archers to get shot and die. In good news, your Archers get a couple hits in, giving enough time for the rest of your troop to draw back. Even though you’ve lost some men, you return home with some resources.\n\nSTAMP Your archers being defeated by enemies on horses",
+        "outcome_2": "Your Archers, quick on horseback, charge at the enemies. The speed and agility of your horses allows your men to evade the incoming arrows, as the enemies are too focused on your Archers to think about the rest of your troop. The Archers shoot down the enemies with no causalities on your side. \n\nSTAMP Your archers on horseback defeating the enemies\n\n However, you see your men grow tired, and with the resources in hand, it would continue to be difficult to fight while holding such items. So, you decide to return home with your loot.",
         "influence": [0,0,0,0,0],
-        "next_decision": "battle_1_outro"
+        "next_decision": "battle_1_outro_mid",
+        "next_decision_2": "battle_1_outro_win"
       },
       "answer_2": {
         "option": "Shieldmen", 
-        "outcome": "With little time, you send your Shieldmen to the front. With their shields, they defend the rest of your troops from the incoming arrows. However, this isn’t able to withstand much longer, as the waves of arrows start to weaken the shield.\nYour offensive soldiers rush to attack the enemy Archers, but with a lack of speed, some of your Shieldmen fall before they your troops can attack. \nYour troops are able to push back against the enemies, just long enough for you to order a withdrawal. You have enough resources, and it would make fighting harder with less men and more carry ons.", 
-        "outcome_2": "Your Sheildmen quickly step to the front, defending the rest of your troops from the incoming arrows. With the enemy soldiers distracted, your offensive men jump onto horseback, taking advantage of the distraction to attack. The enemy soldiers fall one by one, until no more arrows threaten your Sheildmen. However, you see your men grow tired, and with the resources in hand, it would continue to be difficult to fight while holding such items. So, you decide to return home with your loot.",
+        "outcome": "With little time, you send your Shieldmen to the front. With their shields, they defend the rest of your troops from the incoming arrows. However, this isn’t able to withstand much longer, as the waves of arrows start to weaken the shield.\nYour offensive soldiers rush to attack the enemy Archers, but with a lack of speed, some of your Shieldmen fall before they your troops can attack. \nYour troops are able to push back against the enemies, just long enough for you to order a withdrawal. You have enough resources, and it would make fighting harder with less men and more carry ons.\n\nSTAMP Your army escaping among fallen shieldmen", 
+        "outcome_2": "Your Sheildmen quickly step to the front, defending the rest of your troops from the incoming arrows. With the enemy soldiers distracted, your offensive men jump onto horseback, taking advantage of the distraction to attack. The enemy soldiers fall one by one, until no more arrows threaten your Sheildmen. \n\nSTAMP Your shieldmen blocking arrows for swordmen on horseback \n\nHowever, you see your men grow tired, and with the resources in hand, it would continue to be difficult to fight while holding such items. So, you decide to return home with your loot.",
         "influence": [0,0,0,0,0],
-        "next_decision": "battle_1_outro"
+        "next_decision": "battle_1_outro_mid",
+        "next_decision_2": "battle_1_outro_win"
       }
     },
     "battle_1_decision_3.4": {
       "prompt": "As your group begin to start raiding, you’re ambushed by a small group of enemy troops, slightly more men than your group. They spot you first, already aimed to shoot.\nDo you sacrifice your Shield Man or do you attack all together?",
       "answer_1": {
         "option": "Sacrifice shieldmen", 
-        "outcome": "You send your one Shieldman to defend against the arrows. All the enemy soldiers laser focus on them, pelting them with arrows. Your Shieldman withstands the arrows until they start to wear-down, then break the shield. \nYou and your group doesn’t stick around long enough to see them fatally shot, fleeing from the unequal fight without any resources.",
+        "outcome": "You send your one Shieldman to defend against the arrows. All the enemy soldiers laser focus on them, pelting them with arrows. Your Shieldman withstands the arrows until they start to wear-down, then break the shield. \nYou and your group doesn’t stick around long enough to see them fatally shot, fleeing from the unequal fight without any resources. \n\nSTAMP Your shieldmen’s last stand",
         "influence": [0,0,0,0,0],
-        "next_decision": "battle_1_outro"
+        "next_decision": "battle_1_outro_mid"
       },
       "answer_2": {
         "option": "Attack Together", 
-        "outcome": "You decide to take the risk and attack all together. Quickly, you realize you are no match for your enemies’ speed and tactics. Without order, one of your solider starts to defend, becoming a target for the enemy Archer’s arrows.\nYou and your group doesn’t stick around long enough to see them fatally shot, fleeing from the unequal fight without any resources.", 
-        "outcome_2": "You decide to take the risk and attack all together. The first enemy arrow is shot at you, narrowly missing you and the horse stood besides you. It spooks the horse, causing it to yank itself out of the hold of one of your soldiers. Before you could grab onto the steed, it had already ran off towards the enemies, avoiding their arrows and kicking at their numbers. Not even the best trained men can defend against the back-kick of a horse.\nIn the chaos, you see the uninjured and living enemy Archers flee from the area. One of your soldiers is able to control the horse, and you quickly raid the town with what you can carry.\nThe horse still looked shaken up, so you decide to withdraw your army from the Kingdom.",
+        "outcome": "You decide to take the risk and attack all together. Quickly, you realize you are no match for your enemies’ speed and tactics. Without order, one of your solider starts to defend, becoming a target for the enemy Archer’s arrows.\nYou and your group doesn’t stick around long enough to see them fatally shot, fleeing from the unequal fight without any resources.\n\nSTAMP Your army escaping, leaving one swordsman to hold them off", 
+        "outcome_2": "You decide to take the risk and attack all together. The first enemy arrow is shot at you, narrowly missing you and the horse stood besides you. It spooks the horse, causing it to yank itself out of the hold of one of your soldiers. Before you could grab onto the steed, it had already ran off towards the enemies, avoiding their arrows and kicking at their numbers. Not even the best trained men can defend against the back-kick of a horse.\nIn the chaos, you see the uninjured and living enemy Archers flee from the area. One of your soldiers is able to control the horse, and you quickly raid the town with what you can carry.\nThe horse still looked shaken up, so you decide to withdraw your army from the Kingdom.\n\nSTAMP The horse defeating enemies",
         "influence": [0,0,0,0,0],
-        "next_decision": "battle_1_outro"
+        "next_decision": "battle_1_outro_mid",
+        "next_decision_2": "battle_1_outro_win"
       }
     },
     "battle_1_decision_3.5": {
       "prompt": "While your Archers were shooting, the enemy Swordmen charged quickly forwards, used to the unpredictable ground. They slash at your Archers, fatally wounding them.\nWith the loss of some of your men, you need to start raiding as soon as possible before the rest of your men grow tired.\nDo you...",
       "answer_1": {
         "option": "Send some to start raiding", 
-        "outcome": "At your order, you send half of your troops to force their way through the entrance and disregard the enemy soldiers. At the sight of this, the enemy soldiers falter, confused at the sight. Your attacking troops take advantage of this and slaughter some of them. Your troops continue to fight as the others raid what they can.\nAfter some time, with your troops still fighting at the entrance, your raiders return with some resources. They couldn’t get far, as their numbers were no match for the enemy soldiers within the Kingdom.",
+        "outcome": "At your order, you send half of your troops to force their way through the entrance and disregard the enemy soldiers. At the sight of this, the enemy soldiers falter, confused at the sight. Your attacking troops take advantage of this and slaughter some of them. Your troops continue to fight as the others raid what they can.\nAfter some time, with your troops still fighting at the entrance, your raiders return with some resources. They couldn’t get far, as their numbers were no match for the enemy soldiers within the Kingdom.\n\nSTAMP Your troops attacking enemies from both sides",
         "influence": [0,0,0,0,0],
-        "next_decision": "battle_1_outro"
+        "next_decision": "battle_1_outro_win"
       },
       "answer_2": {
         "option": "Keep all troops attacking", 
-        "outcome": "At your order, your troops continue to fight despite the loss of some of your men. As they fight, they become more accustomed to the ground, able to start holding their own. With the physical training, your troops are able to reduce the enemies’ numbers significantly, enough to enter through the entrance.\nYou raid what you can, stone, fish, and ores, before needing to withdrawal as the enemy soldiers from inside the Kingdom makes themselves known. Before you leave the Kingdom land, your troops loot the fallen enemies' swords and shields.",
-        "outcome_2": "At your order, your troops continue to fight despite the loss of some of your men. As they fight, it’s clear that they’re still unable to adapt to the terrain, and with the injures easily, they struggle to hold their own. You watch as some of your men die.",
+        "outcome": "At your order, your troops continue to fight despite the loss of some of your men. As they fight, they become more accustomed to the ground, able to start holding their own. With the physical training, your troops are able to reduce the enemies’ numbers significantly, enough to enter through the entrance.\nYou raid what you can, stone, fish, and ores, before needing to withdrawal as the enemy soldiers from inside the Kingdom makes themselves known. Before you leave the Kingdom land, your troops loot the fallen enemies' swords and shields\n\nSTAMP Your troops defeating the enemies on uneven ground.",
+        "outcome_2": "At your order, your troops continue to fight despite the loss of some of your men. As they fight, it’s clear that they’re still unable to adapt to the terrain, and with the injures easily, they struggle to hold their own. You watch as some of your men die.\n\nSTAMP Your troops being defeated by the enemy",
         "influence": [0,0,0,0,0],
-        "next_decision": "battle_1_outro"
+        "next_decision": "battle_1_outro_win",
+        "next_decision_2": "battle_1_outro_mid"
       }
     },
     "battle_1_decision_3.6": {
       "prompt": "Now inside, you see enemy troops within the Kingdom.\nDo you...",
       "answer_1": {
         "option": "Fight enemy troops", 
-        "outcome": "You decide to fight the enemy soldiers you see. There are a lot more than you expected. While the physical training comes through in your troops, a couple do fall at the swords of the enemies.",
-        "outcome_2": "You decide to fight the enemy soldiers you see. There are a lot more than you expected. With their numbers and strength, and your army’s locational disadvantage, your men are easily slain. You’re barely able to flee from the Kingdom and return home, empty handed except for a lone surviving soldier.",
+        "outcome": "You decide to fight the enemy soldiers you see. There are a lot more than you expected. While the physical training comes through in your troops, a couple do fall at the swords of the enemies.\n\nSTAMP Your troops fighting, some defeated",
+        "outcome_2": "You decide to fight the enemy soldiers you see. There are a lot more than you expected. With their numbers and strength, and your army’s locational disadvantage, your men are easily slain. You’re barely able to flee from the Kingdom and return home, empty handed except for a lone surviving soldier.\n\nSTAMP Your army being defeated by the enemy",
         "influence": [0,0,0,0,0],
-        "next_decision": "battle_1_outro"
+        "next_decision": "battle_1_outro_mid",
+        "next_decision_2": "battle_1_outro_lose"
       },
       "answer_2": {
         "option": "Sneak and raid quietly", 
-        "outcome": "You decide to have your troops raid the Kingdom instead of fighting the enemies. They’re able to use the rocky geography to their advantage, evading the sight of the enemy soldiers within.\nOut of sight, you’re able to raid successfully, gathering metals, ores, and preserved meats. With the raided loot and your men intact, you return home victorious.", 
+        "outcome": "You decide to have your troops raid the Kingdom instead of fighting the enemies. They’re able to use the rocky geography to their advantage, evading the sight of the enemy soldiers within.\nOut of sight, you’re able to raid successfully, gathering metals, ores, and preserved meats. With the raided loot and your men intact, you return home victorious.\n\nSTAMP Your troops sneaking and hiding from enemies", 
         "influence": [0,0,0,0,0],
-        "next_decision": "battle_1_outro"
+        "next_decision": "battle_1_outro_win"
       }
     },
     "battle_1_decision_3.7": {
-      "prompt": "Decision 9: Enemy less full",
+      "prompt": "With less enemy Swordmen, their numbers are more manageable for your men. What are your next orders?",
       "answer_1": {
         "option": "Focus on raiding", 
-        "outcome": "",
+        "outcome": "You decide to have your troops raid the Kingdom instead of fighting the enemies. They’re able to use the rocky geography to their advantage, evading the sight of the enemy soldiers within.\nOut of sight, you’re able to raid successfully, gathering metals, ores, and preserved meats. With the raided loot and your men intact, you return home victorious.\n\nSTAMP Your troops sneaking and hiding from enemies", 
         "influence": [0,0,0,0,0],
-        "next_decision": "battle_1_outro"
+        "next_decision": "battle_1_outro_win"
       },
       "answer_2": {
         "option": "Finish remaining enemies", 
-        "outcome": "", 
-        "outcome_2": "",
+        "outcome": "You decide to have your troops finish off the remaining enemies. Even with the lesser numbers of the enemy troops, their strength still poses a challenge for your men. You’re able to keep your ground, but some of your men fall at the enemies hands.\n\nSTAMP Your troops fighting the enemy, some defeated", 
+        "outcome_2": "You decide to have your troops finish off the remaining enemies. With your physical training, your men are able to slay what enemies were left at the Kingdom entrance. Now without opposition, your troops are able to raid successfully, gathering metals, ores, and preserved meats. With the raided loot and your men intact, you return home victorious.\n\nSTAMP Your strengthened troops victorious among defeated enemies",
         "influence": [0,0,0,0,0],
-        "next_decision": "battle_1_outro"
+        "next_decision": "battle_1_outro_mid",
+        "next_decision_2": "battle_1_outro_win"
       }
     },
     "battle_1_decision_3.8": {
-      "prompt": "Decision 9: Face to face with enemy force",
+      "prompt": "Now face to face with the enemy Swordmen, what are you next orders?",
       "answer_1": {
-        "option": "Use shieldmen", 
-        "outcome": "",
+        "option": "Use Shieldmen", 
+        "outcome": "You decide to have your Shieldmen take over your Swordmen. Using their shields, they distract the enemy Swordmen, allowing for your troops to enter the Kingdom and start raiding.\nDuring this however, some of your Shieldmen are slain by the enemy swords.\n\nSTAMP Your shieldmen fighting enemy swordsmen",
         "influence": [0,0,0,0,0],
-        "next_decision": "battle_1_outro"
+        "next_decision": "battle_1_outro_mid"
       },
       "answer_2": {
-        "option": "Use swordsmen", 
-        "outcome": "",
-        "outcome_2": "",
+        "option": "Use Swordsmen", 
+        "outcome": "You decide to have your Swordmen focus on fighting the enemies. The enemies troops, more stronger than your troops, are able to slay some of your Swordmen.\n\nSTAMP Your swordsmen fighting against various enemies, some defeated",
+        "outcome_2": "You decide to have your Swordmen focus on fighting the enemies. With the help of their physical training, the enemies are unable to hold much ground, cornered against the walls. The enemy Swordmen don’t last long as they’re slain by your men.\nWith this, your troops are able to force into the Kingdom and start raiding.\n\nSTAMP Your strengthened swordsmen cornering the enemies",
         "influence": [0,0,0,0,0],
-        "next_decision": "battle_1_outro"
+        "next_decision": "battle_1_outro_mid",
+        "next_decision_2": "battle_1_outro_win"
       }
-    }
+    },
+    "battle_1_outro_good": {
+      "prompt": "Returning home from your conquest, you look over at your army. You see all your men returned safe. However, celebrations don’t last long.\n\nYou see two options before you.\nThe first is the New King, crowned by the Royal Counsel for their outstanding work during the Raids. They’re more calmer than the average soldier, slow to force but quick to strategize.\nThe second is what your Kingdom has dubbed the ‘Barbarian’, a title granted due to their physical and combat abilities. They’re strong and quick to fight, but slow to strategize.",
+      "answer_1": {
+        "option": "The New King", 
+        "outcome": "And he is crowned. \n\nSTAMP a troop of your choice, now with a crown among the surviving army",
+        "influence": [0,0,0,0,0],
+        "next_decision": "prep_2_intro"
+      },
+      "answer_2": {
+        "option": "The Barbarian", 
+        "outcome": "So it is decided. \n\nSTAMP a troop of your choice, now with an axe among the surviving army",
+        "influence": [0,0,0,0,0],
+        "next_decision": "prep_2_intro"
+      }
+    },
+    "battle_1_outro_mid": {
+      "prompt": "Returning home from your conquest, you look over at your army. Your army has dwindled, lost to hands of war. You don’t get much time for celebrators or memorials before receiving some news. \n\nYou see two options before you.\nThe first is the New King, crowned by the Royal Counsel for their outstanding work during the Raids. They’re more calmer than the average soldier, slow to force but quick to strategize.\nThe second is what your Kingdom has dubbed the ‘Barbarian’, a title granted due to their physical and combat abilities. They’re strong and quick to fight, but slow to strategize.",
+      "answer_1": {
+        "option": "The New King", 
+        "outcome": "And he is crowned. \n\nSTAMP a troop of your choice, now with a crown among the surviving army",
+        "influence": [0,0,0,0,0],
+        "next_decision": "prep_2_intro"
+      },
+      "answer_2": {
+        "option": "The Barbarian", 
+        "outcome": "So it is decided. \n\nSTAMP a troop of your choice, now with an axe among the surviving army",
+        "influence": [0,0,0,0,0],
+        "next_decision": "prep_2_intro"
+      }
+    },
+    "battle_1_outro_bad": "Only one choice stands before you. The New King, crowned by the Royal Counsel for being the sole survivor of the Raids, praised for their resilience. They’re more calmer than your late soldiers, slow to force but quick to strategize. \n\nSTAMP The new king, the lone survivor (any troop with a crown)",
+    "battle_2_decision_1": {
+      "prompt": "Right as the last of your new troops are trained, you get new news. The enemy Kingdom are near, almost at your Kingdom’s doorstep.  You and the Hero quickly inform your troops of the incoming enemy.\nWhen the enemy troops come marching, in sight of you, the Hero prompts you for your command.\nDo you...",
+      "answer_1": {
+        "option": "Send all troop to defend the front entrance.", 
+        "outcome": "At your command, all your troops prepare to defend the entrance. With the experience from your last battle, your army is prepared for the fight. They’re able to hold the enemy troops back, even able to land some fatal hits.\n\nSTAMP Your troops defending your gate against the enemy",
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_2_decision_2.1"
+      },
+      "answer_2": {
+        "option": "Send Swordsmen to attempt a flank", 
+        "outcome": "At your command, your troops begin to set up a flank to attack the enemy from behind. To do this, some of your soldiers slip through other exits to catch the enemy by surprised. This leaves the front lines understaffed, resulting in the lost of some of your troops, mainly ranged and defensive men.\n\nSTAMP the enemies getting through your front lines", 
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_2_decision_2.2"
+      }
+    },
+    "battle_2_decision_2.1": {
+      "prompt": "The enemy soldiers start to back off slowly, but the Hero has the hunch that it’s not over yet. The hunch prompts you to make a decision.\nDo you...",
+      "answer_1": {
+        "option": "Chase down the enemy soldiers backing away", 
+        "outcome": "You order your troops to chase down the enemy troops. They do as commanded, moving from their position to chase. With focus now on offense, your defense lessens. You loose some troops in the attack.\n\nSTAMP your army on foot chasing an enemy to the right",
+        "outcome_2": "You order your troops to chase down the enemy troops. They do as commanded, moving from their position to chase. With the extra training, your troops are able to slay some of the retreating enemy soldiers.\n\nSTAMP Your troops attacking an enemy facing the right",
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_2_decision_3.1"
+      },
+      "answer_2": {
+        "option": "Keep your troops holding defences at the entrance", 
+        "outcome": "You order your troops to hold their defense of the entrance. You watch as the enemies back away until you can no longer see them. Before you start counting your victories, you hear the sound of your troops being attacked. With little time to react, some fall by the hands of the enemy troops.\n\nSTAMP enemies on the left side of the cell, attacking your troops from behind", 
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_2_decision_3.2"
+      }
+    },
+    "battle_2_decision_2.2": {
+      "prompt": "With less troops defending your entrance, the enemy soldiers force their way in. You hear the panicked noises from the civilians inside. What are your next orders?",
+      "answer_1": {
+        "option": "Protect the Civilians", 
+        "outcome": "You quickly order your front line troops to protect the civilians. Your troops follow through, defending them from the attacks of the enemy army, almost too well. Before either you or the Hero realizes that the number of enemy soldiers had gone down, you get news that your Swordsmen sent for the surprise attack were intercepted. The result is the loss of your Swordmen, and a sizable portion of your army.\n\nSTAMP the enemy army on the left side of the cell, attacking your swordsmen on the right",
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_2_decision_3.3"
+      },
+      "answer_2": {
+        "option": "Attack to support the flanking Swordsmen", 
+        "outcome": "You quickly send an order for your Swordsmen to surprise attack now. The timing was perfect, catching the enemy soldiers off guard. In the shock, your troops are able to slay a large portion of the enemy forces. Before you can make your next order, the Hero steps in.\n\nSTAMP your archers and shieldmen on the left of the cell attacking enemies in the middle with your swordsmen flanking on the right", 
+        "influence": [0,0,0,0,0],
+        "next_decision": "battle_2_decision_3.4"
+      }
+    },
+    "battle_2_decision_3.1_king": {
+      "prompt": "You watch as your troops fight the enemies on the battle field a good distance from your Kingdom entrance. Both troops, your own and the enemy’s hold strong, neither faltering.\nThe New King urges for the enemies to be taken care of before your troops grow tired. They give two possible options. Either send in more horses or have your troops try to surround the enemies.",
+      "answer_1": {
+        "option": "Send in Horses", 
+        "outcome": "You command to release the horses. These horses have a burning hatred for the enemy Kingdom, and waste no time starting to kick and stomp on them. You’re slightly stunned by this, but decides a win is a win as the enemy troops’ numbers fall.\n\nSTAMP The enemy troops, trampled by horses",
+        "influence": [0,0,0,0,0],
+        "win_chance": 0.75
+      },
+      "answer_2": {
+        "option": "Surround Them", 
+        "outcome": "You command for your troops to reformate and surround the enemy troops. As they do this, the enemies prepare, and are able to stand their ground against the incoming attacks\n\nSTAMP Many enemies, defending against your troops", 
+        "influence": [0,0,0,0,0],
+        "win_chance": 0.5
+      }
+    },
+    "battle_2_decision_3.2_king": {
+      "prompt": "The New King gives you two options.\nThe first is to split your troops up to narrow down on fighting specific targets, pushing them into the streets where they’re at a disadvantage.\nThe second is to send your Archers to split off from the rest, scaling the walls to use the distance advantage.\nWhich option do you choose?",
+      "answer_1": {
+        "option": "Split into Groups", 
+        "outcome": "You command for your troops to split up into small groups. Your troops fight hard, both thanks to numbers and training. The enemy troops are pushed into the Kingdom streets, but the fight continues strongly, with neither side wanting to face defeat.\n\nSTAMP A trio of your troops fighting evenly against enemies",
+        "influence": [0,0,0,0,0],
+        "win_chance": 0.5
+      },
+      "answer_2": {
+        "option": "Send Archers to the Wall", 
+        "outcome": "You command for your Archers to climb the Kingdom walls. With the distance, your Archers are easily able to shoot down at the enemy troops, and evade the arrows shooting up. With this help, the enemy troops’ numbers fall fast.\n\nSTAMP Your archers firing at enemies from atop their wall", 
+        "influence": [0,0,0,0,0],
+        "win_chance": 0.75
+      }
+    },
+    "battle_2_decision_3.3_king": {
+      "prompt": "The King wants to call a surrender, but you have the option of faking it to surprise attack when the enemy’s guard is low. Which option do you pick?",
+      "answer_1": {
+        "option": "Surrender", 
+        "outcome": "You choose to surrender truthfully. The enemy commander accepts the surrender, sending the enemy soldiers to siege the governing body. Your troops are spared, but kept under watchful eye as the Kingdom is taken over.\n\nSTAMP your troops, surrendering to the enemy",
+        "influence": [0,0,0,0,0],
+        "win_chance": 0
+      },
+      "answer_2": {
+        "option": "False Surrender", 
+        "outcome": "You choose to fake surrender. The enemy commander accepts the surrender, sending some enemy soldiers to siege the governing body and some to keep an eye on your troops. The moment they’re sent off, you order your troops to attack with smaller enemy troop. However, it’s shut down quick from the enemies’ watchful eye. They aren’t merciful, severely wounding those who fought back.\n\nSTAMP Your troops, defended against by enemy shieldmen", 
+        "influence": [0,0,0,0,0],
+        "win_chance": 0
+      }
+    },
+    "battle_2_decision_3.4_king": {
+      "prompt": "The King urges the enemy commander to surrender, and seeing the numbers, the commander agrees and surrenders. The King lets you decide on accepting it or declining. Accepting would spare them, while declining would continue the fight.",
+      "answer_1": {
+        "option": "Accept", 
+        "outcome": "You accept the enemy’s surrender. They don’t go back on their word, allowing themselves to imprisoned. With the enemy troops contained and defeated, you finally breathe easily.\n\nSTAMP enemy troops, surrendering to your army.",
+        "influence": [0,0,0,0,0],
+        "win_chance": 1
+      },
+      "answer_2": {
+        "option": "Decline", 
+        "outcome": "You decline the enemy’s surrender, ordering for your troops to finish off what enemy soldiers remain. The fight continues, the numbers leaning to your side.\n\nSTAMP your ruthless army, fighting against the few enemies left", 
+        "influence": [0,0,0,0,0],
+        "win_chance": 0.75
+      }
+    },
+    "battle_2_decision_3.1_barbarian": {
+      "prompt": "You watch as your troops fight the enemies on the battle field a good distance from your Kingdom entrance. Both troops, your own and the enemy’s hold strong, neither faltering.\nThe Barbarian isn’t satisfied though, seeing this as a waste of time. He urges you to do something, either to let him handle it or tell your troop to focus on the enemies’ horses. Do you...",
+      "answer_1": {
+        "option": "Let Him Handle It", 
+        "outcome": "You let the Barbarian handle it, and they are ecstatic. They charge in, large sword swinging. Immediately, they break the formation of your troops, attack the enemies with little care. In the chaos, some of your men are slain and some of the enemies slip away and towards the Kingdom entrance. \n\nSTAMP your barbarian, defeated as the battle continues",
+        "influence": [0,0,0,0,0],
+        "win_chance": 0
+      },
+      "answer_2": {
+        "option": "Focus on Their Horses", 
+        "outcome": "You command for your troops to focus on the enemy horses. Your troops, eager to finish off the enemies, quickly go for the horses. Slowly, as the horses are scared away or slain, the enemies are vulnerable to attacks. They don’t last long without their steed, and your troops are able to dismantle their army.\n\nSTAMP Your troops defeating enemies on horseback", 
+        "influence": [0,0,0,0,0],
+        "win_chance": 1
+      }
+    },
+    "battle_2_decision_3.2_barbarian": {
+      "prompt": "The Barbarian gives you two options.\nThe first is to do a double flank, backing away and attacking from within the Kingdom.\nThe second is to inspire the Civilians to do their part in defending their Kingdom.\nWhich option do you choose?",
+      "answer_1": {
+        "option": "Double flank", 
+        "outcome": "You command for your troops attempt a double flank, but as they start to move away from the Kingdom walls, the enemy troops are already there to stop them. They easily predict your strategy, and swiftly start slaying your soldiers.\n\nSTAMP Enemy troops defending themselves from your troops attacking on both sides",
+        "influence": [0,0,0,0,0],
+        "win_chance": 0.25
+      },
+      "answer_2": {
+        "option": "Inspire The Civillians", 
+        "outcome": "In the distraction of the battle, the enemy troops don’t notice you and the Barbarian slip away into the Kingdom. You both stand in the town center, not too far from the Kingdom entrance. Together, you start to rally the frightened, scared, and angry civilians to help defend their beloved Kingdom from the enemies.\nIt works. The years of torment from the enemy Kingdom fueled a fire within your Kingdom’s people, and using whatever tools they have on hand, the civilians start to help the attack of the enemy army. It’s unexpected to your enemy, and they struggle to hold their own against the wave of angry people.\n\nSTAMP A chaotic battle, enemies on fire", 
+        "influence": [0,0,0,0,0],
+        "win_chance": 0.75
+      }
+    },
+    "battle_2_decision_3.3_barbarian": {
+      "prompt": "The Barbarian wants to keep pushing, either letting him handle it or have the troops continue to hold defence. Which option do you pick?",
+      "answer_1": {
+        "option": "Let Him Handle It", 
+        "outcome": "You let the Barbarian handle it. He does not, in fact, handle it well. He swings and attacks with little thought, and in the distraction, is taken down easily severely wounded by the enemy soldiers. Your own troops, stunned by this, are severely wounded as well.\n\nSTAMP the barbarian, failing to handle it",
+        "influence": [0,0,0,0,0],
+        "win_chance": 0
+      },
+      "answer_2": {
+        "option": "Defence (Last Stand)", 
+        "outcome": "However, they don’t last long. Without the asset of physical training, their current strength is no match for the enemy’s numbers. They’re severely wounded one by one.\n\nSTAMP your troops, fighting a losing battle", 
+        "outcome_2": "With the asset of their physical training, they’re able to hold steady against the enemy’s numbers, putting up a strong fight.\n\nSTAMP your strengthened but outnumbered troops, fighting an even battle against the enemy",
+        "influence": [0,0,0,0,0],
+        "win_chance": 0,
+        "next_decision_2": "battle_2_outro"
+      }
+    },
+    "battle_2_decision_3.4_barbarian": {
+      "prompt": "The Barbarian wants to finish off the enemy troops, years of distain for the enemy Kingdom showing in his eyes. He gives you the options of either sending everyone in to attack or to let him handle it.\nWhich do you choose?",
+      "answer_1": {
+        "option": "Everyone Attack", 
+        "outcome": "You order for all your troops to attack the enemy soldiers, with the Barbarian adding ‘to finish them off’. With the numbers leaning to your side, your troops are easily able to slay the enemy soldiers.\n\nSTAMP your ruthless army, fighting against the few enemies left",
+        "influence": [0,0,0,0,0],
+        "win_chance": 0.75
+      },
+      "answer_2": {
+        "option": "Let Him Handle It", 
+        "outcome": "You let the Barbarian handle it, and he is ecstatic. He’s able to focus in on the few remaining enemy soldiers and charge in swords swinging. The enemies have no chance, as the moment they notice the Barbarian, they’ve already been slashed. The enemy forces dies in a matter of seconds.\n\nSTAMP the barbarian’s rampage", 
+        "influence": [0,0,0,0,0],
+        "win_chance": 1
+      }
+    },
+    "batlle_2_win": "As the fight continues, you watch as your Kingdom comes out on top, resisting the enemy Kingdom’s invasion. When the threat is gone, you finally celebrate. You watch as the Hero is celebrated, standing victorious .\n\nSTAMP your hero, standing among your army",
+    "battle_2_lose": "As the fight continues, you watch as your Kingdom is seized, taken over by the enemy Kingdom. The Centuries of defending and work on holding them off crumbling in a matter of days. Your home Kingdom is no longer yours, but now an extension of Prerid Kingdom.\n\nSTAMP The enemy kingdom’s crest"
   }
 }
