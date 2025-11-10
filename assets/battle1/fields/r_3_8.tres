@@ -1,10 +1,58 @@
-[gd_resource type="Resource" script_class="Prompt" load_steps=2 format=3 uid="uid://cl5c25pp1nnmf"]
+[gd_resource type="Resource" script_class="Prompt" load_steps=9 format=3 uid="uid://cl5c25pp1nnmf"]
 
 [ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="1_0x4jk"]
+[ext_resource type="Resource" uid="uid://digqea7oi1n5y" path="res://assets/battle1/fields/f_mid_des.tres" id="1_1yrt5"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="2_midpu"]
+[ext_resource type="Resource" uid="uid://dcqd24qr63br2" path="res://assets/battle1/fields/f_win_des.tres" id="3_midpu"]
+
+[sub_resource type="Resource" id="Resource_hgjuf"]
+script = ExtResource("2_midpu")
+Description = "Use Shieldmen"
+Outcome = "You decide to have your Shieldmen take over your Swordmen. Using their shields, they distract the enemy Swordmen, allowing for your troops to enter the Kingdom and start raiding.\\nDuring this however, some of your Shieldmen are slain by the enemy swords.\\n\\nSTAMP Your shieldmen fighting enemy swordsmen"
+Influence = Dictionary[int, int]({
+2: -1
+})
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("1_1yrt5")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_qtfwt"]
+script = ExtResource("2_midpu")
+Description = ""
+Outcome = "You decide to have your Swordmen focus on fighting the enemies. With the help of their physical training, the enemies are unable to hold much ground, cornered against the walls. The enemy Swordmen don’t last long as they’re slain by your men.\\nWith this, your troops are able to force into the Kingdom and start raiding.\\n\\nSTAMP Your strengthened swordsmen cornering the enemies"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("3_midpu")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_6eg1f"]
+script = ExtResource("2_midpu")
+Description = ""
+Outcome = "You decide to have your Swordmen focus on fighting the enemies. The enemies troops, more stronger than your troops, are able to slay some of your Swordmen.\\n\\nSTAMP Your swordsmen fighting against various enemies, some defeated"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("1_1yrt5")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_8ch8x"]
+script = ExtResource("2_midpu")
+Description = "Use Swordsmen"
+Outcome = ""
+ConditionalOutcome1 = SubResource("Resource_qtfwt")
+ConditionalOutcome2 = SubResource("Resource_6eg1f")
+Influence = Dictionary[int, int]({})
+ConditionKey = "has_strength"
+ConditionIndex = -1
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]
 script = ExtResource("1_0x4jk")
-PromptText = ""
-Answer1ConditionKey = ""
-Answer2ConditionKey = ""
+PromptText = "Now face to face with the enemy Swordmen, what are you next orders?"
+Answer1ConditionKey = "has_shieldmen"
+Answer2ConditionKey = "has_swords"
+Answer1 = SubResource("Resource_hgjuf")
+Answer2 = SubResource("Resource_8ch8x")
 metadata/_custom_type_script = "uid://4kjr6gery7dy"

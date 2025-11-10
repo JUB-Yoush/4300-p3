@@ -36,7 +36,7 @@ Outcome = ""
 ConditionalOutcome1 = SubResource("Resource_6lehf")
 ConditionalOutcome2 = SubResource("Resource_y1b1j")
 Influence = null
-ConditionKey = ""
+ConditionKey = "has_strength"
 ConditionIndex = -1
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 

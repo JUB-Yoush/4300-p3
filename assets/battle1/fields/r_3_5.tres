@@ -1,10 +1,56 @@
-[gd_resource type="Resource" script_class="Prompt" load_steps=2 format=3 uid="uid://dtn2j17f5kl8g"]
+[gd_resource type="Resource" script_class="Prompt" load_steps=9 format=3 uid="uid://dtn2j17f5kl8g"]
 
 [ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="1_5puj0"]
+[ext_resource type="Resource" uid="uid://dcqd24qr63br2" path="res://assets/battle1/fields/f_win_des.tres" id="1_qsyvi"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="2_5qe5k"]
+[ext_resource type="Resource" uid="uid://digqea7oi1n5y" path="res://assets/battle1/fields/f_mid_des.tres" id="3_5qe5k"]
+
+[sub_resource type="Resource" id="Resource_iw78t"]
+script = ExtResource("2_5qe5k")
+Description = "Send some to start raiding"
+Outcome = "At your order, you send half of your troops to force their way through the entrance and disregard the enemy soldiers. At the sight of this, the enemy soldiers falter, confused at the sight. Your attacking troops take advantage of this and slaughter some of them. Your troops continue to fight as the others raid what they can.\\nAfter some time, with your troops still fighting at the entrance, your raiders return with some resources. They couldn’t get far, as their numbers were no match for the enemy soldiers within the Kingdom.\\n\\nSTAMP Your troops attacking enemies from both sides"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("1_qsyvi")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_jyybh"]
+script = ExtResource("2_5qe5k")
+Description = ""
+Outcome = "At your order, your troops continue to fight despite the loss of some of your men. As they fight, they become more accustomed to the ground, able to start holding their own. With the physical training, your troops are able to reduce the enemies’ numbers significantly, enough to enter through the entrance.\\nYou raid what you can, stone, fish, and ores, before needing to withdrawal as the enemy soldiers from inside the Kingdom makes themselves known. Before you leave the Kingdom land, your troops loot the fallen enemies' swords and shields\\n\\nSTAMP Your troops defeating the enemies on uneven ground."
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("1_qsyvi")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_i1vfx"]
+script = ExtResource("2_5qe5k")
+Description = ""
+Outcome = "At your order, your troops continue to fight despite the loss of some of your men. As they fight, it’s clear that they’re still unable to adapt to the terrain, and with the injures easily, they struggle to hold their own. You watch as some of your men die.\\n\\nSTAMP Your troops being defeated by the enemy"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("3_5qe5k")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_to8xl"]
+script = ExtResource("2_5qe5k")
+Description = "Keep all troops attacking"
+Outcome = ""
+ConditionalOutcome1 = SubResource("Resource_jyybh")
+ConditionalOutcome2 = SubResource("Resource_i1vfx")
+Influence = null
+ConditionKey = "has_strength"
+ConditionIndex = -1
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]
 script = ExtResource("1_5puj0")
-PromptText = ""
+PromptText = "While your Archers were shooting, the enemy Swordmen charged quickly forwards, used to the unpredictable ground. They slash at your Archers, fatally wounding them.\\nWith the loss of some of your men, you need to start raiding as soon as possible before the rest of your men grow tired.\\nDo you..."
 Answer1ConditionKey = ""
 Answer2ConditionKey = ""
+Answer1 = SubResource("Resource_iw78t")
+Answer2 = SubResource("Resource_to8xl")
 metadata/_custom_type_script = "uid://4kjr6gery7dy"

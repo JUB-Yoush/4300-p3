@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource("1_3s1fy")
-Description = ""
-Outcome = ""
+Description = "you win "
+Outcome = "You did it frfr"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1

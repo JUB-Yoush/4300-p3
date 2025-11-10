@@ -50,10 +50,12 @@ public partial class Main : Control
         GD.Print($"condition:{key}");
         return key switch
         {
-            "has_horse" => Stats[(int)Modifiers.HORSE] > 1,
-            "has_archers" => Stats[(int)Modifiers.ARCHERS] > 1,
-            "has_swords" => Stats[(int)Modifiers.SWORDSMEN] > 1,
+            "has_horse" => Stats[(int)Modifiers.HORSE] > 0,
+            "has_archers" => Stats[(int)Modifiers.ARCHERS] > 0,
+            "has_swords" => Stats[(int)Modifiers.SWORDSMEN] > 0,
             "has_weak" => Stats[(int)Modifiers.STRENGTH] < 0,
+            "has_strength" => Stats[(int)Modifiers.STRENGTH] > 0,
+            "has_shieldmen" => Stats[(int)Modifiers.SHIELDMEN] > 0,
             null => true,
             "" => true,
             _ => throw new Exception(),
@@ -93,7 +95,7 @@ public partial class Main : Control
 
         foreach (var statChange in decision.Influence)
         {
-            Stats[(int)statChange.Key] += statChange.Value;
+            Stats[(int)statChange.Key] = statChange.Value;
         }
 
         Choice1Btn.Text = "Continue";
