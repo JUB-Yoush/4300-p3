@@ -109,6 +109,7 @@ public partial class Main : Control
         Choice2Btn.Visible = false;
         Choice1Btn.Disabled = false;
         Choice2Btn.Disabled = false;
+        GD.Print($"titles???{prompt.Answer1.Description}");
 
         currentNode = prompt;
         Prompt.Text = prompt.PromptText;
@@ -175,5 +176,13 @@ public partial class Main : Control
     {
         GetNode<Label>("%Stats").Text =
             $"SWORDS:{Stats[(int)Modifiers.SWORDSMEN]}\n SHEILD:{Stats[(int)Modifiers.SHIELDMEN]}\n ARCHERS:{Stats[(int)Modifiers.ARCHERS]}\n HORSE:{Stats[(int)Modifiers.HORSE]}\n STRENGTH:{Stats[(int)Modifiers.STRENGTH]}\n";
+    }
+
+    public override void _Process(double delta)
+    {
+        if (Input.IsActionJustPressed("skip"))
+        {
+            LoadPrompt(GD.Load<Prompt>("res://assets/prep2/king_or_barb.tres"));
+        }
     }
 }

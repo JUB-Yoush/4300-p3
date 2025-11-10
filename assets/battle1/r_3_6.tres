@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Prompt" load_steps=10 format=3 uid="uid://crairikqt37pu"]
 
 [ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="1_84hgn"]
-[ext_resource type="Resource" uid="uid://digqea7oi1n5y" path="res://assets/battle1/fields/f_mid_des.tres" id="1_v4q7u"]
+[ext_resource type="Resource" uid="uid://digqea7oi1n5y" path="res://assets/battle1/f_mid_des.tres" id="1_v4q7u"]
 [ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="2_eaa7q"]
-[ext_resource type="Resource" uid="uid://bhp604eeua6e4" path="res://assets/battle1/fields/f_lose_des.tres" id="3_rfmde"]
-[ext_resource type="Resource" uid="uid://dcqd24qr63br2" path="res://assets/battle1/fields/f_win_des.tres" id="4_30xek"]
+[ext_resource type="Resource" uid="uid://bhp604eeua6e4" path="res://assets/battle1/f_lose_des.tres" id="3_rfmde"]
+[ext_resource type="Resource" uid="uid://dcqd24qr63br2" path="res://assets/battle1/f_win_des.tres" id="4_30xek"]
 
 [sub_resource type="Resource" id="Resource_7ggyq"]
 script = ExtResource("2_eaa7q")

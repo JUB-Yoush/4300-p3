@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Prompt" load_steps=6 format=3 uid="uid://bf0txufxywbmj"]
+
+[ext_resource type="Resource" uid="uid://nw2n18frwr7q" path="res://assets/prep2/p2d3.tres" id="1_qs2gw"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="2_g2l4r"]
+[ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="3_hln0r"]
+
+[sub_resource type="Resource" id="Resource_hcrmx"]
+script = ExtResource("2_g2l4r")
+Description = "Train Horses"
+Outcome = "You can now have your best soldiers ride into battle.\\n\\nSTAMP 2 horses"
+Influence = Dictionary[int, int]({
+4: 2
+})
+ConditionKey = ""
+ConditionIndex = -1
+NextPrompt = ExtResource("1_qs2gw")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_qs2gw"]
+script = ExtResource("2_g2l4r")
+Description = "Train Physical Ability"
+Outcome = "Your soldiers become much more capable. Add the strength\\n\\nSTAMP to your army"
+Influence = Dictionary[int, int]({
+5: 1
+})
+ConditionKey = ""
+ConditionIndex = -1
+NextPrompt = ExtResource("1_qs2gw")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[resource]
+script = ExtResource("3_hln0r")
+PromptText = "You are given a choice between two training programs. The first trains horses to battle alongside your soldiers, while the other trains the physical abilities of your soldiers. \\nWhich training program do you pick?"
+Answer1ConditionKey = ""
+Answer2ConditionKey = ""
+Answer1 = SubResource("Resource_hcrmx")
+Answer2 = SubResource("Resource_qs2gw")
+metadata/_custom_type_script = "uid://4kjr6gery7dy"

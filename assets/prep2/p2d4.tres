@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Prompt" load_steps=6 format=3 uid="uid://cq2teisa26ah8"]
+
+[ext_resource type="Resource" uid="uid://ca55cdquusgcb" path="res://assets/battle2/b_1_1.tres" id="1_o2k6t"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="2_5h2dq"]
+[ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="3_genvb"]
+
+[sub_resource type="Resource" id="Resource_o2k6t"]
+script = ExtResource("2_5h2dq")
+Description = "Produce Bows"
+Outcome = "The leather is used to create a solid grip.\\n\\nSTAMP 2 archers"
+Influence = Dictionary[int, int]({
+3: 2
+})
+ConditionKey = ""
+ConditionIndex = -1
+NextPrompt = ExtResource("1_o2k6t")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_rnken"]
+script = ExtResource("2_5h2dq")
+Description = "Produce Shields"
+Outcome = "Your kingdom's crest is burned onto the leather covers.\\n\\nSTAMP 2 Shieldmen"
+Influence = Dictionary[int, int]({
+2: 2
+})
+ConditionKey = ""
+ConditionIndex = -1
+NextPrompt = ExtResource("1_o2k6t")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[resource]
+script = ExtResource("3_genvb")
+PromptText = "Even with the resources looted from the Kingdoms, the amount of leather on hand is limited. With what leather is given to the army, do you put it towards producing shields or producing bows?"
+Answer1ConditionKey = ""
+Answer2ConditionKey = ""
+Answer1 = SubResource("Resource_o2k6t")
+Answer2 = SubResource("Resource_rnken")
+metadata/_custom_type_script = "uid://4kjr6gery7dy"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Decision" load_steps=3 format=3 uid="uid://bm4xcbsnt0fvh"]
+
+[ext_resource type="Resource" uid="uid://d20ri3byf3yki" path="res://assets/prep2/p2d1.tres" id="1_5oh6h"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="1_mihor"]
+
+[resource]
+script = ExtResource("1_mihor")
+Description = ""
+Outcome = "You’re hit with the news of the enemy Kingdom. They’re approaching steadily, and it’s unclear what their forces are made of. With time not on your side, you won’t be able to build an army by yourself. Having a helping hand is crucial. With little choices, you turn to the army who had fought with you."
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextPrompt = ExtResource("1_5oh6h")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"

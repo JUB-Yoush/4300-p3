@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Decision" load_steps=3 format=3 uid="uid://digqea7oi1n5y"]
+
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="1_i37br"]
+[ext_resource type="Resource" uid="uid://c3ixnfq1l85ew" path="res://assets/prep2/king_or_barb.tres" id="1_vqr6f"]
+
+[resource]
+script = ExtResource("1_i37br")
+Description = ""
+Outcome = "Returning home from your conquest, you look over at your army. Your army has dwindled, lost to hands of war. You don’t get much time for celebrators or memorials before receiving some news. "
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextPrompt = ExtResource("1_vqr6f")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"

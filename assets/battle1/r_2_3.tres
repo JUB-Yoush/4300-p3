@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="1_efegc"]
 [ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="1_soetu"]
-[ext_resource type="Resource" uid="uid://dtn2j17f5kl8g" path="res://assets/battle1/fields/r_3_5.tres" id="1_ufprf"]
-[ext_resource type="Resource" uid="uid://crairikqt37pu" path="res://assets/battle1/fields/r_3_6.tres" id="3_bqr61"]
+[ext_resource type="Resource" uid="uid://dtn2j17f5kl8g" path="res://assets/battle1/r_3_5.tres" id="1_ufprf"]
+[ext_resource type="Resource" uid="uid://crairikqt37pu" path="res://assets/battle1/r_3_6.tres" id="3_bqr61"]
 
 [sub_resource type="Resource" id="Resource_tyvkk"]
 script = ExtResource("1_soetu")

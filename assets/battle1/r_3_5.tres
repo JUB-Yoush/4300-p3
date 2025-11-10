@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Prompt" load_steps=9 format=3 uid="uid://dtn2j17f5kl8g"]
 
 [ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="1_5puj0"]
-[ext_resource type="Resource" uid="uid://dcqd24qr63br2" path="res://assets/battle1/fields/f_win_des.tres" id="1_qsyvi"]
+[ext_resource type="Resource" uid="uid://dcqd24qr63br2" path="res://assets/battle1/f_win_des.tres" id="1_qsyvi"]
 [ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="2_5qe5k"]
-[ext_resource type="Resource" uid="uid://digqea7oi1n5y" path="res://assets/battle1/fields/f_mid_des.tres" id="3_5qe5k"]
+[ext_resource type="Resource" uid="uid://digqea7oi1n5y" path="res://assets/battle1/f_mid_des.tres" id="3_5qe5k"]
 
 [sub_resource type="Resource" id="Resource_iw78t"]
 script = ExtResource("2_5qe5k")

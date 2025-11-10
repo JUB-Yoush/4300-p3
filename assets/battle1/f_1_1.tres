@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Prompt" load_steps=9 format=3 uid="uid://0ijeced02aoq"]
 
-[ext_resource type="Resource" uid="uid://c0qjj30edi35a" path="res://assets/battle1/fields/f_2_1.tres" id="1_scopd"]
+[ext_resource type="Resource" uid="uid://c0qjj30edi35a" path="res://assets/battle1/f_2_1.tres" id="1_scopd"]
 [ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="2_nleci"]
-[ext_resource type="Resource" uid="uid://dd2mfgrqw8sja" path="res://assets/battle1/fields/f_2_2.tres" id="3_eedle"]
+[ext_resource type="Resource" uid="uid://dd2mfgrqw8sja" path="res://assets/battle1/f_2_2.tres" id="3_eedle"]
 [ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="4_hh6wq"]
 
 [sub_resource type="Resource" id="Resource_v5vlu"]
