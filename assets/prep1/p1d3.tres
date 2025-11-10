@@ -1,25 +1,38 @@
-[gd_resource type="Resource" script_class="Preperation" load_steps=5 format=3 uid="uid://de8e8k6xf6gfa"]
+[gd_resource type="Resource" script_class="Prompt" load_steps=6 format=3 uid="uid://de8e8k6xf6gfa"]
 
-[ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Preperation.cs" id="1_7sraq"]
 [ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="1_81mj4"]
+[ext_resource type="Resource" uid="uid://jlqyajf52n42" path="res://assets/prep1/p1d4.tres" id="1_hqg1j"]
+[ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="2_81mj4"]
 
 [sub_resource type="Resource" id="Resource_hqg1j"]
 script = ExtResource("1_81mj4")
 Description = "Bulk Defense"
 Outcome = "Your army grows impenetrable.\\n\\nSTAMP 2 Shieldmen"
-Influence = Dictionary[int, int]({})
+Influence = Dictionary[int, int]({
+2: 2
+})
+ConditionKey = ""
+ConditionIndex = -1
+NextPrompt = ExtResource("1_hqg1j")
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_44w41"]
 script = ExtResource("1_81mj4")
 Description = "Bulk Offence"
 Outcome = "Your army strikes fear into enemies.\\n\\nSTAMP 2 swordsmen"
-Influence = Dictionary[int, int]({})
+Influence = Dictionary[int, int]({
+1: 2
+})
+ConditionKey = ""
+ConditionIndex = -1
+NextPrompt = ExtResource("1_hqg1j")
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]
-script = ExtResource("1_7sraq")
-Prompt = "You are given the option of bulking up your defense lines or bulking up your offensive lines with a grant from the local lord. Where do you put the money?"
+script = ExtResource("2_81mj4")
+PromptText = "You are given the option of bulking up your defense lines or bulking up your offensive lines with a grant from the local lord. Where do you put the money?"
+Answer1ConditionKey = ""
+Answer2ConditionKey = ""
 Answer1 = SubResource("Resource_hqg1j")
 Answer2 = SubResource("Resource_44w41")
 metadata/_custom_type_script = "uid://4kjr6gery7dy"

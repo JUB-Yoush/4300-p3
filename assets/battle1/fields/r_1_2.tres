@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="Prompt" load_steps=9 format=3 uid="uid://cu6wcs14x4urv"]
+
+[ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="1_oa0cr"]
+[ext_resource type="Resource" uid="uid://dd712siqw32dd" path="res://assets/battle1/fields/r_2_3.tres" id="1_p6vpe"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="2_4yjhr"]
+[ext_resource type="Resource" uid="uid://ucuxi2yijpcg" path="res://assets/battle1/fields/r_2_4.tres" id="3_n0ko8"]
+
+[sub_resource type="Resource" id="Resource_6lehf"]
+script = ExtResource("2_4yjhr")
+Description = ""
+Outcome = "You order your troop to charge in for a surprise attack. However, the rocky and uneven stone ground is foreign on your troops feet. You watch as they each loose their footing and trip.\\nLuckily, your troops were trained for this. Their physical training allowing your troops to quickly recover from the trip, brushing off their injuries and continuing to charge forwards.\\n\\nSTAMP Your army approaching the enemy walls\\nLOSE STRENGTH"
+Influence = Dictionary[int, int]({
+5: -1
+})
+ConditionKey = ""
+ConditionIndex = -1
+NextPrompt = ExtResource("1_p6vpe")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_y1b1j"]
+script = ExtResource("2_4yjhr")
+Description = ""
+Outcome = "You order your troop to charge in for a surprise attack. However, the rocky and uneven stone ground is foreign on your troops feet. You watch as they each loose their footing and trip.\\nUnfortunately, your troops weren’t trained for this. Even with the horses, your men (and horses) are unable to recover from their trips. Your troops, scraped and hurt by the rocks, still continues to charge, but it’s clear they’re weak to their injuries.\\n\\nSTAMP Your army approaching the enemy walls\\nSTAMP Weakness"
+Influence = Dictionary[int, int]({
+5: -1
+})
+ConditionKey = ""
+ConditionIndex = -1
+NextPrompt = ExtResource("1_p6vpe")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_rfvsj"]
+script = ExtResource("2_4yjhr")
+Description = "Run In"
+Outcome = ""
+ConditionalOutcome1 = SubResource("Resource_6lehf")
+ConditionalOutcome2 = SubResource("Resource_y1b1j")
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_3taii"]
+script = ExtResource("2_4yjhr")
+Description = "Walk"
+Outcome = "You order your troops to march forwards, walking to avoid the rocky terrain. While taking their time avoiding injury, enemy troops take notice of your army and prepare to defend. \\n\\nSTAMP your army on rocky terrain being noticed."
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextPrompt = ExtResource("3_n0ko8")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[resource]
+script = ExtResource("1_oa0cr")
+PromptText = "You inform your army of the raiding of Comore, and you waste no time as your troops make the journey. You see the Kingdom as you approach, on the highest level of the rocky and uneven coastal terrain. It looks taller than it is, with high walls surrounding it. It’s clear there is only one entrance, as the other sides lead right into cliffside. It’s guarded by swordmen and shield men on the stone floor.\\n\\nDo you order your army to charge or march to the entrance?"
+Answer1ConditionKey = ""
+Answer2ConditionKey = ""
+Answer1 = SubResource("Resource_rfvsj")
+Answer2 = SubResource("Resource_3taii")
+metadata/_custom_type_script = "uid://4kjr6gery7dy"

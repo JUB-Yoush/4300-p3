@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Prompt" load_steps=7 format=3 uid="uid://dd712siqw32dd"]
+
+[ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="1_efegc"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="1_soetu"]
+[ext_resource type="Resource" uid="uid://dtn2j17f5kl8g" path="res://assets/battle1/fields/r_3_5.tres" id="1_ufprf"]
+[ext_resource type="Resource" uid="uid://crairikqt37pu" path="res://assets/battle1/fields/r_3_6.tres" id="3_bqr61"]
+
+[sub_resource type="Resource" id="Resource_tyvkk"]
+script = ExtResource("1_soetu")
+Description = "Send In Archers"
+Outcome = "You command your Archers to shoot at the enemy lines, hoping to use the slight distance between to your advantage. However, your arrows are no match for the shields, almost bouncing off. \\n\\nSTAMP Your archers’ arrows being blocked by enemy shieldmen\""
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextPrompt = ExtResource("1_ufprf")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_ufprf"]
+script = ExtResource("1_soetu")
+Description = "Send In Shieldmen"
+Outcome = "You command your Shield-men to push through the enemy lines, using their shields to block the attacks of the swords. With your Shield-men on the defensive, your troops are able to force their way into the Kingdom.\\n\\nSTAMP Your troops fighting past enemy walls"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextPrompt = ExtResource("3_bqr61")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[resource]
+script = ExtResource("1_efegc")
+PromptText = "Even with the struggle of the ground, your army gets closer to the enemies guarding the entrance. They don’t see you approach fast enough to use the rocks to their advantage, instead facing your troops at face level. They’re equipped with long swords and thick shields.\\nYou’re given two options on how to advance."
+Answer1ConditionKey = "has_archers"
+Answer2ConditionKey = "has_shieldmen"
+Answer1 = SubResource("Resource_tyvkk")
+Answer2 = SubResource("Resource_ufprf")
+metadata/_custom_type_script = "uid://4kjr6gery7dy"

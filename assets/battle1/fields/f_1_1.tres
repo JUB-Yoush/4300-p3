@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="Prompt" load_steps=9 format=3 uid="uid://0ijeced02aoq"]
+
+[ext_resource type="Resource" uid="uid://c0qjj30edi35a" path="res://assets/battle1/fields/f_2_1.tres" id="1_scopd"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="2_nleci"]
+[ext_resource type="Resource" uid="uid://dd2mfgrqw8sja" path="res://assets/battle1/fields/f_2_2.tres" id="3_eedle"]
+[ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="4_hh6wq"]
+
+[sub_resource type="Resource" id="Resource_v5vlu"]
+script = ExtResource("2_nleci")
+Description = ""
+Outcome = "You order your army to ambush the guarding Archers. The enemy Archers see your army as you approach on the open fields, drawing their bows and shooting quick.\\nWith the speed and agility of the Horses, your troops are able to evade the in-coming arrows.\\n\\nSTAMP arrows pointing down on the left side\""
+Influence = Dictionary[int, int]({})
+ConditionKey = ""
+ConditionIndex = -1
+NextPrompt = ExtResource("1_scopd")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_ip5sq"]
+script = ExtResource("2_nleci")
+Description = ""
+Outcome = "You order your army to ambush the guarding Archers. The enemy Archers see your army as you approach on the open fields, drawing their bows and shooting quick.\\nWith the speed and agility of the Horses, your troops are able to evade the in-coming arrows.\\n\\nSTAMP arrows pointing down on the left side"
+Influence = Dictionary[int, int]({
+1: -1,
+5: -2
+})
+ConditionKey = ""
+ConditionIndex = -1
+NextPrompt = ExtResource("1_scopd")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_tp0l3"]
+script = ExtResource("2_nleci")
+Description = "Ambush"
+Outcome = ""
+ConditionalOutcome1 = SubResource("Resource_v5vlu")
+ConditionalOutcome2 = SubResource("Resource_ip5sq")
+Influence = null
+ConditionKey = "has_horse"
+ConditionIndex = -1
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_xbyww"]
+script = ExtResource("2_nleci")
+Description = "Sneak In"
+Outcome = "You order your army to avoid the main entrance and sneak in through one of the outer entrances used for accessing the outer wheat fields. Through the tall wheat, your troops sneaks through, slipping in easily."
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextPrompt = ExtResource("3_eedle")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[resource]
+script = ExtResource("4_hh6wq")
+PromptText = "You inform your army of the raiding of Vetedam, and you waste no time as your troops make the journey. \\nYou see the Kingdom from many miles away, visible with the flat openness of the fields. Your army faces the front entrance, guarded by the Kingdom’s own army of Archers.\\n\\nSTAMP an enemy Archer on the right side of cell in green ink\\n\\n Do you order your army to ambush and attack the enemy Archers before they have the chance to shoot, or do you sneak in through another entrance?"
+Answer1ConditionKey = ""
+Answer2ConditionKey = ""
+Answer1 = SubResource("Resource_tp0l3")
+Answer2 = SubResource("Resource_xbyww")
+metadata/_custom_type_script = "uid://4kjr6gery7dy"

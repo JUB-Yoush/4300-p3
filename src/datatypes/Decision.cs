@@ -1,8 +1,10 @@
 using System;
+using System.Dynamic;
 using Godot;
+using Godot.Collections;
 
 [GlobalClass]
-public partial class Decision : Resource
+public partial class Decision : Resource, INode
 {
     [Export]
     public string Description { get; set; }
@@ -11,10 +13,25 @@ public partial class Decision : Resource
     public string Outcome { get; set; }
 
     [Export]
-    public Godot.Collections.Dictionary<Modifiers, int> Influence;
+    public Decision ConditionalOutcome1 { get; set; }
 
     [Export]
-    public Battle NextPrompt { get; set; }
+    public Decision ConditionalOutcome2 { get; set; }
+
+    [Export]
+    public Dictionary<Modifiers, int> Influence;
+
+    [Export]
+    public string ConditionKey = null;
+
+    [Export]
+    public int ConditionIndex = -1;
+
+    [Export]
+    public Prompt NextPrompt = null;
+
+    [Export]
+    public Decision NextDecision = null;
 
     public Decision() { }
 }
