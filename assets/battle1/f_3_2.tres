@@ -14,6 +14,8 @@ Influence = null
 ConditionKey = ""
 ConditionIndex = -1
 NextDecision = ExtResource("1_gtdx2")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_skeux"]
@@ -26,6 +28,8 @@ Influence = Dictionary[int, int]({
 ConditionKey = ""
 ConditionIndex = -1
 NextDecision = ExtResource("3_kbe4i")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_kbe4i"]
@@ -35,8 +39,10 @@ Outcome = ""
 ConditionalOutcome1 = SubResource("Resource_xrj6x")
 ConditionalOutcome2 = SubResource("Resource_skeux")
 Influence = null
-ConditionKey = "has_weak"
+ConditionKey = "not_weak"
 ConditionIndex = -1
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_4t8d4"]
@@ -47,6 +53,8 @@ Influence = null
 ConditionKey = ""
 ConditionIndex = -1
 NextDecision = ExtResource("2_xrj6x")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]

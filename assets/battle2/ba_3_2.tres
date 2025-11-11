@@ -9,7 +9,11 @@
 script = ExtResource("2_n31pd")
 Description = "Double flank"
 Outcome = "You command for your troops attempt a double flank, but as they start to move away from the Kingdom walls, the enemy troops are already there to stop them. They easily predict your strategy, and swiftly start slaying your soldiers.\\n\\nSTAMP Enemy troops defending themselves from your troops attacking on both sides"
-Influence = null
+Influence = Dictionary[int, int]({
+1: -1,
+2: -1,
+3: -1
+})
 ConditionKey = ""
 ConditionIndex = -1
 NextDecision = ExtResource("1_i4xxt")

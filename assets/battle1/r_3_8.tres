@@ -15,6 +15,8 @@ Influence = Dictionary[int, int]({
 ConditionKey = ""
 ConditionIndex = -1
 NextDecision = ExtResource("1_1yrt5")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_qtfwt"]
@@ -25,16 +27,20 @@ Influence = null
 ConditionKey = ""
 ConditionIndex = -1
 NextDecision = ExtResource("3_midpu")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_6eg1f"]
 script = ExtResource("2_midpu")
 Description = ""
 Outcome = "You decide to have your Swordmen focus on fighting the enemies. The enemies troops, more stronger than your troops, are able to slay some of your Swordmen.\\n\\nSTAMP Your swordsmen fighting against various enemies, some defeated"
-Influence = null
+Influence = Dictionary[int, int]({})
 ConditionKey = ""
 ConditionIndex = -1
 NextDecision = ExtResource("1_1yrt5")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_8ch8x"]
@@ -46,6 +52,8 @@ ConditionalOutcome2 = SubResource("Resource_6eg1f")
 Influence = Dictionary[int, int]({})
 ConditionKey = "has_strength"
 ConditionIndex = -1
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]

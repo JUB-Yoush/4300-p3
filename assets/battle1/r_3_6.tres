@@ -10,20 +10,27 @@
 script = ExtResource("2_eaa7q")
 Description = "You decide to fight the enemy soldiers you see. There are a lot more than you expected. While the physical training comes through in your troops, a couple do fall at the swords of the enemies.\\n\\nSTAMP Your troops fighting, some defeated\""
 Outcome = ""
-Influence = null
+Influence = Dictionary[int, int]({
+1: -1,
+2: -1
+})
 ConditionKey = ""
 ConditionIndex = -1
 NextDecision = ExtResource("1_v4q7u")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_rwi38"]
 script = ExtResource("2_eaa7q")
 Description = "You decide to fight the enemy soldiers you see. There are a lot more than you expected. With their numbers and strength, and your army’s locational disadvantage, your men are easily slain. You’re barely able to flee from the Kingdom and return home, empty handed except for a lone surviving soldier.\\n\\nSTAMP Your army being defeated by the enemy"
 Outcome = ""
-Influence = null
+Influence = Dictionary[int, int]({})
 ConditionKey = ""
 ConditionIndex = -1
 NextDecision = ExtResource("3_rfmde")
+setHero = 0
+newState = 3
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_lms7p"]
@@ -35,6 +42,8 @@ ConditionalOutcome2 = SubResource("Resource_rwi38")
 Influence = null
 ConditionKey = "has_strength"
 ConditionIndex = -1
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_tdwry"]
@@ -45,6 +54,8 @@ Influence = null
 ConditionKey = ""
 ConditionIndex = -1
 NextDecision = ExtResource("4_30xek")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]

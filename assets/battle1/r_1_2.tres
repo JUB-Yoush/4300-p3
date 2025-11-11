@@ -15,6 +15,8 @@ Influence = Dictionary[int, int]({
 ConditionKey = ""
 ConditionIndex = -1
 NextPrompt = ExtResource("1_p6vpe")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_y1b1j"]
@@ -27,6 +29,8 @@ Influence = Dictionary[int, int]({
 ConditionKey = ""
 ConditionIndex = -1
 NextPrompt = ExtResource("1_p6vpe")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_rfvsj"]
@@ -38,6 +42,8 @@ ConditionalOutcome2 = SubResource("Resource_y1b1j")
 Influence = null
 ConditionKey = "has_strength"
 ConditionIndex = -1
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_3taii"]
@@ -48,6 +54,8 @@ Influence = null
 ConditionKey = ""
 ConditionIndex = -1
 NextPrompt = ExtResource("3_n0ko8")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]

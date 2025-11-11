@@ -20,12 +20,12 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 script = ExtResource("2_b7pqh")
 Description = "False Surrender"
 Outcome = "You choose to fake surrender. The enemy commander accepts the surrender, sending some enemy soldiers to siege the governing body and some to keep an eye on your troops. The moment they’re sent off, you order your troops to attack with smaller enemy troop. However, it’s shut down quick from the enemies’ watchful eye. They aren’t merciful, severely wounding those who fought back.\\n\\nSTAMP Your troops, defended against by enemy shieldmen"
-Influence = null
+Influence = Dictionary[int, int]({})
 ConditionKey = ""
 ConditionIndex = -1
 NextDecision = ExtResource("1_mfktp")
 setHero = 0
-newState = 0
+newState = 3
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]

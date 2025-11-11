@@ -13,6 +13,8 @@ Influence = null
 ConditionKey = ""
 ConditionIndex = -1
 NextPrompt = ExtResource("1_pd3r4")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_7qsvq"]
@@ -23,6 +25,8 @@ Influence = null
 ConditionKey = ""
 ConditionIndex = -1
 NextPrompt = ExtResource("2_pd3r4")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]

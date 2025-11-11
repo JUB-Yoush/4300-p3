@@ -39,6 +39,7 @@ public enum GameState
     PLAYING,
     WIN,
     LOSE,
+    WIPED,
 }
 
 public interface INode { } // we have union types at home
@@ -70,11 +71,12 @@ public partial class Main : Control
             "has_archers" => Stats[(int)Modifiers.ARCHERS] > 0,
             "has_swords" => Stats[(int)Modifiers.SWORDSMEN] > 0,
             "has_weak" => Stats[(int)Modifiers.STRENGTH] < 0,
+            "not_weak" => Stats[(int)Modifiers.STRENGTH] > -1,
             "has_strength" => Stats[(int)Modifiers.STRENGTH] > 0,
             "has_shieldmen" => Stats[(int)Modifiers.SHIELDMEN] > 0,
-            "chance_25" => GD.Randf() >= 0.25,
-            "chance_50" => GD.Randf() >= 0.5,
-            "chance_75" => GD.Randf() >= 0.75,
+            "chance_25" => GD.Randf() <= 0.25,
+            "chance_50" => GD.Randf() <= 0.5,
+            "chance_75" => GD.Randf() <= 0.75,
             null => true,
             "" => true,
             _ => throw new Exception(),
@@ -102,7 +104,7 @@ public partial class Main : Control
 
     public void LoadDescision(Decision decision)
     {
-        if (decision.newState != GameState.PLAYING)
+        if (decision.newState == GameState.WIN || decision.newState == GameState.LOSE)
         {
             currentNode = decision;
             Prompt.Text = decision.Outcome;
@@ -130,7 +132,12 @@ public partial class Main : Control
 
         foreach (var statChange in decision.Influence)
         {
-            Stats[(int)statChange.Key] = statChange.Value;
+            Stats[(int)statChange.Key] += statChange.Value;
+        }
+
+        if (decision.newState == GameState.WIPED)
+        {
+            Stats = new int[Enum.GetNames(typeof(Modifiers)).Length];
         }
 
         Choice1Btn.Text = "Continue";

@@ -9,10 +9,14 @@
 script = ExtResource("2_s8vrn")
 Description = "Sacrifice shieldmen"
 Outcome = "You send your one Shieldman to defend against the arrows. All the enemy soldiers laser focus on them, pelting them with arrows. Your Shieldman withstands the arrows until they start to wear-down, then break the shield. \\nYou and your group doesn’t stick around long enough to see them fatally shot, fleeing from the unequal fight without any resources. \\n\\nSTAMP Your shieldmen’s last stand"
-Influence = null
+Influence = Dictionary[int, int]({
+2: -2
+})
 ConditionKey = ""
 ConditionIndex = -1
 NextDecision = ExtResource("1_i0t6d")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_pbd4y"]
@@ -23,16 +27,20 @@ Influence = null
 ConditionKey = ""
 ConditionIndex = -1
 NextDecision = ExtResource("3_sift6")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_42hsg"]
 script = ExtResource("2_s8vrn")
 Description = ""
 Outcome = "You decide to take the risk and attack all together. Quickly, you realize you are no match for your enemies’ speed and tactics. Without order, one of your solider starts to defend, becoming a target for the enemy Archer’s arrows.\\nYou and your group doesn’t stick around long enough to see them fatally shot, fleeing from the unequal fight without any resources.\\n\\nSTAMP Your army escaping, leaving one swordsman to hold them off"
-Influence = null
+Influence = Dictionary[int, int]({})
 ConditionKey = ""
 ConditionIndex = -1
 NextDecision = ExtResource("1_i0t6d")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_5yutv"]
@@ -44,6 +52,8 @@ ConditionalOutcome2 = SubResource("Resource_42hsg")
 Influence = null
 ConditionKey = "has_horse"
 ConditionIndex = -1
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]

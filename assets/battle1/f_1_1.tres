@@ -13,6 +13,8 @@ Influence = Dictionary[int, int]({})
 ConditionKey = ""
 ConditionIndex = -1
 NextPrompt = ExtResource("1_scopd")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_ip5sq"]
@@ -26,6 +28,8 @@ Influence = Dictionary[int, int]({
 ConditionKey = ""
 ConditionIndex = -1
 NextPrompt = ExtResource("1_scopd")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_tp0l3"]
@@ -37,6 +41,8 @@ ConditionalOutcome2 = SubResource("Resource_ip5sq")
 Influence = null
 ConditionKey = "has_horse"
 ConditionIndex = -1
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_xbyww"]
@@ -47,6 +53,8 @@ Influence = null
 ConditionKey = ""
 ConditionIndex = -1
 NextPrompt = ExtResource("3_eedle")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]
