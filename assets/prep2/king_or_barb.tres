@@ -12,7 +12,7 @@ Influence = null
 ConditionKey = ""
 ConditionIndex = -1
 NextDecision = ExtResource("1_2y7bg")
-setHero = 0
+setHero = 1
 newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
@@ -24,7 +24,7 @@ Influence = null
 ConditionKey = ""
 ConditionIndex = -1
 NextDecision = ExtResource("1_2y7bg")
-setHero = 0
+setHero = 2
 newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 

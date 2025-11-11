@@ -5,10 +5,10 @@
 [resource]
 script = ExtResource("1_d4oy8")
 Description = ""
-Outcome = ""
+Outcome = "As the fight continues, you watch as your Kingdom is seized, taken over by the enemy Kingdom. The Centuries of defending and work on holding them off crumbling in a matter of days. Your home Kingdom is no longer yours, but now an extension of Prerid Kingdom.\\n\\nSTAMP The enemy kingdom’s crest"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
 setHero = 0
-newState = 0
+newState = 2
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"

@@ -1,10 +1,39 @@
-[gd_resource type="Resource" script_class="Prompt" load_steps=2 format=3 uid="uid://c2sxv1jo53x6a"]
+[gd_resource type="Resource" script_class="Prompt" load_steps=7 format=3 uid="uid://c2sxv1jo53x6a"]
 
+[ext_resource type="Resource" uid="uid://cemack680x0vw" path="res://assets/battle2/win_25.tres" id="1_i4xxt"]
 [ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="1_j7gtq"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="2_n31pd"]
+[ext_resource type="Resource" uid="uid://ciawpkla84k84" path="res://assets/battle2/win_75.tres" id="3_n31pd"]
+
+[sub_resource type="Resource" id="Resource_i0s8m"]
+script = ExtResource("2_n31pd")
+Description = "Double flank"
+Outcome = "You command for your troops attempt a double flank, but as they start to move away from the Kingdom walls, the enemy troops are already there to stop them. They easily predict your strategy, and swiftly start slaying your soldiers.\\n\\nSTAMP Enemy troops defending themselves from your troops attacking on both sides"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("1_i4xxt")
+setHero = 0
+newState = 0
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_17gue"]
+script = ExtResource("2_n31pd")
+Description = "Inspire The Civillians"
+Outcome = "In the distraction of the battle, the enemy troops don’t notice you and the Barbarian slip away into the Kingdom. You both stand in the town center, not too far from the Kingdom entrance. Together, you start to rally the frightened, scared, and angry civilians to help defend their beloved Kingdom from the enemies.\\nIt works. The years of torment from the enemy Kingdom fueled a fire within your Kingdom’s people, and using whatever tools they have on hand, the civilians start to help the attack of the enemy army. It’s unexpected to your enemy, and they struggle to hold their own against the wave of angry people.\\n\\nSTAMP A chaotic battle, enemies on fire"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("3_n31pd")
+setHero = 0
+newState = 0
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]
 script = ExtResource("1_j7gtq")
-PromptText = ""
+PromptText = "The Barbarian gives you two options.\\nThe first is to do a double flank, backing away and attacking from within the Kingdom.\\nThe second is to inspire the Civilians to do their part in defending their Kingdom.\\nWhich option do you choose?"
 Answer1ConditionKey = ""
 Answer2ConditionKey = ""
+Answer1 = SubResource("Resource_i0s8m")
+Answer2 = SubResource("Resource_17gue")
 metadata/_custom_type_script = "uid://4kjr6gery7dy"

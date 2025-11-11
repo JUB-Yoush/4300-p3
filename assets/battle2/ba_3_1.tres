@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Prompt" load_steps=6 format=3 uid="uid://bulljc62mb7s5"]
+[gd_resource type="Resource" script_class="Prompt" load_steps=7 format=3 uid="uid://bulljc62mb7s5"]
 
+[ext_resource type="Resource" uid="uid://ba84vvy3eqs2" path="res://assets/battle2/lose.tres" id="1_3c2l3"]
 [ext_resource type="Resource" uid="uid://t5i0202nae8u" path="res://assets/battle2/win.tres" id="1_qbjbr"]
 [ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="2_3c2l3"]
 [ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="3_lflvm"]
@@ -11,7 +12,7 @@ Outcome = "You let the Barbarian handle it, and they are ecstatic. They charge i
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
-NextDecision = ExtResource("1_qbjbr")
+NextDecision = ExtResource("1_3c2l3")
 setHero = 0
 newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"

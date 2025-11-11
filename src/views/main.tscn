@@ -21,9 +21,9 @@ theme = ExtResource("2_fwy4t")
 [node name="Choice1" type="Button" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 380.0
+offset_left = 295.0
 offset_top = 480.0
-offset_right = 1533.0
+offset_right = 1627.0
 offset_bottom = 565.0
 theme = ExtResource("2_fwy4t")
 theme_override_font_sizes/font_size = 64
@@ -32,9 +32,9 @@ text = "nobody thought of it."
 [node name="Choice2" type="Button" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 383.0
+offset_left = 288.0
 offset_top = 675.0
-offset_right = 1536.0
+offset_right = 1630.0
 offset_bottom = 760.0
 theme = ExtResource("2_fwy4t")
 theme_override_font_sizes/font_size = 64
@@ -56,7 +56,7 @@ layout_mode = 0
 offset_left = 21.0
 offset_top = 18.0
 offset_right = 299.0
-offset_bottom = 409.0
+offset_bottom = 275.0
 
 [node name="Stats" type="Label" parent="Panel2"]
 unique_name_in_owner = true

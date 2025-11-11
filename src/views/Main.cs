@@ -72,6 +72,9 @@ public partial class Main : Control
             "has_weak" => Stats[(int)Modifiers.STRENGTH] < 0,
             "has_strength" => Stats[(int)Modifiers.STRENGTH] > 0,
             "has_shieldmen" => Stats[(int)Modifiers.SHIELDMEN] > 0,
+            "chance_25" => GD.Randf() >= 0.25,
+            "chance_50" => GD.Randf() >= 0.5,
+            "chance_75" => GD.Randf() >= 0.75,
             null => true,
             "" => true,
             _ => throw new Exception(),
@@ -89,8 +92,24 @@ public partial class Main : Control
         UpdateStatLabel();
     }
 
+    void EndGame(GameState state)
+    {
+        Choice1Btn.Text = "RESET";
+        Choice2Btn.Visible = false;
+        Choice1Btn.Pressed -= OnChoice1Pressed;
+        Choice1Btn.Pressed += () => GetTree().ReloadCurrentScene();
+    }
+
     public void LoadDescision(Decision decision)
     {
+        if (decision.newState != GameState.PLAYING)
+        {
+            currentNode = decision;
+            Prompt.Text = decision.Outcome;
+            EndGame(decision.newState);
+            return;
+        }
+
         Choice1Btn.Disabled = false;
         Choice2Btn.Disabled = false;
         currentNode = decision;
@@ -169,6 +188,13 @@ public partial class Main : Control
     {
         if (currentNode is Decision decision)
         {
+            if (hero == HeroType.NONE)
+            {
+                hero = decision.setHero;
+            }
+
+            GD.Print($"hero:{hero}, kingchoice:{decision.NextPromptKing != null}");
+
             if (decision.NextDecision != null)
             {
                 LoadDescision(decision.NextDecision);

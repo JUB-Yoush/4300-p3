@@ -13,6 +13,8 @@ Influence = null
 ConditionKey = ""
 ConditionIndex = -1
 NextPrompt = ExtResource("1_px1ml")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_px1ml"]
@@ -26,6 +28,8 @@ Influence = Dictionary[int, int]({
 ConditionKey = ""
 ConditionIndex = -1
 NextPrompt = ExtResource("3_ref8h")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]

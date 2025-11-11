@@ -1,10 +1,39 @@
-[gd_resource type="Resource" script_class="Prompt" load_steps=2 format=3 uid="uid://cdhq6fso2chsa"]
+[gd_resource type="Resource" script_class="Prompt" load_steps=7 format=3 uid="uid://cdhq6fso2chsa"]
 
+[ext_resource type="Resource" uid="uid://ciawpkla84k84" path="res://assets/battle2/win_75.tres" id="1_grpyg"]
 [ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="1_q42e8"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="2_liup2"]
+[ext_resource type="Resource" uid="uid://t5i0202nae8u" path="res://assets/battle2/win.tres" id="3_gt452"]
+
+[sub_resource type="Resource" id="Resource_sk3ix"]
+script = ExtResource("2_liup2")
+Description = "Everyone Attack"
+Outcome = "You order for all your troops to attack the enemy soldiers, with the Barbarian adding ‘to finish them off’. With the numbers leaning to your side, your troops are easily able to slay the enemy soldiers.\\n\\nSTAMP your ruthless army, fighting against the few enemies left"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("1_grpyg")
+setHero = 0
+newState = 0
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_hcxwt"]
+script = ExtResource("2_liup2")
+Description = "Let Him Handle It"
+Outcome = "You let the Barbarian handle it, and he is ecstatic. He’s able to focus in on the few remaining enemy soldiers and charge in swords swinging. The enemies have no chance, as the moment they notice the Barbarian, they’ve already been slashed. The enemy forces dies in a matter of seconds.\\n\\nSTAMP the barbarian’s rampage"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("3_gt452")
+setHero = 0
+newState = 0
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]
 script = ExtResource("1_q42e8")
-PromptText = ""
+PromptText = "The Barbarian wants to finish off the enemy troops, years of distain for the enemy Kingdom showing in his eyes. He gives you the options of either sending everyone in to attack or to let him handle it.\\nWhich do you choose?"
 Answer1ConditionKey = ""
 Answer2ConditionKey = ""
+Answer1 = SubResource("Resource_sk3ix")
+Answer2 = SubResource("Resource_hcxwt")
 metadata/_custom_type_script = "uid://4kjr6gery7dy"
