@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="Prompt" load_steps=9 format=3 uid="uid://d1yqsaig1b8fw"]
+
+[ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="1_c34e2"]
+[ext_resource type="Resource" uid="uid://dcqd24qr63br2" path="res://assets/battle1/f_win_des.tres" id="1_rf6sx"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="2_isb4t"]
+[ext_resource type="Resource" uid="uid://digqea7oi1n5y" path="res://assets/battle1/f_mid_des.tres" id="3_isb4t"]
+
+[sub_resource type="Resource" id="Resource_v31n7"]
+script = ExtResource("2_isb4t")
+Description = "Focus on raiding"
+Outcome = "You decide to have your troops raid the Kingdom instead of fighting the enemies. They’re able to use the rocky geography to their advantage, evading the sight of the enemy soldiers within.\\nOut of sight, you’re able to raid successfully, gathering metals, ores, and preserved meats. With the raided loot and your men intact, you return home victorious.\\n\\nSTAMP Your troops sneaking and hiding from enemies"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("1_rf6sx")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_24pbo"]
+script = ExtResource("2_isb4t")
+Description = ""
+Outcome = "You decide to have your troops finish off the remaining enemies. With your physical training, your men are able to slay what enemies were left at the Kingdom entrance. Now without opposition, your troops are able to raid successfully, gathering metals, ores, and preserved meats. With the raided loot and your men intact, you return home victorious.\\n\\nSTAMP Your strengthened troops victorious among defeated enemies"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("1_rf6sx")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_4yvmc"]
+script = ExtResource("2_isb4t")
+Description = "You decide to have your troops finish off the remaining enemies. Even with the lesser numbers of the enemy troops, their strength still poses a challenge for your men. You’re able to keep your ground, but some of your men fall at the enemies hands.\\n\\nSTAMP Your troops fighting the enemy, some defeated"
+Outcome = ""
+Influence = Dictionary[int, int]({
+1: -1,
+2: -1
+})
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("3_isb4t")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_w4d0x"]
+script = ExtResource("2_isb4t")
+Description = "Finish remaining enemies"
+Outcome = ""
+ConditionalOutcome1 = SubResource("Resource_24pbo")
+ConditionalOutcome2 = SubResource("Resource_4yvmc")
+Influence = null
+ConditionKey = "has_strength"
+ConditionIndex = -1
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[resource]
+script = ExtResource("1_c34e2")
+PromptText = "With less enemy Swordmen, their numbers are more manageable for your men. What are your next orders?"
+Answer1ConditionKey = ""
+Answer2ConditionKey = ""
+Answer1 = SubResource("Resource_v31n7")
+Answer2 = SubResource("Resource_w4d0x")
+metadata/_custom_type_script = "uid://4kjr6gery7dy"

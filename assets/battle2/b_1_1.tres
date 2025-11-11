@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Prompt" load_steps=7 format=3 uid="uid://ca55cdquusgcb"]
+
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="1_2f4y0"]
+[ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="1_5tsc2"]
+[ext_resource type="Resource" uid="uid://fi6gp1ahm81f" path="res://assets/battle2/b_2_1.tres" id="1_px1ml"]
+[ext_resource type="Resource" uid="uid://crsvonxo65t3c" path="res://assets/battle2/b_2_2.tres" id="3_ref8h"]
+
+[sub_resource type="Resource" id="Resource_pveuy"]
+script = ExtResource("1_2f4y0")
+Description = "Send all your troops to defend the entrance"
+Outcome = "At your command, all your troops prepare to defend the entrance. With the experience from your last battle, your army is prepared for the fight. They’re able to hold the enemy troops back, even able to land some fatal hits.\\n\\nSTAMP Your troops defending your gate against the enemy"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextPrompt = ExtResource("1_px1ml")
+setHero = 0
+newState = 0
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_px1ml"]
+script = ExtResource("1_2f4y0")
+Description = "Send your Swordsmen to attempt a flank."
+Outcome = "At your command, your troops begin to set up a flank to attack the enemy from behind. To do this, some of your soldiers slip through other exits to catch the enemy by surprised. This leaves the front lines understaffed, resulting in the lost of some of your troops, mainly ranged and defensive men."
+Influence = Dictionary[int, int]({
+2: -1,
+3: -1
+})
+ConditionKey = ""
+ConditionIndex = -1
+NextPrompt = ExtResource("3_ref8h")
+setHero = 0
+newState = 0
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[resource]
+script = ExtResource("1_5tsc2")
+PromptText = "Right as the last of your new troops are trained, you get new news. The enemy Kingdom are near, almost at your Kingdom’s doorstep.  You and the Hero quickly inform your troops of the incoming enemy.When the enemy troops come marching, in sight of you, the Hero prompts you for your command. Do you..."
+Answer1ConditionKey = ""
+Answer2ConditionKey = "has_swords"
+Answer1 = SubResource("Resource_pveuy")
+Answer2 = SubResource("Resource_px1ml")
+metadata/_custom_type_script = "uid://4kjr6gery7dy"

@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Prompt" load_steps=6 format=3 uid="uid://nw2n18frwr7q"]
+
+[ext_resource type="Resource" uid="uid://cq2teisa26ah8" path="res://assets/prep2/p2d4.tres" id="1_m2meo"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="2_ice8v"]
+[ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="3_n5so6"]
+
+[sub_resource type="Resource" id="Resource_m2meo"]
+script = ExtResource("2_ice8v")
+Description = "Bulk Defense"
+Outcome = "Your army grows impenetrable.\\n\\nSTAMP 2 Shieldmen"
+Influence = Dictionary[int, int]({
+2: 2
+})
+ConditionKey = ""
+ConditionIndex = -1
+NextPrompt = ExtResource("1_m2meo")
+setHero = 0
+newState = 0
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_6ofqm"]
+script = ExtResource("2_ice8v")
+Description = "Bulk Offence"
+Outcome = "Your army strikes fear into enemies.\\n\\nSTAMP 2 swordsmen"
+Influence = Dictionary[int, int]({
+1: 2
+})
+ConditionKey = ""
+ConditionIndex = -1
+NextPrompt = ExtResource("1_m2meo")
+setHero = 0
+newState = 0
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[resource]
+script = ExtResource("3_n5so6")
+PromptText = "You are given the option of bulking up your defense lines or bulking up your offensive lines with a grant from the local lord. Where do you put the money?"
+Answer1ConditionKey = ""
+Answer2ConditionKey = ""
+Answer1 = SubResource("Resource_m2meo")
+Answer2 = SubResource("Resource_6ofqm")
+metadata/_custom_type_script = "uid://4kjr6gery7dy"

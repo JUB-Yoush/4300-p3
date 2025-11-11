@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="Prompt" load_steps=9 format=3 uid="uid://cal1t54c62giy"]
+
+[ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="1_dvl88"]
+[ext_resource type="Resource" uid="uid://ba84vvy3eqs2" path="res://assets/battle2/lose.tres" id="1_rvo5j"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="2_lc872"]
+[ext_resource type="Resource" uid="uid://cco7g7q6xsqe5" path="res://assets/battle2/win_50.tres" id="3_lc872"]
+
+[sub_resource type="Resource" id="Resource_q4c30"]
+script = ExtResource("2_lc872")
+Description = "Let Him Handle It"
+Outcome = "You let the Barbarian handle it. He does not, in fact, handle it well. He swings and attacks with little thought, and in the distraction, is taken down easily severely wounded by the enemy soldiers. Your own troops, stunned by this, are severely wounded as well.\\n\\nSTAMP the barbarian, failing to handle it"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("1_rvo5j")
+setHero = 0
+newState = 0
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_p6pu1"]
+script = ExtResource("2_lc872")
+Description = ""
+Outcome = "With the asset of their physical training, they’re able to hold steady against the enemy’s numbers, putting up a strong fight.\\n\\nSTAMP your strengthened but outnumbered troops, fighting an even battle against the enemy"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("3_lc872")
+setHero = 0
+newState = 0
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_dscpq"]
+script = ExtResource("2_lc872")
+Description = ""
+Outcome = "However, they don’t last long. Without the asset of physical training, their current strength is no match for the enemy’s numbers. They’re severely wounded one by one.\\n\\nSTAMP your troops, fighting a losing battle"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("1_rvo5j")
+setHero = 0
+newState = 0
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_x27yq"]
+script = ExtResource("2_lc872")
+Description = "Defence (Last Stand)"
+Outcome = ""
+ConditionalOutcome1 = SubResource("Resource_p6pu1")
+ConditionalOutcome2 = SubResource("Resource_dscpq")
+Influence = null
+ConditionKey = "has_strength"
+ConditionIndex = -1
+setHero = 0
+newState = 0
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[resource]
+script = ExtResource("1_dvl88")
+PromptText = "The Barbarian wants to keep pushing, either letting him handle it or have the troops continue to hold defence. Which option do you pick?"
+Answer1ConditionKey = ""
+Answer2ConditionKey = ""
+Answer1 = SubResource("Resource_q4c30")
+Answer2 = SubResource("Resource_x27yq")
+metadata/_custom_type_script = "uid://4kjr6gery7dy"

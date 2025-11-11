@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Decision" load_steps=4 format=3 uid="uid://ciawpkla84k84"]
+
+[ext_resource type="Resource" uid="uid://t5i0202nae8u" path="res://assets/battle2/win.tres" id="1_dktja"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="1_j46oj"]
+[ext_resource type="Resource" uid="uid://ba84vvy3eqs2" path="res://assets/battle2/lose.tres" id="2_q77qk"]
+
+[resource]
+script = ExtResource("1_j46oj")
+Description = ""
+Outcome = ""
+ConditionalOutcome1 = ExtResource("1_dktja")
+ConditionalOutcome2 = ExtResource("2_q77qk")
+Influence = null
+ConditionKey = "chance_75"
+ConditionIndex = -1
+setHero = 0
+newState = 0
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"

@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Prompt" load_steps=6 format=3 uid="uid://c3ixnfq1l85ew"]
+
+[ext_resource type="Resource" uid="uid://bm4xcbsnt0fvh" path="res://assets/prep2/p2d0.tres" id="1_2y7bg"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="1_5s6hi"]
+[ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="1_tktjk"]
+
+[sub_resource type="Resource" id="Resource_2y7bg"]
+script = ExtResource("1_5s6hi")
+Description = "The New King"
+Outcome = "And he is crowned. \\n\\nSTAMP a troop of your choice, now with a crown among the surviving army"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("1_2y7bg")
+setHero = 1
+newState = 0
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_s0rv8"]
+script = ExtResource("1_5s6hi")
+Description = "The Barbarian"
+Outcome = "So it is decided. \\n\\nSTAMP a troop of your choice, now with an axe among the surviving army"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("1_2y7bg")
+setHero = 2
+newState = 0
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[resource]
+script = ExtResource("1_tktjk")
+PromptText = "\\n\\nYou see two options before you.\\nThe first is the New King, crowned by the Royal Counsel for their outstanding work during the Raids. They’re more calmer than the average soldier, slow to force but quick to strategize.\\nThe second is what your Kingdom has dubbed the ‘Barbarian’, a title granted due to their physical and combat abilities. They’re strong and quick to fight, but slow to strategize."
+Answer1ConditionKey = ""
+Answer2ConditionKey = ""
+Answer1 = SubResource("Resource_2y7bg")
+Answer2 = SubResource("Resource_s0rv8")
+metadata/_custom_type_script = "uid://4kjr6gery7dy"

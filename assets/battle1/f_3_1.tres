@@ -1,0 +1,57 @@
+[gd_resource type="Resource" script_class="Prompt" load_steps=10 format=3 uid="uid://dnts8lpwqak0r"]
+
+[ext_resource type="Resource" uid="uid://dcqd24qr63br2" path="res://assets/battle1/f_win_des.tres" id="1_hrxli"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="2_6ejn5"]
+[ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="3_hrxli"]
+[ext_resource type="Resource" uid="uid://bhp604eeua6e4" path="res://assets/battle1/f_lose_des.tres" id="3_mf3gy"]
+[ext_resource type="Resource" uid="uid://digqea7oi1n5y" path="res://assets/battle1/f_mid_des.tres" id="4_5kwka"]
+
+[sub_resource type="Resource" id="Resource_3k5aw"]
+script = ExtResource("2_6ejn5")
+Description = "Use Fire"
+Outcome = "You pull out a match stick from your pocket, striking it against one of the wooden support beam. You toss it into the piles of dried grain, seeing it catch a-blaze. As the fire starts to spread, it scares the enemy horses, allowing you and your Archers to escape the burning storage house.\\n\\nSTAMP your archers escaping the scene.\\n\\nWhile none of your Archers looses their life, you are unable to continue to raid the town. The enemy Archers quickly recovers and their keen eye makes it impossible for you to continue to raid the town. It’s likely word has gone out as well, stopping your troops to raid anymore."
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("1_hrxli")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_mf3gy"]
+script = ExtResource("2_6ejn5")
+Description = ""
+Outcome = "You order your Archers to fight back quickly. Your Archers, injured from the arrows earlier, struggles to pull their bows in time. Your Archers are shot one by one, unable to defend themselves. You’re able to flee from the storage house.\\nGrouping back with the rest of your troop outside, you choose to draw back. The news have gotten out of your raiding, and more enemy Archers are making their way to the front entrance.\\n\\nSTAMP Your weakened archers failing to evade enemy fire"
+Influence = Dictionary[int, int]({})
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("3_mf3gy")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_5kwka"]
+script = ExtResource("2_6ejn5")
+Description = ""
+Outcome = "You order your Archers to fight back quickly. Your Archers, fast on their feet and bows, out-shoots the enemy Archers before they could ready their bows. Their horses are scared away from the arrows.\\nYou and your troops are able to quickly raid the piles of grain from the storage. It’s enough grain to supply bread to your whole army.\\n\\nSTAMP Your army winning against the archers"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("4_5kwka")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_bph0e"]
+script = ExtResource("2_6ejn5")
+Description = "Use Force"
+Outcome = ""
+ConditionalOutcome1 = SubResource("Resource_mf3gy")
+ConditionalOutcome2 = SubResource("Resource_5kwka")
+Influence = null
+ConditionKey = "has_weak"
+ConditionIndex = -1
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[resource]
+script = ExtResource("3_hrxli")
+PromptText = "Enemy troops located inside the Kingdom gets news of your raiding, and a handful of Archers on horseback ambushes you in the storage house. \\nDo you set the storage on fire, allowing for an escape but losing the grain inside, or do you use force to attack back?"
+Answer1ConditionKey = ""
+Answer2ConditionKey = ""
+Answer1 = SubResource("Resource_3k5aw")
+Answer2 = SubResource("Resource_bph0e")
+metadata/_custom_type_script = "uid://4kjr6gery7dy"

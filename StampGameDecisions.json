@@ -190,7 +190,7 @@
       },
       "answer_2": {
         "option": "Keep all your troops together to attack.", 
-        "outcome": "As your troops continue to fight the enemy soldiers, you see more enemy soldiers from inside the Kingdom start to approach, most likely alerted during the arrow rain. \n\nSTAMP Your troops fighting the enemy’s", 
+        "outcome": "As your troops continue to fight the enemy soldiers, you see more enemy soldiers from inside the Kingdom start to approach, most likely alerted during the arrow rain. \n\nSTAMP Your troops fighting the enemy's", 
         "influence": [0,0,0,0,0],
         "next_decision": "battle_1_decision_3.2"
       }

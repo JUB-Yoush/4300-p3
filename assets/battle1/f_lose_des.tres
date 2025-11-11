@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Decision" load_steps=3 format=3 uid="uid://bhp604eeua6e4"]
+
+[ext_resource type="Resource" uid="uid://bm4xcbsnt0fvh" path="res://assets/prep2/p2d0.tres" id="1_2nkho"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="1_uvppg"]
+
+[resource]
+script = ExtResource("1_uvppg")
+Description = ""
+Outcome = "Only one choice stands before you. The New King, crowned by the Royal Counsel for being the sole survivor of the Raids, praised for their resilience. They’re more calmer than your late soldiers, slow to force but quick to strategize. \\n\\nSTAMP The new king, the lone survivor (any troop with a crown)"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("1_2nkho")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"

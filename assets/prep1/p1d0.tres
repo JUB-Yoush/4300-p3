@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Decision" load_steps=3 format=3 uid="uid://cn5hsyv25cdod"]
+
+[ext_resource type="Resource" uid="uid://beg44tdg5u8w8" path="res://assets/prep1/p1d1.tres" id="1_ajssl"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="1_qtfuc"]
+
+[resource]
+script = ExtResource("1_qtfuc")
+Description = ""
+Outcome = "You get news that century long enemy in the Prerid Kingdom is planning to seize your Kingdom. However, due to a bad harvest season, the Kingdom is lacking in resources, so your only option are to raid nearby weaker Kingdoms.
+You have been tasked with leading and documenting."
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextPrompt = ExtResource("1_ajssl")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"

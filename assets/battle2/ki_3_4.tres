@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Prompt" load_steps=7 format=3 uid="uid://bu736fawwtr"]
+
+[ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="1_bpdyu"]
+[ext_resource type="Resource" uid="uid://t5i0202nae8u" path="res://assets/battle2/win.tres" id="1_njuly"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="2_x7lry"]
+[ext_resource type="Resource" uid="uid://ciawpkla84k84" path="res://assets/battle2/win_75.tres" id="3_d0yge"]
+
+[sub_resource type="Resource" id="Resource_xgdhn"]
+script = ExtResource("2_x7lry")
+Description = "Accept"
+Outcome = "You accept the enemy’s surrender. They don’t go back on their word, allowing themselves to imprisoned. With the enemy troops contained and defeated, you finally breathe easily.\\n\\nSTAMP enemy troops, surrendering to your army."
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("1_njuly")
+setHero = 0
+newState = 0
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_q7qb0"]
+script = ExtResource("2_x7lry")
+Description = "Decline"
+Outcome = "You decline the enemy’s surrender, ordering for your troops to finish off what enemy soldiers remain. The fight continues, the numbers leaning to your side.\\n\\nSTAMP your ruthless army, fighting against the few enemies left"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("3_d0yge")
+setHero = 0
+newState = 0
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[resource]
+script = ExtResource("1_bpdyu")
+PromptText = "The King urges the enemy commander to surrender, and seeing the numbers, the commander agrees and surrenders. The King lets you decide on accepting it or declining. Accepting would spare them, while declining would continue the fight."
+Answer1ConditionKey = ""
+Answer2ConditionKey = ""
+Answer1 = SubResource("Resource_xgdhn")
+Answer2 = SubResource("Resource_q7qb0")
+metadata/_custom_type_script = "uid://4kjr6gery7dy"
