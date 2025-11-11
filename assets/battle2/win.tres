@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Decision" load_steps=2 format=3 uid="uid://t5i0202nae8u"]
+
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="1_x2d8l"]
+
+[resource]
+script = ExtResource("1_x2d8l")
+Description = ""
+Outcome = ""
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+setHero = 0
+newState = 0
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"

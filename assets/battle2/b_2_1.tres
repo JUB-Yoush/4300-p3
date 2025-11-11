@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="Prompt" load_steps=9 format=3 uid="uid://fi6gp1ahm81f"]
+
+[ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="1_aw821"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="1_u4eqx"]
+[ext_resource type="Resource" uid="uid://bulljc62mb7s5" path="res://assets/battle2/ba_3_1.tres" id="2_xu7gw"]
+[ext_resource type="Resource" uid="uid://b83lmhdhsisbc" path="res://assets/battle2/ki_3_2.tres" id="3_sk2m4"]
+
+[sub_resource type="Resource" id="Resource_b8hrx"]
+script = ExtResource("1_u4eqx")
+Description = ""
+Outcome = "You order your troops to chase down the enemy troops. They do as commanded, moving from their position to chase. With the extra training, your troops are able to slay some of the retreating enemy soldiers.\\n\\nSTAMP Your troops attacking an enemy facing the right"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_xu7gw"]
+script = ExtResource("1_u4eqx")
+Description = ""
+Outcome = "You order your troops to chase down the enemy troops. They do as commanded, moving from their position to chase. With focus now on offense, your defense lessens. You loose some troops in the attack.\\n\\nSTAMP your army on foot chasing an enemy to the right"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_sk2m4"]
+script = ExtResource("1_u4eqx")
+Description = "Chase down the enemy soldiers backing away"
+Outcome = ""
+ConditionalOutcome1 = SubResource("Resource_b8hrx")
+ConditionalOutcome2 = SubResource("Resource_xu7gw")
+Influence = null
+ConditionKey = "has_strength"
+ConditionIndex = -1
+NextPrompt = ExtResource("2_xu7gw")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_elfob"]
+script = ExtResource("1_u4eqx")
+Description = "Keep your troops holding defences at the entrance"
+Outcome = ""
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextPrompt = ExtResource("3_sk2m4")
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[resource]
+script = ExtResource("1_aw821")
+PromptText = "The enemy soldiers start to back off slowly, but the Hero has the hunch that it’s not over yet. The hunch prompts you to make a decision.\\nDo you..."
+Answer1ConditionKey = ""
+Answer2ConditionKey = ""
+Answer1 = SubResource("Resource_sk2m4")
+Answer2 = SubResource("Resource_elfob")
+metadata/_custom_type_script = "uid://4kjr6gery7dy"

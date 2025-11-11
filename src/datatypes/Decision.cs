@@ -31,7 +31,19 @@ public partial class Decision : Resource, INode
     public Prompt NextPrompt = null;
 
     [Export]
+    public Prompt NextPromptKing = null;
+
+    [Export]
+    public Prompt NextPromptBarb = null;
+
+    [Export]
     public Decision NextDecision = null;
+
+    [Export]
+    public HeroType setHero = HeroType.NONE;
+
+    [Export]
+    public GameState newState = GameState.PLAYING;
 
     public Decision() { }
 }

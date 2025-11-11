@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Prompt" load_steps=7 format=3 uid="uid://b83lmhdhsisbc"]
+
+[ext_resource type="Resource" uid="uid://cco7g7q6xsqe5" path="res://assets/battle2/win_50.tres" id="1_k3iq7"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="2_rv47x"]
+[ext_resource type="Resource" uid="uid://ciawpkla84k84" path="res://assets/battle2/win_75.tres" id="3_h58rf"]
+[ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="4_dcreo"]
+
+[sub_resource type="Resource" id="Resource_2bt2a"]
+script = ExtResource("2_rv47x")
+Description = "Split into Groups"
+Outcome = "You command for your troops to split up into small groups. Your troops fight hard, both thanks to numbers and training. The enemy troops are pushed into the Kingdom streets, but the fight continues strongly, with neither side wanting to face defeat.\\n\\nSTAMP A trio of your troops fighting evenly against enemies"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("1_k3iq7")
+setHero = 0
+newState = 0
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_uu7rl"]
+script = ExtResource("2_rv47x")
+Description = "Send Archers to the Wall"
+Outcome = "You command for your Archers to climb the Kingdom walls. With the distance, your Archers are easily able to shoot down at the enemy troops, and evade the arrows shooting up. With this help, the enemy troops’ numbers fall fast.\\n\\nSTAMP Your archers firing at enemies from atop their wall"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("3_h58rf")
+setHero = 0
+newState = 0
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[resource]
+script = ExtResource("4_dcreo")
+PromptText = "The New King gives you two options.\\nThe first is to split your troops up to narrow down on fighting specific targets, pushing them into the streets where they’re at a disadvantage.\\nThe second is to send your Archers to split off from the rest, scaling the walls to use the distance advantage.\\nWhich option do you choose?"
+Answer1ConditionKey = ""
+Answer2ConditionKey = "has_archers"
+Answer1 = SubResource("Resource_2bt2a")
+Answer2 = SubResource("Resource_uu7rl")
+metadata/_custom_type_script = "uid://4kjr6gery7dy"

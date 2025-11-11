@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Prompt" load_steps=6 format=3 uid="uid://bulljc62mb7s5"]
+
+[ext_resource type="Resource" uid="uid://t5i0202nae8u" path="res://assets/battle2/win.tres" id="1_qbjbr"]
+[ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="2_3c2l3"]
+[ext_resource type="Script" uid="uid://4kjr6gery7dy" path="res://src/datatypes/Prompt.cs" id="3_lflvm"]
+
+[sub_resource type="Resource" id="Resource_e6vj3"]
+script = ExtResource("2_3c2l3")
+Description = "Let Him Handle It"
+Outcome = "You let the Barbarian handle it, and they are ecstatic. They charge in, large sword swinging. Immediately, they break the formation of your troops, attack the enemies with little care. In the chaos, some of your men are slain and some of the enemies slip away and towards the Kingdom entrance. \\n\\nSTAMP your barbarian, defeated as the battle continues\""
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("1_qbjbr")
+setHero = 0
+newState = 0
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[sub_resource type="Resource" id="Resource_woqs6"]
+script = ExtResource("2_3c2l3")
+Description = "Focus on Their Horses"
+Outcome = "You command for your troops to focus on the enemy horses. Your troops, eager to finish off the enemies, quickly go for the horses. Slowly, as the horses are scared away or slain, the enemies are vulnerable to attacks. They don’t last long without their steed, and your troops are able to dismantle their army.\\n\\nSTAMP Your troops defeating enemies on horseback"
+Influence = null
+ConditionKey = ""
+ConditionIndex = -1
+NextDecision = ExtResource("1_qbjbr")
+setHero = 0
+newState = 0
+metadata/_custom_type_script = "uid://b7ptuqotty2dn"
+
+[resource]
+script = ExtResource("3_lflvm")
+PromptText = "You watch as your troops fight the enemies on the battle field a good distance from your Kingdom entrance. Both troops, your own and the enemy’s hold strong, neither faltering.\\nThe Barbarian isn’t satisfied though, seeing this as a waste of time. He urges you to do something, either to let him handle it or tell your troop to focus on the enemies’ horses. Do you."
+Answer1ConditionKey = ""
+Answer2ConditionKey = ""
+Answer1 = SubResource("Resource_e6vj3")
+Answer2 = SubResource("Resource_woqs6")
+metadata/_custom_type_script = "uid://4kjr6gery7dy"

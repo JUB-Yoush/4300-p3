@@ -27,6 +27,20 @@ public enum PromptType
     PREP,
 }
 
+public enum HeroType
+{
+    NONE,
+    KING,
+    BARB,
+}
+
+public enum GameState
+{
+    PLAYING,
+    WIN,
+    LOSE,
+}
+
 public interface INode { } // we have union types at home
 
 public partial class Main : Control
@@ -42,6 +56,8 @@ public partial class Main : Control
     Decision NextNode = null;
 
     INode currentNode = null;
+
+    HeroType hero = HeroType.NONE;
 
     public int[] Stats = new int[Enum.GetNames(typeof(Modifiers)).Length];
 
@@ -101,6 +117,11 @@ public partial class Main : Control
         Choice1Btn.Text = "Continue";
         Choice2Btn.Visible = false;
         UpdateStatLabel();
+
+        if (decision.setHero != HeroType.NONE && hero != HeroType.NONE)
+        {
+            hero = decision.setHero;
+        }
     }
 
     public void LoadPrompt(Prompt prompt)
@@ -151,6 +172,14 @@ public partial class Main : Control
             if (decision.NextDecision != null)
             {
                 LoadDescision(decision.NextDecision);
+            }
+            else if (decision.NextPromptKing != null && hero == HeroType.KING)
+            {
+                LoadPrompt(decision.NextPromptKing);
+            }
+            else if (decision.NextPromptBarb != null && hero == HeroType.BARB)
+            {
+                LoadPrompt(decision.NextPromptBarb);
             }
             else
             {
