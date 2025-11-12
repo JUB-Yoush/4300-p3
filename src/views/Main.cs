@@ -132,7 +132,17 @@ public partial class Main : Control
 
         foreach (var statChange in decision.Influence)
         {
-            Stats[(int)statChange.Key] += statChange.Value;
+            if (statChange.Key != Modifiers.STRENGTH)
+            {
+                Stats[(int)statChange.Key] = Math.Max(
+                    0,
+                    Stats[(int)statChange.Key] + statChange.Value
+                );
+            }
+            else
+            {
+                Stats[(int)statChange.Key] += statChange.Value;
+            }
         }
 
         if (decision.newState == GameState.WIPED)
@@ -242,9 +252,7 @@ public partial class Main : Control
 
     public override void _Process(double delta)
     {
-        if (Input.IsActionJustPressed("skip"))
-        {
-            LoadPrompt(GD.Load<Prompt>("res://assets/prep2/king_or_barb.tres"));
-        }
+        if (Input.IsActionJustPressed("reset"))
+            GetTree().ReloadCurrentScene();
     }
 }
