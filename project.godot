@@ -15,6 +15,10 @@ run/main_scene="uid://d2ocdrlsujq8s"
 config/features=PackedStringArray("4.4", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+AudioManager="*res://src/singletons/AudioManager.cs"
+
 [debug]
 
 gdscript/warnings/unused_variable=2

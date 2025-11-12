@@ -203,6 +203,7 @@ public partial class Main : Control
 
     public void OnChoice1Pressed()
     {
+        AudioManager.PlaySfx(SFX.Stamp);
         if (currentNode is Decision decision)
         {
             if (hero == HeroType.NONE)
@@ -237,6 +238,7 @@ public partial class Main : Control
 
     public void OnChoice2Pressed()
     {
+        AudioManager.PlaySfx(SFX.Stamp);
         if (currentNode is Decision decision) { }
         else if (currentNode is Prompt prompt)
         {
