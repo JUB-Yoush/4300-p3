@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2ocdrlsujq8s"]
+[gd_scene load_steps=5 format=3 uid="uid://d2ocdrlsujq8s"]
 
 [ext_resource type="Script" uid="uid://ctlecg5iltyil" path="res://src/views/Main.cs" id="1_p6asa"]
 [ext_resource type="Theme" uid="uid://bxpo0q2d0qj06" path="res://assets/ui/themes/ui.tres" id="2_fwy4t"]
+[ext_resource type="Texture2D" uid="uid://bgis8gdjvt486" path="res://assets/ui/spritesheet.png" id="3_olnjq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qbrlg"]
+texture = ExtResource("3_olnjq")
+region_rect = Rect2(6.78394, 692.643, 357.533, 474.381)
+modulate_color = Color(0.204045, 0.192016, 0.136272, 1)
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -24,7 +30,7 @@ layout_mode = 0
 offset_left = 295.0
 offset_top = 480.0
 offset_right = 1627.0
-offset_bottom = 565.0
+offset_bottom = 630.0
 theme = ExtResource("2_fwy4t")
 theme_override_font_sizes/font_size = 64
 text = "nobody thought of it."
@@ -33,9 +39,9 @@ text = "nobody thought of it."
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 288.0
-offset_top = 675.0
+offset_top = 651.0
 offset_right = 1630.0
-offset_bottom = 760.0
+offset_bottom = 801.0
 theme = ExtResource("2_fwy4t")
 theme_override_font_sizes/font_size = 64
 text = "nobody thought of it."
@@ -53,16 +59,21 @@ text = "asdfasdfasdfasdfasdf"
 
 [node name="Panel2" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 21.0
-offset_top = 18.0
-offset_right = 299.0
-offset_bottom = 275.0
+offset_left = 77.0
+offset_top = 52.0
+offset_right = 355.0
+offset_bottom = 309.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_qbrlg")
 
 [node name="Stats" type="Label" parent="Panel2"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_right = 267.0
-offset_bottom = 144.0
+offset_left = 7.0
+offset_top = 24.0
+offset_right = 274.0
+offset_bottom = 237.0
+theme = ExtResource("2_fwy4t")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 text = "    SWORDSMEN: 0
     SHIELDMEN: 0
@@ -70,10 +81,3 @@ text = "    SWORDSMEN: 0
     HORSE: 0
     STRENGTH: 0
 "
-
-[node name="CurrentNode" type="Label" parent="Panel2"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_right = 267.0
-offset_bottom = 144.0
-theme_override_font_sizes/font_size = 24

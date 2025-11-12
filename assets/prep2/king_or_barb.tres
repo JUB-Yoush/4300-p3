@@ -34,9 +34,7 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]
 script = ExtResource("1_tktjk")
-PromptText = "
-
-You see two options before you.
+PromptText = "You see two options before you.
 The first is the New King, crowned by the Royal Counsel for their outstanding work during the Raids. They’re more calmer than the average soldier, slow to force but quick to strategize.
 The second is what your Kingdom has dubbed the ‘Barbarian’, a title granted due to their physical and combat abilities. They’re strong and quick to fight, but slow to strategize."
 Answer1ConditionKey = ""

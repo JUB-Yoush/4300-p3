@@ -36,10 +36,8 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_4yvmc"]
 script = ExtResource("2_isb4t")
-Description = "You decide to have your troops finish off the remaining enemies. Even with the lesser numbers of the enemy troops, their strength still poses a challenge for your men. You’re able to keep your ground, but some of your men fall at the enemies hands.
-
-STAMP Your troops fighting the enemy, some defeated"
-Outcome = ""
+Description = ""
+Outcome = "You decide to have your troops finish off the remaining enemies. Even with the lesser numbers of the enemy troops, their strength still poses a challenge for your men. You’re able to keep your ground, but some of your men fall at the enemies hands.STAMP Your troops fighting the enemy, some defeated"
 Influence = Dictionary[int, int]({
 1: -1,
 2: -1

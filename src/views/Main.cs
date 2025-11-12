@@ -57,6 +57,9 @@ public partial class Main : Control
     Decision NextNode = null;
 
     INode currentNode = null;
+    INode prevNode = null;
+
+    Stack<string> promptStack = [];
 
     HeroType hero = HeroType.NONE;
 
@@ -64,7 +67,6 @@ public partial class Main : Control
 
     public bool Conditional(string key)
     {
-        GD.Print($"condition:{key}");
         return key switch
         {
             "has_horse" => Stats[(int)Modifiers.HORSE] > 0,
@@ -85,12 +87,14 @@ public partial class Main : Control
 
     public override void _Ready()
     {
+        promptStack.Push("");
         Choice1Btn = GetNode<Button>("%Choice1");
         Choice2Btn = GetNode<Button>("%Choice2");
         Prompt = GetNode<RichTextLabel>("%Prompt");
         Choice1Btn.Pressed += OnChoice1Pressed;
         Choice2Btn.Pressed += OnChoice2Pressed;
         LoadDescision(GD.Load<Decision>("res://assets/prep1/p1d0.tres"));
+        AudioManager.PlayMusic(BGM.Song);
         UpdateStatLabel();
     }
 
@@ -102,8 +106,17 @@ public partial class Main : Control
         Choice1Btn.Pressed += () => GetTree().ReloadCurrentScene();
     }
 
+    void PrintList()
+    {
+        foreach (var item in promptStack)
+        {
+            GD.Print(item);
+        }
+    }
+
     public void LoadDescision(Decision decision)
     {
+        GD.Print(promptStack.Peek());
         if (decision.newState == GameState.WIN || decision.newState == GameState.LOSE)
         {
             currentNode = decision;
@@ -127,12 +140,24 @@ public partial class Main : Control
             }
             return;
         }
+
+        prevNode = currentNode;
         currentNode = decision;
         Prompt.Text = decision.Outcome;
 
         foreach (var statChange in decision.Influence)
         {
-            Stats[(int)statChange.Key] += statChange.Value;
+            if (statChange.Key != Modifiers.STRENGTH)
+            {
+                Stats[(int)statChange.Key] = Math.Max(
+                    0,
+                    Stats[(int)statChange.Key] + statChange.Value
+                );
+            }
+            else
+            {
+                Stats[(int)statChange.Key] += statChange.Value;
+            }
         }
 
         if (decision.newState == GameState.WIPED)
@@ -156,14 +181,13 @@ public partial class Main : Control
         Choice2Btn.Visible = false;
         Choice1Btn.Disabled = false;
         Choice2Btn.Disabled = false;
-        GD.Print($"titles???{prompt.Answer1.Description}");
 
+        prevNode = currentNode;
         currentNode = prompt;
         Prompt.Text = prompt.PromptText;
 
         if (Conditional(prompt.Answer1ConditionKey))
         {
-            GD.Print(prompt.Answer1ConditionKey);
             Choice1Btn.Disabled = false;
             Choice1Btn.Visible = true;
             Choice1Btn.Text = prompt.Answer1.Description;
@@ -178,7 +202,6 @@ public partial class Main : Control
 
         if (Conditional(prompt.Answer2ConditionKey))
         {
-            GD.Print(prompt.Answer2ConditionKey);
             Choice2Btn.Visible = true;
             Choice2Btn.Text = prompt.Answer2.Description;
             Choice2 = prompt.Answer2;
@@ -193,14 +216,13 @@ public partial class Main : Control
 
     public void OnChoice1Pressed()
     {
+        AudioManager.PlaySfx(SFX.Stamp);
         if (currentNode is Decision decision)
         {
             if (hero == HeroType.NONE)
             {
                 hero = decision.setHero;
             }
-
-            GD.Print($"hero:{hero}, kingchoice:{decision.NextPromptKing != null}");
 
             if (decision.NextDecision != null)
             {
@@ -221,15 +243,18 @@ public partial class Main : Control
         }
         else if (currentNode is Prompt prompt)
         {
+            promptStack.Push(prompt.Answer1.Description);
             LoadDescision(prompt.Answer1);
         }
     }
 
     public void OnChoice2Pressed()
     {
+        AudioManager.PlaySfx(SFX.Stamp);
         if (currentNode is Decision decision) { }
         else if (currentNode is Prompt prompt)
         {
+            promptStack.Push(prompt.Answer2.Description);
             LoadDescision(prompt.Answer2);
         }
     }
@@ -237,14 +262,14 @@ public partial class Main : Control
     public void UpdateStatLabel()
     {
         GetNode<Label>("%Stats").Text =
-            $"SWORDS:{Stats[(int)Modifiers.SWORDSMEN]}\n SHEILD:{Stats[(int)Modifiers.SHIELDMEN]}\n ARCHERS:{Stats[(int)Modifiers.ARCHERS]}\n HORSE:{Stats[(int)Modifiers.HORSE]}\n STRENGTH:{Stats[(int)Modifiers.STRENGTH]}\n";
+            $"SWORDS:{Stats[(int)Modifiers.SWORDSMEN]}\n SHEILD:{Stats[(int)Modifiers.SHIELDMEN]}\n ARCHERS:{Stats[(int)Modifiers.ARCHERS]}\n HORSES:{Stats[(int)Modifiers.HORSE]}\n STRENGTH:{Stats[(int)Modifiers.STRENGTH]}\n";
     }
 
     public override void _Process(double delta)
     {
         if (Input.IsActionJustPressed("skip"))
         {
-            LoadPrompt(GD.Load<Prompt>("res://assets/prep2/king_or_barb.tres"));
+            GetTree().ReloadCurrentScene();
         }
     }
 }

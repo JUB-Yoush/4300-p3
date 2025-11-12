@@ -37,7 +37,7 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 script = ExtResource("1_67ta2")
 PromptText = "You watch as your troops fight the enemies on the battle field a good distance from your Kingdom entrance. Both troops, your own and the enemy’s hold strong, neither faltering.
 The New King urges for the enemies to be taken care of before your troops grow tired. They give two possible options. Either send in more horses or have your troops try to surround the enemies."
-Answer1ConditionKey = "has_horses"
+Answer1ConditionKey = "has_horse"
 Answer2ConditionKey = ""
 Answer1 = SubResource("Resource_jp1o8")
 Answer2 = SubResource("Resource_1igcr")
