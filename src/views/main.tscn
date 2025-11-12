@@ -71,7 +71,7 @@ layout_mode = 0
 offset_left = 7.0
 offset_top = 24.0
 offset_right = 274.0
-offset_bottom = 243.0
+offset_bottom = 237.0
 theme = ExtResource("2_fwy4t")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
@@ -81,12 +81,3 @@ text = "    SWORDSMEN: 0
     HORSE: 0
     STRENGTH: 0
 "
-
-[node name="CurrentNode" type="Label" parent="Panel2"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 7.0
-offset_top = 24.0
-offset_right = 274.0
-offset_bottom = 168.0
-theme_override_font_sizes/font_size = 24

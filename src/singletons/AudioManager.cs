@@ -4,7 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using Godot;
 
-public static class BGM { }
+public static class BGM
+{
+    public static AudioStream Song = GD.Load<AudioStream>("res://assets/audio/bgm/harpsicore.ogg");
+}
 
 public static class SFX
 {
