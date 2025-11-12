@@ -8,7 +8,9 @@
 [sub_resource type="Resource" id="Resource_q4c30"]
 script = ExtResource("2_lc872")
 Description = "Let Him Handle It"
-Outcome = "You let the Barbarian handle it. He does not, in fact, handle it well. He swings and attacks with little thought, and in the distraction, is taken down easily severely wounded by the enemy soldiers. Your own troops, stunned by this, are severely wounded as well.\\n\\nSTAMP the barbarian, failing to handle it"
+Outcome = "You let the Barbarian handle it. He does not, in fact, handle it well. He swings and attacks with little thought, and in the distraction, is taken down easily severely wounded by the enemy soldiers. Your own troops, stunned by this, are severely wounded as well.
+
+STAMP the barbarian, failing to handle it"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
@@ -20,7 +22,9 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_p6pu1"]
 script = ExtResource("2_lc872")
 Description = ""
-Outcome = "With the asset of their physical training, they’re able to hold steady against the enemy’s numbers, putting up a strong fight.\\n\\nSTAMP your strengthened but outnumbered troops, fighting an even battle against the enemy"
+Outcome = "With the asset of their physical training, they’re able to hold steady against the enemy’s numbers, putting up a strong fight.
+
+STAMP your strengthened but outnumbered troops, fighting an even battle against the enemy"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
@@ -32,7 +36,9 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_dscpq"]
 script = ExtResource("2_lc872")
 Description = ""
-Outcome = "However, they don’t last long. Without the asset of physical training, their current strength is no match for the enemy’s numbers. They’re severely wounded one by one.\\n\\nSTAMP your troops, fighting a losing battle"
+Outcome = "However, they don’t last long. Without the asset of physical training, their current strength is no match for the enemy’s numbers. They’re severely wounded one by one.
+
+STAMP your troops, fighting a losing battle"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1

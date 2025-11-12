@@ -7,7 +7,9 @@
 [sub_resource type="Resource" id="Resource_e0ydu"]
 script = ExtResource("2_phu43")
 Description = "Long Range Training"
-Outcome = "Your soldiers become reliable with a bow.\\n\\nSTAMP 2 archers"
+Outcome = "Your soldiers become reliable with a bow.
+
+STAMP 2 archers"
 Influence = Dictionary[int, int]({
 3: 2
 })
@@ -21,7 +23,9 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_uqmcc"]
 script = ExtResource("2_phu43")
 Description = "Close Quarters Combat"
-Outcome = "your soldiers become skilled with a sword.\\n\\nSTAMP 2 swordsmen"
+Outcome = "your soldiers become skilled with a sword.
+
+STAMP 2 swordsmen"
 Influence = Dictionary[int, int]({
 1: 2
 })

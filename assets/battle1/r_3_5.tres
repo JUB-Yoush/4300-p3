@@ -8,7 +8,10 @@
 [sub_resource type="Resource" id="Resource_iw78t"]
 script = ExtResource("2_5qe5k")
 Description = "Send some to start raiding"
-Outcome = "At your order, you send half of your troops to force their way through the entrance and disregard the enemy soldiers. At the sight of this, the enemy soldiers falter, confused at the sight. Your attacking troops take advantage of this and slaughter some of them. Your troops continue to fight as the others raid what they can.\\nAfter some time, with your troops still fighting at the entrance, your raiders return with some resources. They couldn’t get far, as their numbers were no match for the enemy soldiers within the Kingdom.\\n\\nSTAMP Your troops attacking enemies from both sides"
+Outcome = "At your order, you send half of your troops to force their way through the entrance and disregard the enemy soldiers. At the sight of this, the enemy soldiers falter, confused at the sight. Your attacking troops take advantage of this and slaughter some of them. Your troops continue to fight as the others raid what they can.
+After some time, with your troops still fighting at the entrance, your raiders return with some resources. They couldn’t get far, as their numbers were no match for the enemy soldiers within the Kingdom.
+
+STAMP Your troops attacking enemies from both sides"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
@@ -20,7 +23,10 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_jyybh"]
 script = ExtResource("2_5qe5k")
 Description = ""
-Outcome = "At your order, your troops continue to fight despite the loss of some of your men. As they fight, they become more accustomed to the ground, able to start holding their own. With the physical training, your troops are able to reduce the enemies’ numbers significantly, enough to enter through the entrance.\\nYou raid what you can, stone, fish, and ores, before needing to withdrawal as the enemy soldiers from inside the Kingdom makes themselves known. Before you leave the Kingdom land, your troops loot the fallen enemies' swords and shields\\n\\nSTAMP Your troops defeating the enemies on uneven ground."
+Outcome = "At your order, your troops continue to fight despite the loss of some of your men. As they fight, they become more accustomed to the ground, able to start holding their own. With the physical training, your troops are able to reduce the enemies’ numbers significantly, enough to enter through the entrance.
+You raid what you can, stone, fish, and ores, before needing to withdrawal as the enemy soldiers from inside the Kingdom makes themselves known. Before you leave the Kingdom land, your troops loot the fallen enemies' swords and shields
+
+STAMP Your troops defeating the enemies on uneven ground."
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
@@ -32,7 +38,9 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_i1vfx"]
 script = ExtResource("2_5qe5k")
 Description = ""
-Outcome = "At your order, your troops continue to fight despite the loss of some of your men. As they fight, it’s clear that they’re still unable to adapt to the terrain, and with the injures easily, they struggle to hold their own. You watch as some of your men die.\\n\\nSTAMP Your troops being defeated by the enemy"
+Outcome = "At your order, your troops continue to fight despite the loss of some of your men. As they fight, it’s clear that they’re still unable to adapt to the terrain, and with the injures easily, they struggle to hold their own. You watch as some of your men die.
+
+STAMP Your troops being defeated by the enemy"
 Influence = Dictionary[int, int]({
 2: -1,
 3: -1
@@ -59,7 +67,9 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]
 script = ExtResource("1_5puj0")
-PromptText = "While your Archers were shooting, the enemy Swordmen charged quickly forwards, used to the unpredictable ground. They slash at your Archers, fatally wounding them.\\nWith the loss of some of your men, you need to start raiding as soon as possible before the rest of your men grow tired.\\nDo you..."
+PromptText = "While your Archers were shooting, the enemy Swordmen charged quickly forwards, used to the unpredictable ground. They slash at your Archers, fatally wounding them.
+With the loss of some of your men, you need to start raiding as soon as possible before the rest of your men grow tired.
+Do you..."
 Answer1ConditionKey = ""
 Answer2ConditionKey = ""
 Answer1 = SubResource("Resource_iw78t")

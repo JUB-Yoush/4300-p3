@@ -8,7 +8,10 @@
 [sub_resource type="Resource" id="Resource_qj6dx"]
 script = ExtResource("2_s8vrn")
 Description = "Sacrifice shieldmen"
-Outcome = "You send your one Shieldman to defend against the arrows. All the enemy soldiers laser focus on them, pelting them with arrows. Your Shieldman withstands the arrows until they start to wear-down, then break the shield. \\nYou and your group doesn’t stick around long enough to see them fatally shot, fleeing from the unequal fight without any resources. \\n\\nSTAMP Your shieldmen’s last stand"
+Outcome = "You send your one Shieldman to defend against the arrows. All the enemy soldiers laser focus on them, pelting them with arrows. Your Shieldman withstands the arrows until they start to wear-down, then break the shield. 
+You and your group doesn’t stick around long enough to see them fatally shot, fleeing from the unequal fight without any resources. 
+
+STAMP Your shieldmen’s last stand"
 Influence = Dictionary[int, int]({
 2: -2
 })
@@ -22,7 +25,11 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_pbd4y"]
 script = ExtResource("2_s8vrn")
 Description = ""
-Outcome = "You decide to take the risk and attack all together. The first enemy arrow is shot at you, narrowly missing you and the horse stood besides you. It spooks the horse, causing it to yank itself out of the hold of one of your soldiers. Before you could grab onto the steed, it had already ran off towards the enemies, avoiding their arrows and kicking at their numbers. Not even the best trained men can defend against the back-kick of a horse.\\nIn the chaos, you see the uninjured and living enemy Archers flee from the area. One of your soldiers is able to control the horse, and you quickly raid the town with what you can carry.\\nThe horse still looked shaken up, so you decide to withdraw your army from the Kingdom.\\n\\nSTAMP The horse defeating enemies"
+Outcome = "You decide to take the risk and attack all together. The first enemy arrow is shot at you, narrowly missing you and the horse stood besides you. It spooks the horse, causing it to yank itself out of the hold of one of your soldiers. Before you could grab onto the steed, it had already ran off towards the enemies, avoiding their arrows and kicking at their numbers. Not even the best trained men can defend against the back-kick of a horse.
+In the chaos, you see the uninjured and living enemy Archers flee from the area. One of your soldiers is able to control the horse, and you quickly raid the town with what you can carry.
+The horse still looked shaken up, so you decide to withdraw your army from the Kingdom.
+
+STAMP The horse defeating enemies"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
@@ -34,7 +41,10 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_42hsg"]
 script = ExtResource("2_s8vrn")
 Description = ""
-Outcome = "You decide to take the risk and attack all together. Quickly, you realize you are no match for your enemies’ speed and tactics. Without order, one of your solider starts to defend, becoming a target for the enemy Archer’s arrows.\\nYou and your group doesn’t stick around long enough to see them fatally shot, fleeing from the unequal fight without any resources.\\n\\nSTAMP Your army escaping, leaving one swordsman to hold them off"
+Outcome = "You decide to take the risk and attack all together. Quickly, you realize you are no match for your enemies’ speed and tactics. Without order, one of your solider starts to defend, becoming a target for the enemy Archer’s arrows.
+You and your group doesn’t stick around long enough to see them fatally shot, fleeing from the unequal fight without any resources.
+
+STAMP Your army escaping, leaving one swordsman to hold them off"
 Influence = Dictionary[int, int]({})
 ConditionKey = ""
 ConditionIndex = -1
@@ -58,7 +68,8 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]
 script = ExtResource("4_2stgp")
-PromptText = "As your group begin to start raiding, you’re ambushed by a small group of enemy troops, slightly more men than your group. They spot you first, already aimed to shoot.\\nDo you sacrifice your Shield Man or do you attack all together?"
+PromptText = "As your group begin to start raiding, you’re ambushed by a small group of enemy troops, slightly more men than your group. They spot you first, already aimed to shoot.
+Do you sacrifice your Shield Man or do you attack all together?"
 Answer1ConditionKey = "has_shieldmen"
 Answer2ConditionKey = ""
 Answer1 = SubResource("Resource_qj6dx")

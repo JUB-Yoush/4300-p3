@@ -8,7 +8,9 @@
 [sub_resource type="Resource" id="Resource_jp1o8"]
 script = ExtResource("2_bl6tn")
 Description = "Send in Horses"
-Outcome = "You command to release the horses. These horses have a burning hatred for the enemy Kingdom, and waste no time starting to kick and stomp on them. You’re slightly stunned by this, but decides a win is a win as the enemy troops’ numbers fall.\\n\\nSTAMP The enemy troops, trampled by horses"
+Outcome = "You command to release the horses. These horses have a burning hatred for the enemy Kingdom, and waste no time starting to kick and stomp on them. You’re slightly stunned by this, but decides a win is a win as the enemy troops’ numbers fall.
+
+STAMP The enemy troops, trampled by horses"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
@@ -20,7 +22,9 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_1igcr"]
 script = ExtResource("2_bl6tn")
 Description = "Surround Them"
-Outcome = "You command for your troops to reformate and surround the enemy troops. As they do this, the enemies prepare, and are able to stand their ground against the incoming attacks\\n\\nSTAMP Many enemies, defending against your troops"
+Outcome = "You command for your troops to reformate and surround the enemy troops. As they do this, the enemies prepare, and are able to stand their ground against the incoming attacks
+
+STAMP Many enemies, defending against your troops"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
@@ -31,7 +35,8 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]
 script = ExtResource("1_67ta2")
-PromptText = "You watch as your troops fight the enemies on the battle field a good distance from your Kingdom entrance. Both troops, your own and the enemy’s hold strong, neither faltering.\\nThe New King urges for the enemies to be taken care of before your troops grow tired. They give two possible options. Either send in more horses or have your troops try to surround the enemies."
+PromptText = "You watch as your troops fight the enemies on the battle field a good distance from your Kingdom entrance. Both troops, your own and the enemy’s hold strong, neither faltering.
+The New King urges for the enemies to be taken care of before your troops grow tired. They give two possible options. Either send in more horses or have your troops try to surround the enemies."
 Answer1ConditionKey = "has_horses"
 Answer2ConditionKey = ""
 Answer1 = SubResource("Resource_jp1o8")

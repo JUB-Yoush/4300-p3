@@ -10,7 +10,9 @@
 [sub_resource type="Resource" id="Resource_o63av"]
 script = ExtResource("2_6c07n")
 Description = "Protect the Civilians"
-Outcome = "You quickly order your front line troops to protect the civilians. Your troops follow through, defending them from the attacks of the enemy army, almost too well. Before either you or the Hero realizes that the number of enemy soldiers had gone down, you get news that your Swordsmen sent for the surprise attack were intercepted. The result is the loss of your Swordmen, and a sizable portion of your army.\\n\\nSTAMP the enemy army on the left side of the cell, attacking your swordsmen on the right"
+Outcome = "You quickly order your front line troops to protect the civilians. Your troops follow through, defending them from the attacks of the enemy army, almost too well. Before either you or the Hero realizes that the number of enemy soldiers had gone down, you get news that your Swordsmen sent for the surprise attack were intercepted. The result is the loss of your Swordmen, and a sizable portion of your army.
+
+STAMP the enemy army on the left side of the cell, attacking your swordsmen on the right"
 Influence = Dictionary[int, int]({
 1: -2
 })
@@ -25,7 +27,9 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_t3skn"]
 script = ExtResource("2_6c07n")
 Description = "Attack to support the flanking Swordsmen"
-Outcome = "You quickly send an order for your Swordsmen to surprise attack now. The timing was perfect, catching the enemy soldiers off guard. In the shock, your troops are able to slay a large portion of the enemy forces. Before you can make your next order, the Hero steps in.\\n\\nSTAMP your archers and shieldmen on the left of the cell attacking enemies in the middle with your swordsmen flanking on the right"
+Outcome = "You quickly send an order for your Swordsmen to surprise attack now. The timing was perfect, catching the enemy soldiers off guard. In the shock, your troops are able to slay a large portion of the enemy forces. Before you can make your next order, the Hero steps in.
+
+STAMP your archers and shieldmen on the left of the cell attacking enemies in the middle with your swordsmen flanking on the right"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1

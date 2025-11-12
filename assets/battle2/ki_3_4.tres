@@ -8,7 +8,9 @@
 [sub_resource type="Resource" id="Resource_xgdhn"]
 script = ExtResource("2_x7lry")
 Description = "Accept"
-Outcome = "You accept the enemy’s surrender. They don’t go back on their word, allowing themselves to imprisoned. With the enemy troops contained and defeated, you finally breathe easily.\\n\\nSTAMP enemy troops, surrendering to your army."
+Outcome = "You accept the enemy’s surrender. They don’t go back on their word, allowing themselves to imprisoned. With the enemy troops contained and defeated, you finally breathe easily.
+
+STAMP enemy troops, surrendering to your army."
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
@@ -20,7 +22,9 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_q7qb0"]
 script = ExtResource("2_x7lry")
 Description = "Decline"
-Outcome = "You decline the enemy’s surrender, ordering for your troops to finish off what enemy soldiers remain. The fight continues, the numbers leaning to your side.\\n\\nSTAMP your ruthless army, fighting against the few enemies left"
+Outcome = "You decline the enemy’s surrender, ordering for your troops to finish off what enemy soldiers remain. The fight continues, the numbers leaning to your side.
+
+STAMP your ruthless army, fighting against the few enemies left"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1

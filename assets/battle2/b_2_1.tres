@@ -10,7 +10,9 @@
 [sub_resource type="Resource" id="Resource_b8hrx"]
 script = ExtResource("1_u4eqx")
 Description = ""
-Outcome = "You order your troops to chase down the enemy troops. They do as commanded, moving from their position to chase. With the extra training, your troops are able to slay some of the retreating enemy soldiers.\\n\\nSTAMP Your troops attacking an enemy facing the right"
+Outcome = "You order your troops to chase down the enemy troops. They do as commanded, moving from their position to chase. With the extra training, your troops are able to slay some of the retreating enemy soldiers.
+
+STAMP Your troops attacking an enemy facing the right"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
@@ -23,7 +25,9 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_xu7gw"]
 script = ExtResource("1_u4eqx")
 Description = ""
-Outcome = "You order your troops to chase down the enemy troops. They do as commanded, moving from their position to chase. With focus now on offense, your defense lessens. You loose some troops in the attack.\\n\\nSTAMP your army on foot chasing an enemy to the right"
+Outcome = "You order your troops to chase down the enemy troops. They do as commanded, moving from their position to chase. With focus now on offense, your defense lessens. You loose some troops in the attack.
+
+STAMP your army on foot chasing an enemy to the right"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
@@ -61,7 +65,8 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]
 script = ExtResource("1_aw821")
-PromptText = "The enemy soldiers start to back off slowly, but the Hero has the hunch that it’s not over yet. The hunch prompts you to make a decision.\\nDo you..."
+PromptText = "The enemy soldiers start to back off slowly, but the Hero has the hunch that it’s not over yet. The hunch prompts you to make a decision.
+Do you..."
 Answer1ConditionKey = ""
 Answer2ConditionKey = ""
 Answer1 = SubResource("Resource_sk2m4")

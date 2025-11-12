@@ -8,7 +8,9 @@
 [sub_resource type="Resource" id="Resource_tyvkk"]
 script = ExtResource("1_soetu")
 Description = "Send In Archers"
-Outcome = "You command your Archers to shoot at the enemy lines, hoping to use the slight distance between to your advantage. However, your arrows are no match for the shields, almost bouncing off. \\n\\nSTAMP Your archers’ arrows being blocked by enemy shieldmen\""
+Outcome = "You command your Archers to shoot at the enemy lines, hoping to use the slight distance between to your advantage. However, your arrows are no match for the shields, almost bouncing off. 
+
+STAMP Your archers’ arrows being blocked by enemy shieldmen\""
 Influence = Dictionary[int, int]({
 3: -1
 })
@@ -22,7 +24,9 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_ufprf"]
 script = ExtResource("1_soetu")
 Description = "Send In Shieldmen"
-Outcome = "You command your Shield-men to push through the enemy lines, using their shields to block the attacks of the swords. With your Shield-men on the defensive, your troops are able to force their way into the Kingdom.\\n\\nSTAMP Your troops fighting past enemy walls"
+Outcome = "You command your Shield-men to push through the enemy lines, using their shields to block the attacks of the swords. With your Shield-men on the defensive, your troops are able to force their way into the Kingdom.
+
+STAMP Your troops fighting past enemy walls"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
@@ -33,7 +37,8 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]
 script = ExtResource("1_efegc")
-PromptText = "Even with the struggle of the ground, your army gets closer to the enemies guarding the entrance. They don’t see you approach fast enough to use the rocks to their advantage, instead facing your troops at face level. They’re equipped with long swords and thick shields.\\nYou’re given two options on how to advance."
+PromptText = "Even with the struggle of the ground, your army gets closer to the enemies guarding the entrance. They don’t see you approach fast enough to use the rocks to their advantage, instead facing your troops at face level. They’re equipped with long swords and thick shields.
+You’re given two options on how to advance."
 Answer1ConditionKey = "has_archers"
 Answer2ConditionKey = "has_shieldmen"
 Answer1 = SubResource("Resource_tyvkk")

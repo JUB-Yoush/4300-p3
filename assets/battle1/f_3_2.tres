@@ -9,7 +9,10 @@
 [sub_resource type="Resource" id="Resource_xrj6x"]
 script = ExtResource("1_xrj6x")
 Description = ""
-Outcome = "You order your Swordmen to take care of the incoming enemy troops. The Swordmen, jumping onto horseback, quickly charges at them, evading the arrows similar to before. They’re able to get face to face and attack, too close for the enemy Archers to shoot more. \\nYou see those enemy Archers fall as your Swordmen takes them out. Too far away to hear anymore commands, the Swordmen decide to do some raiding as you and the others continue to fight the enemy troops outside the Kingdom.\\n\\nSTAMP Your swordsmen’s triumph over the enemies"
+Outcome = "You order your Swordmen to take care of the incoming enemy troops. The Swordmen, jumping onto horseback, quickly charges at them, evading the arrows similar to before. They’re able to get face to face and attack, too close for the enemy Archers to shoot more. 
+You see those enemy Archers fall as your Swordmen takes them out. Too far away to hear anymore commands, the Swordmen decide to do some raiding as you and the others continue to fight the enemy troops outside the Kingdom.
+
+STAMP Your swordsmen’s triumph over the enemies"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
@@ -21,7 +24,11 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_skeux"]
 script = ExtResource("1_xrj6x")
 Description = ""
-Outcome = "You order your Swordmen to take care of the incoming enemy troops. They make their way over, but with their injuries from the arrows earlier, they are slower and clumsier. The Swordmen get spotted easily, and lacking the speed, they get shot down easily.\\n\\nSTAMP Your swordsmen failing to evade enemy fire\\n\\nWithout a portion of your army, you’re unable to fight back against the wave of new enemies. With no other choice, you and your troops flee."
+Outcome = "You order your Swordmen to take care of the incoming enemy troops. They make their way over, but with their injuries from the arrows earlier, they are slower and clumsier. The Swordmen get spotted easily, and lacking the speed, they get shot down easily.
+
+STAMP Your swordsmen failing to evade enemy fire
+
+Without a portion of your army, you’re unable to fight back against the wave of new enemies. With no other choice, you and your troops flee."
 Influence = Dictionary[int, int]({
 1: -1
 })
@@ -48,7 +55,9 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_4t8d4"]
 script = ExtResource("1_xrj6x")
 Description = "Archers"
-Outcome = "You order your Archers to take care of the incoming enemy troops. They quickly start to aim at those new enemies riding on horseback. Your Archers shoots once in range, taking advantage of their head start, as the incoming enemies are too focused on riding quickly to aim. You see those enemies fall as your Archers shoots them down.\\n\\nSTAMP Your archers firing enemies off horses"
+Outcome = "You order your Archers to take care of the incoming enemy troops. They quickly start to aim at those new enemies riding on horseback. Your Archers shoots once in range, taking advantage of their head start, as the incoming enemies are too focused on riding quickly to aim. You see those enemies fall as your Archers shoots them down.
+
+STAMP Your archers firing enemies off horses"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
@@ -59,7 +68,9 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]
 script = ExtResource("1_78rfn")
-PromptText = "They have yet to get within bow and arrow range. Your army won’t be able to combat all of them at once, so you have no choice but to send one of your force to take care of the incoming enemies.\\n\\n Who do you send in"
+PromptText = "They have yet to get within bow and arrow range. Your army won’t be able to combat all of them at once, so you have no choice but to send one of your force to take care of the incoming enemies.
+
+ Who do you send in"
 Answer1ConditionKey = "has_swords"
 Answer2ConditionKey = "has_archers"
 Answer1 = SubResource("Resource_kbe4i")

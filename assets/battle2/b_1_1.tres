@@ -8,7 +8,9 @@
 [sub_resource type="Resource" id="Resource_pveuy"]
 script = ExtResource("1_2f4y0")
 Description = "Send all your troops to defend the entrance"
-Outcome = "At your command, all your troops prepare to defend the entrance. With the experience from your last battle, your army is prepared for the fight. They’re able to hold the enemy troops back, even able to land some fatal hits.\\n\\nSTAMP Your troops defending your gate against the enemy"
+Outcome = "At your command, all your troops prepare to defend the entrance. With the experience from your last battle, your army is prepared for the fight. They’re able to hold the enemy troops back, even able to land some fatal hits.
+
+STAMP Your troops defending your gate against the enemy"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1

@@ -7,7 +7,9 @@
 [sub_resource type="Resource" id="Resource_hcrmx"]
 script = ExtResource("2_g2l4r")
 Description = "Train Horses"
-Outcome = "You can now have your best soldiers ride into battle.\\n\\nSTAMP 2 horses"
+Outcome = "You can now have your best soldiers ride into battle.
+
+STAMP 2 horses"
 Influence = Dictionary[int, int]({
 4: 2
 })
@@ -21,7 +23,9 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_qs2gw"]
 script = ExtResource("2_g2l4r")
 Description = "Train Physical Ability"
-Outcome = "Your soldiers become much more capable. Add the strength\\n\\nSTAMP to your army"
+Outcome = "Your soldiers become much more capable. Add the strength
+
+STAMP to your army"
 Influence = Dictionary[int, int]({
 5: 1
 })
@@ -34,7 +38,8 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]
 script = ExtResource("3_hln0r")
-PromptText = "You are given a choice between two training programs. The first trains horses to battle alongside your soldiers, while the other trains the physical abilities of your soldiers. \\nWhich training program do you pick?"
+PromptText = "You are given a choice between two training programs. The first trains horses to battle alongside your soldiers, while the other trains the physical abilities of your soldiers. 
+Which training program do you pick?"
 Answer1ConditionKey = ""
 Answer2ConditionKey = ""
 Answer1 = SubResource("Resource_hcrmx")

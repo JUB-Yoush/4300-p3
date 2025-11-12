@@ -8,7 +8,10 @@
 [sub_resource type="Resource" id="Resource_hgjuf"]
 script = ExtResource("2_midpu")
 Description = "Use Shieldmen"
-Outcome = "You decide to have your Shieldmen take over your Swordmen. Using their shields, they distract the enemy Swordmen, allowing for your troops to enter the Kingdom and start raiding.\\nDuring this however, some of your Shieldmen are slain by the enemy swords.\\n\\nSTAMP Your shieldmen fighting enemy swordsmen"
+Outcome = "You decide to have your Shieldmen take over your Swordmen. Using their shields, they distract the enemy Swordmen, allowing for your troops to enter the Kingdom and start raiding.
+During this however, some of your Shieldmen are slain by the enemy swords.
+
+STAMP Your shieldmen fighting enemy swordsmen"
 Influence = Dictionary[int, int]({
 2: -1
 })
@@ -22,7 +25,10 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_qtfwt"]
 script = ExtResource("2_midpu")
 Description = ""
-Outcome = "You decide to have your Swordmen focus on fighting the enemies. With the help of their physical training, the enemies are unable to hold much ground, cornered against the walls. The enemy Swordmen don’t last long as they’re slain by your men.\\nWith this, your troops are able to force into the Kingdom and start raiding.\\n\\nSTAMP Your strengthened swordsmen cornering the enemies"
+Outcome = "You decide to have your Swordmen focus on fighting the enemies. With the help of their physical training, the enemies are unable to hold much ground, cornered against the walls. The enemy Swordmen don’t last long as they’re slain by your men.
+With this, your troops are able to force into the Kingdom and start raiding.
+
+STAMP Your strengthened swordsmen cornering the enemies"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
@@ -34,7 +40,9 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_6eg1f"]
 script = ExtResource("2_midpu")
 Description = ""
-Outcome = "You decide to have your Swordmen focus on fighting the enemies. The enemies troops, more stronger than your troops, are able to slay some of your Swordmen.\\n\\nSTAMP Your swordsmen fighting against various enemies, some defeated"
+Outcome = "You decide to have your Swordmen focus on fighting the enemies. The enemies troops, more stronger than your troops, are able to slay some of your Swordmen.
+
+STAMP Your swordsmen fighting against various enemies, some defeated"
 Influence = Dictionary[int, int]({})
 ConditionKey = ""
 ConditionIndex = -1

@@ -8,7 +8,9 @@
 [sub_resource type="Resource" id="Resource_iy38h"]
 script = ExtResource("1_u3u1u")
 Description = "Use Archers"
-Outcome = "You order your Archers to shoot at the enemy Swordmen. Unprepared for the long range attacks, your Archers land some fatal hits on them.\\n\\nSTAMP Enemy swordsmen being shot by your archers"
+Outcome = "You order your Archers to shoot at the enemy Swordmen. Unprepared for the long range attacks, your Archers land some fatal hits on them.
+
+STAMP Enemy swordsmen being shot by your archers"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
@@ -20,7 +22,9 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_1fiek"]
 script = ExtResource("1_u3u1u")
 Description = "Climb With Swordsmen"
-Outcome = "You order your Swordmen to climb the wall to close the distance between. They begin to climb the wall with issue, as the enemy Swordmen are unable to reach. \\n\\nSTAMP Your swordsmen facing the enemy swordsmen"
+Outcome = "You order your Swordmen to climb the wall to close the distance between. They begin to climb the wall with issue, as the enemy Swordmen are unable to reach. 
+
+STAMP Your swordsmen facing the enemy swordsmen"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
@@ -31,7 +35,9 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]
 script = ExtResource("1_fi7ew")
-PromptText = "You order your troops to march forwards, walking to avoid the rocky terrain. As you get closer, the enemies sees your troop from the entrance, their Swordmen quickly scaling the entrance wall to gain the high ground.\\n\\nSTAMP Enemy swordsmen on the right side of the cell"
+PromptText = "You order your troops to march forwards, walking to avoid the rocky terrain. As you get closer, the enemies sees your troop from the entrance, their Swordmen quickly scaling the entrance wall to gain the high ground.
+
+STAMP Enemy swordsmen on the right side of the cell"
 Answer1ConditionKey = "has_archers"
 Answer2ConditionKey = ""
 Answer1 = SubResource("Resource_iy38h")
