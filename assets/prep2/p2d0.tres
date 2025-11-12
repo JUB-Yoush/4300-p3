@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Decision" load_steps=3 format=3 uid="uid://bm4xcbsnt0fvh"]
 
-[ext_resource type="Resource" uid="uid://d20ri3byf3yki" path="res://assets/prep2/p2d1.tres" id="1_5oh6h"]
+[ext_resource type="Resource" uid="uid://c3ixnfq1l85ew" path="res://assets/prep2/king_or_barb.tres" id="1_5oh6h"]
 [ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="1_mihor"]
 
 [resource]
@@ -11,4 +11,6 @@ Influence = null
 ConditionKey = ""
 ConditionIndex = -1
 NextPrompt = ExtResource("1_5oh6h")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"

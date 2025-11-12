@@ -7,7 +7,9 @@
 [sub_resource type="Resource" id="Resource_nu45c"]
 script = ExtResource("2_b7pqh")
 Description = "Surrender"
-Outcome = "You choose to surrender truthfully. The enemy commander accepts the surrender, sending the enemy soldiers to siege the governing body. Your troops are spared, but kept under watchful eye as the Kingdom is taken over.\\n\\nSTAMP your troops, surrendering to the enemy"
+Outcome = "You choose to surrender truthfully. The enemy commander accepts the surrender, sending the enemy soldiers to siege the governing body. Your troops are spared, but kept under watchful eye as the Kingdom is taken over.
+
+STAMP your troops, surrendering to the enemy"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
@@ -19,13 +21,15 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_w64dx"]
 script = ExtResource("2_b7pqh")
 Description = "False Surrender"
-Outcome = "You choose to fake surrender. The enemy commander accepts the surrender, sending some enemy soldiers to siege the governing body and some to keep an eye on your troops. The moment they’re sent off, you order your troops to attack with smaller enemy troop. However, it’s shut down quick from the enemies’ watchful eye. They aren’t merciful, severely wounding those who fought back.\\n\\nSTAMP Your troops, defended against by enemy shieldmen"
-Influence = null
+Outcome = "You choose to fake surrender. The enemy commander accepts the surrender, sending some enemy soldiers to siege the governing body and some to keep an eye on your troops. The moment they’re sent off, you order your troops to attack with smaller enemy troop. However, it’s shut down quick from the enemies’ watchful eye. They aren’t merciful, severely wounding those who fought back.
+
+STAMP Your troops, defended against by enemy shieldmen"
+Influence = Dictionary[int, int]({})
 ConditionKey = ""
 ConditionIndex = -1
 NextDecision = ExtResource("1_mfktp")
 setHero = 0
-newState = 0
+newState = 3
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]

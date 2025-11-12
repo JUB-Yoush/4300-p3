@@ -8,17 +8,25 @@
 [sub_resource type="Resource" id="Resource_v5vlu"]
 script = ExtResource("2_nleci")
 Description = ""
-Outcome = "You order your army to ambush the guarding Archers. The enemy Archers see your army as you approach on the open fields, drawing their bows and shooting quick.\\nWith the speed and agility of the Horses, your troops are able to evade the in-coming arrows.\\n\\nSTAMP arrows pointing down on the left side\""
+Outcome = "You order your army to ambush the guarding Archers. The enemy Archers see your army as you approach on the open fields, drawing their bows and shooting quick.
+With the speed and agility of the Horses, your troops are able to evade the in-coming arrows.
+
+STAMP arrows pointing down on the left side\""
 Influence = Dictionary[int, int]({})
 ConditionKey = ""
 ConditionIndex = -1
 NextPrompt = ExtResource("1_scopd")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_ip5sq"]
 script = ExtResource("2_nleci")
 Description = ""
-Outcome = "You order your army to ambush the guarding Archers. The enemy Archers see your army as you approach on the open fields, drawing their bows and shooting quick.\\nWith the speed and agility of the Horses, your troops are able to evade the in-coming arrows.\\n\\nSTAMP arrows pointing down on the left side"
+Outcome = "You order your army to ambush the guarding Archers. The enemy Archers see your army as you approach on the open fields, drawing their bows and shooting quick.
+With the speed and agility of the Horses, your troops are able to evade the in-coming arrows.
+
+STAMP arrows pointing down on the left side"
 Influence = Dictionary[int, int]({
 1: -1,
 5: -2
@@ -26,6 +34,8 @@ Influence = Dictionary[int, int]({
 ConditionKey = ""
 ConditionIndex = -1
 NextPrompt = ExtResource("1_scopd")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_tp0l3"]
@@ -37,6 +47,8 @@ ConditionalOutcome2 = SubResource("Resource_ip5sq")
 Influence = null
 ConditionKey = "has_horse"
 ConditionIndex = -1
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_xbyww"]
@@ -47,11 +59,18 @@ Influence = null
 ConditionKey = ""
 ConditionIndex = -1
 NextPrompt = ExtResource("3_eedle")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]
 script = ExtResource("4_hh6wq")
-PromptText = "You inform your army of the raiding of Vetedam, and you waste no time as your troops make the journey. \\nYou see the Kingdom from many miles away, visible with the flat openness of the fields. Your army faces the front entrance, guarded by the Kingdom’s own army of Archers.\\n\\nSTAMP an enemy Archer on the right side of cell in green ink\\n\\n Do you order your army to ambush and attack the enemy Archers before they have the chance to shoot, or do you sneak in through another entrance?"
+PromptText = "You inform your army of the raiding of Vetedam, and you waste no time as your troops make the journey. 
+You see the Kingdom from many miles away, visible with the flat openness of the fields. Your army faces the front entrance, guarded by the Kingdom’s own army of Archers.
+
+STAMP an enemy Archer on the right side of cell in green ink
+
+ Do you order your army to ambush and attack the enemy Archers before they have the chance to shoot, or do you sneak in through another entrance?"
 Answer1ConditionKey = ""
 Answer2ConditionKey = ""
 Answer1 = SubResource("Resource_tp0l3")

@@ -8,26 +8,36 @@
 [sub_resource type="Resource" id="Resource_y5dqh"]
 script = ExtResource("1_nnf2s")
 Description = "Siege Vetedam Kingdom"
-Outcome = "It has been decided.\\n\\nSTAMP the enemy's crest in green"
+Outcome = "It has been decided.
+
+STAMP the enemy's crest in green"
 Influence = Dictionary[int, int]({})
 ConditionKey = ""
 ConditionIndex = -1
 NextPrompt = ExtResource("1_y5dqh")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_x8kwd"]
 script = ExtResource("1_nnf2s")
 Description = "Siege Comore"
-Outcome = "It has been decided. \\n\\nSTAMP the enemy's crest in yellow"
+Outcome = "It has been decided. 
+
+STAMP the enemy's crest in yellow"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
 NextPrompt = ExtResource("3_x8kwd")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]
 script = ExtResource("3_y5dqh")
-PromptText = "It is now the time to pick your battle. Two Kingdoms are set before you, both with resources needed for your Kingdom’s protection. \\nThe first Kingdom of Vetedam resides in the flat fields, rich of crops and farm animals. They are known for their archery and speed, adapting to the open and flat geography.\\nThe second, Comore Kingdom, rests on the rocky shores, rich in metals and oceanic resources. They’re known for their close combat and power, useful to living in the uneven geography."
+PromptText = "It is now the time to pick your battle. Two Kingdoms are set before you, both with resources needed for your Kingdom’s protection. 
+The first Kingdom of Vetedam resides in the flat fields, rich of crops and farm animals. They are known for their archery and speed, adapting to the open and flat geography.
+The second, Comore Kingdom, rests on the rocky shores, rich in metals and oceanic resources. They’re known for their close combat and power, useful to living in the uneven geography."
 Answer1ConditionKey = ""
 Answer2ConditionKey = ""
 Answer1 = SubResource("Resource_y5dqh")

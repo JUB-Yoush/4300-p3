@@ -8,8 +8,14 @@
 [sub_resource type="Resource" id="Resource_i0s8m"]
 script = ExtResource("2_n31pd")
 Description = "Double flank"
-Outcome = "You command for your troops attempt a double flank, but as they start to move away from the Kingdom walls, the enemy troops are already there to stop them. They easily predict your strategy, and swiftly start slaying your soldiers.\\n\\nSTAMP Enemy troops defending themselves from your troops attacking on both sides"
-Influence = null
+Outcome = "You command for your troops attempt a double flank, but as they start to move away from the Kingdom walls, the enemy troops are already there to stop them. They easily predict your strategy, and swiftly start slaying your soldiers.
+
+STAMP Enemy troops defending themselves from your troops attacking on both sides"
+Influence = Dictionary[int, int]({
+1: -1,
+2: -1,
+3: -1
+})
 ConditionKey = ""
 ConditionIndex = -1
 NextDecision = ExtResource("1_i4xxt")
@@ -20,7 +26,10 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_17gue"]
 script = ExtResource("2_n31pd")
 Description = "Inspire The Civillians"
-Outcome = "In the distraction of the battle, the enemy troops don’t notice you and the Barbarian slip away into the Kingdom. You both stand in the town center, not too far from the Kingdom entrance. Together, you start to rally the frightened, scared, and angry civilians to help defend their beloved Kingdom from the enemies.\\nIt works. The years of torment from the enemy Kingdom fueled a fire within your Kingdom’s people, and using whatever tools they have on hand, the civilians start to help the attack of the enemy army. It’s unexpected to your enemy, and they struggle to hold their own against the wave of angry people.\\n\\nSTAMP A chaotic battle, enemies on fire"
+Outcome = "In the distraction of the battle, the enemy troops don’t notice you and the Barbarian slip away into the Kingdom. You both stand in the town center, not too far from the Kingdom entrance. Together, you start to rally the frightened, scared, and angry civilians to help defend their beloved Kingdom from the enemies.
+It works. The years of torment from the enemy Kingdom fueled a fire within your Kingdom’s people, and using whatever tools they have on hand, the civilians start to help the attack of the enemy army. It’s unexpected to your enemy, and they struggle to hold their own against the wave of angry people.
+
+STAMP A chaotic battle, enemies on fire"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
@@ -31,7 +40,10 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]
 script = ExtResource("1_j7gtq")
-PromptText = "The Barbarian gives you two options.\\nThe first is to do a double flank, backing away and attacking from within the Kingdom.\\nThe second is to inspire the Civilians to do their part in defending their Kingdom.\\nWhich option do you choose?"
+PromptText = "The Barbarian gives you two options.
+The first is to do a double flank, backing away and attacking from within the Kingdom.
+The second is to inspire the Civilians to do their part in defending their Kingdom.
+Which option do you choose?"
 Answer1ConditionKey = ""
 Answer2ConditionKey = ""
 Answer1 = SubResource("Resource_i0s8m")

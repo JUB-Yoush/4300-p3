@@ -8,7 +8,11 @@
 [sub_resource type="Resource" id="Resource_wd22o"]
 script = ExtResource("2_6vcou")
 Description = ""
-Outcome = "Your Archers, quick on horseback, charge at the enemies. The speed and agility of your horses allows your men to evade the incoming arrows, as the enemies are too focused on your Archers to think about the rest of your troop. The Archers shoot down the enemies with no causalities on your side. \\n\\nSTAMP Your archers on horseback defeating the enemies\\n\\n However, you see your men grow tired, and with the resources in hand, it would continue to be difficult to fight while holding such items. So, you decide to return home with your loot."
+Outcome = "Your Archers, quick on horseback, charge at the enemies. The speed and agility of your horses allows your men to evade the incoming arrows, as the enemies are too focused on your Archers to think about the rest of your troop. The Archers shoot down the enemies with no causalities on your side. 
+
+STAMP Your archers on horseback defeating the enemies
+
+ However, you see your men grow tired, and with the resources in hand, it would continue to be difficult to fight while holding such items. So, you decide to return home with your loot."
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
@@ -20,7 +24,9 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_m0jkx"]
 script = ExtResource("2_6vcou")
 Description = ""
-Outcome = "With little time, you send your Archers to take down the enemies. However, their speed fails to match your enemies, leading to some of your Archers to get shot and die. In good news, your Archers get a couple hits in, giving enough time for the rest of your troop to draw back. Even though you’ve lost some men, you return home with some resources.\\n\\nSTAMP Your archers being defeated by enemies on horses"
+Outcome = "With little time, you send your Archers to take down the enemies. However, their speed fails to match your enemies, leading to some of your Archers to get shot and die. In good news, your Archers get a couple hits in, giving enough time for the rest of your troop to draw back. Even though you’ve lost some men, you return home with some resources.
+
+STAMP Your archers being defeated by enemies on horses"
 Influence = Dictionary[int, int]({
 3: -1
 })
@@ -47,7 +53,11 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_qq778"]
 script = ExtResource("2_6vcou")
 Description = ""
-Outcome = "Your Sheildmen quickly step to the front, defending the rest of your troops from the incoming arrows. With the enemy soldiers distracted, your offensive men jump onto horseback, taking advantage of the distraction to attack. The enemy soldiers fall one by one, until no more arrows threaten your Sheildmen. \\n\\nSTAMP Your shieldmen blocking arrows for swordmen on horseback \\n\\nHowever, you see your men grow tired, and with the resources in hand, it would continue to be difficult to fight while holding such items. So, you decide to return home with your loot."
+Outcome = "Your Sheildmen quickly step to the front, defending the rest of your troops from the incoming arrows. With the enemy soldiers distracted, your offensive men jump onto horseback, taking advantage of the distraction to attack. The enemy soldiers fall one by one, until no more arrows threaten your Sheildmen. 
+
+STAMP Your shieldmen blocking arrows for swordmen on horseback 
+
+However, you see your men grow tired, and with the resources in hand, it would continue to be difficult to fight while holding such items. So, you decide to return home with your loot."
 Influence = Dictionary[int, int]({})
 ConditionKey = ""
 ConditionIndex = -1
@@ -59,8 +69,12 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_01s8o"]
 script = ExtResource("2_6vcou")
 Description = ""
-Outcome = "With little time, you send your Shieldmen to the front. With their shields, they defend the rest of your troops from the incoming arrows. However, this isn’t able to withstand much longer, as the waves of arrows start to weaken the shield.\\nYour offensive soldiers rush to attack the enemy Archers, but with a lack of speed, some of your Shieldmen fall before they your troops can attack. \\nYour troops are able to push back against the enemies, just long enough for you to order a withdrawal. You have enough resources, and it would make fighting harder with less men and more carry ons.\\n\\nSTAMP Your army escaping among fallen shieldmen"
-Influence = null
+Outcome = "With little time, you send your Shieldmen to the front. With their shields, they defend the rest of your troops from the incoming arrows. However, this isn’t able to withstand much longer, as the waves of arrows start to weaken the shield.
+Your offensive soldiers rush to attack the enemy Archers, but with a lack of speed, some of your Shieldmen fall before they your troops can attack. 
+Your troops are able to push back against the enemies, just long enough for you to order a withdrawal. You have enough resources, and it would make fighting harder with less men and more carry ons.
+
+STAMP Your army escaping among fallen shieldmen"
+Influence = Dictionary[int, int]({})
 ConditionKey = ""
 ConditionIndex = -1
 NextDecision = ExtResource("5_6vcou")
@@ -83,7 +97,8 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]
 script = ExtResource("4_01s8o")
-PromptText = "After raiding the town, your troops gather in the town center, waiting for your next command. Before you can give any, you’re ambushed my a fleet of enemy soldiers. They’re quick, already aiming their bows at your men.\\nWho do you send first?"
+PromptText = "After raiding the town, your troops gather in the town center, waiting for your next command. Before you can give any, you’re ambushed my a fleet of enemy soldiers. They’re quick, already aiming their bows at your men.
+Who do you send first?"
 Answer1ConditionKey = "has_archers"
 Answer2ConditionKey = "has_shieldmen"
 Answer1 = SubResource("Resource_5kmxh")

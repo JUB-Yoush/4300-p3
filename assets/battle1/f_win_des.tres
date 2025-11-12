@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Decision" load_steps=3 format=3 uid="uid://dcqd24qr63br2"]
 
 [ext_resource type="Script" uid="uid://b7ptuqotty2dn" path="res://src/datatypes/Decision.cs" id="1_3s1fy"]
-[ext_resource type="Resource" uid="uid://c3ixnfq1l85ew" path="res://assets/prep2/king_or_barb.tres" id="1_3tmqv"]
+[ext_resource type="Resource" uid="uid://bm4xcbsnt0fvh" path="res://assets/prep2/p2d0.tres" id="1_5gc86"]
 
 [resource]
 script = ExtResource("1_3s1fy")
@@ -10,7 +10,7 @@ Outcome = "Returning home from your conquest, you look over at your army. You se
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
-NextPrompt = ExtResource("1_3tmqv")
+NextDecision = ExtResource("1_5gc86")
 setHero = 0
 newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"

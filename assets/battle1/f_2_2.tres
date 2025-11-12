@@ -8,21 +8,29 @@
 [sub_resource type="Resource" id="Resource_26rtk"]
 script = ExtResource("2_gueqr")
 Description = "Stay Together"
-Outcome = "Deciding to keep your army together, your numbers are enough to start raiding a decently sized town within the Kingdom. \\n\\nSTAMP your troops sneaking into enemy houses."
+Outcome = "Deciding to keep your army together, your numbers are enough to start raiding a decently sized town within the Kingdom. 
+
+STAMP your troops sneaking into enemy houses."
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
 NextPrompt = ExtResource("1_syph4")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_pbpyg"]
 script = ExtResource("2_gueqr")
 Description = "Split into groups"
-Outcome = "You decide to split your troops up into small group to cover more area. Following one of the larger groups, you find yourselves in a small town, with a small town center. \\n\\nSTAMP your troops sneaking into enemy houses."
+Outcome = "You decide to split your troops up into small group to cover more area. Following one of the larger groups, you find yourselves in a small town, with a small town center. 
+
+STAMP your troops sneaking into enemy houses."
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
 NextPrompt = ExtResource("3_vpkux")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]

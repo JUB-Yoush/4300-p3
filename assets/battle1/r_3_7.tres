@@ -8,26 +8,37 @@
 [sub_resource type="Resource" id="Resource_v31n7"]
 script = ExtResource("2_isb4t")
 Description = "Focus on raiding"
-Outcome = "You decide to have your troops raid the Kingdom instead of fighting the enemies. They’re able to use the rocky geography to their advantage, evading the sight of the enemy soldiers within.\\nOut of sight, you’re able to raid successfully, gathering metals, ores, and preserved meats. With the raided loot and your men intact, you return home victorious.\\n\\nSTAMP Your troops sneaking and hiding from enemies"
+Outcome = "You decide to have your troops raid the Kingdom instead of fighting the enemies. They’re able to use the rocky geography to their advantage, evading the sight of the enemy soldiers within.
+Out of sight, you’re able to raid successfully, gathering metals, ores, and preserved meats. With the raided loot and your men intact, you return home victorious.
+
+STAMP Your troops sneaking and hiding from enemies"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
 NextDecision = ExtResource("1_rf6sx")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_24pbo"]
 script = ExtResource("2_isb4t")
 Description = ""
-Outcome = "You decide to have your troops finish off the remaining enemies. With your physical training, your men are able to slay what enemies were left at the Kingdom entrance. Now without opposition, your troops are able to raid successfully, gathering metals, ores, and preserved meats. With the raided loot and your men intact, you return home victorious.\\n\\nSTAMP Your strengthened troops victorious among defeated enemies"
+Outcome = "You decide to have your troops finish off the remaining enemies. With your physical training, your men are able to slay what enemies were left at the Kingdom entrance. Now without opposition, your troops are able to raid successfully, gathering metals, ores, and preserved meats. With the raided loot and your men intact, you return home victorious.
+
+STAMP Your strengthened troops victorious among defeated enemies"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
 NextDecision = ExtResource("1_rf6sx")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_4yvmc"]
 script = ExtResource("2_isb4t")
-Description = "You decide to have your troops finish off the remaining enemies. Even with the lesser numbers of the enemy troops, their strength still poses a challenge for your men. You’re able to keep your ground, but some of your men fall at the enemies hands.\\n\\nSTAMP Your troops fighting the enemy, some defeated"
+Description = "You decide to have your troops finish off the remaining enemies. Even with the lesser numbers of the enemy troops, their strength still poses a challenge for your men. You’re able to keep your ground, but some of your men fall at the enemies hands.
+
+STAMP Your troops fighting the enemy, some defeated"
 Outcome = ""
 Influence = Dictionary[int, int]({
 1: -1,
@@ -36,6 +47,8 @@ Influence = Dictionary[int, int]({
 ConditionKey = ""
 ConditionIndex = -1
 NextDecision = ExtResource("3_isb4t")
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [sub_resource type="Resource" id="Resource_w4d0x"]
@@ -47,6 +60,8 @@ ConditionalOutcome2 = SubResource("Resource_4yvmc")
 Influence = null
 ConditionKey = "has_strength"
 ConditionIndex = -1
+setHero = 0
+newState = 0
 metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]

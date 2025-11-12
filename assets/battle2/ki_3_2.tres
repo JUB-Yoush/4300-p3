@@ -8,7 +8,9 @@
 [sub_resource type="Resource" id="Resource_2bt2a"]
 script = ExtResource("2_rv47x")
 Description = "Split into Groups"
-Outcome = "You command for your troops to split up into small groups. Your troops fight hard, both thanks to numbers and training. The enemy troops are pushed into the Kingdom streets, but the fight continues strongly, with neither side wanting to face defeat.\\n\\nSTAMP A trio of your troops fighting evenly against enemies"
+Outcome = "You command for your troops to split up into small groups. Your troops fight hard, both thanks to numbers and training. The enemy troops are pushed into the Kingdom streets, but the fight continues strongly, with neither side wanting to face defeat.
+
+STAMP A trio of your troops fighting evenly against enemies"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
@@ -20,7 +22,9 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 [sub_resource type="Resource" id="Resource_uu7rl"]
 script = ExtResource("2_rv47x")
 Description = "Send Archers to the Wall"
-Outcome = "You command for your Archers to climb the Kingdom walls. With the distance, your Archers are easily able to shoot down at the enemy troops, and evade the arrows shooting up. With this help, the enemy troops’ numbers fall fast.\\n\\nSTAMP Your archers firing at enemies from atop their wall"
+Outcome = "You command for your Archers to climb the Kingdom walls. With the distance, your Archers are easily able to shoot down at the enemy troops, and evade the arrows shooting up. With this help, the enemy troops’ numbers fall fast.
+
+STAMP Your archers firing at enemies from atop their wall"
 Influence = null
 ConditionKey = ""
 ConditionIndex = -1
@@ -31,7 +35,10 @@ metadata/_custom_type_script = "uid://b7ptuqotty2dn"
 
 [resource]
 script = ExtResource("4_dcreo")
-PromptText = "The New King gives you two options.\\nThe first is to split your troops up to narrow down on fighting specific targets, pushing them into the streets where they’re at a disadvantage.\\nThe second is to send your Archers to split off from the rest, scaling the walls to use the distance advantage.\\nWhich option do you choose?"
+PromptText = "The New King gives you two options.
+The first is to split your troops up to narrow down on fighting specific targets, pushing them into the streets where they’re at a disadvantage.
+The second is to send your Archers to split off from the rest, scaling the walls to use the distance advantage.
+Which option do you choose?"
 Answer1ConditionKey = ""
 Answer2ConditionKey = "has_archers"
 Answer1 = SubResource("Resource_2bt2a")
